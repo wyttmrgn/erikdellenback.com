@@ -193,6 +193,7 @@ a:focus-visible { outline: 2px solid var(--hover); outline-offset: 4px; }
   padding: 12px 0; border-bottom: 1px solid var(--rule);
   font-size: 14px; color: var(--org);
 }
+.work__list li > span:first-child { flex: 0 1 auto; min-width: 40%; }
 .work__role { color: var(--role); text-align: right; }
 
 /* Footer ---------------------------------------------------------------- */
