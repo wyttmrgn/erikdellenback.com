@@ -80,7 +80,7 @@ Open http://localhost:8000.
 
 The site deploys from the `main` branch, root folder. Every push to `main` goes live in a minute or two.
 
-Ownership: Wyatt owns this GitHub repository and the GitHub Pages site. Erik owns the three domains at GoDaddy. GitHub Pages ties the custom domain, its certificate and the `www` CNAME target to the account that owns the repository, so if the repo ever moves to another account, the domain verification and the `www` record have to be redone.
+Ownership: Wyatt owns this GitHub repository and the GitHub Pages site. Erik owns the domain at GoDaddy. GitHub Pages ties the custom domain, its certificate and the `www` CNAME target to the account that owns the repository, so if the repo ever moves to another account, the domain verification and the `www` record have to be redone.
 
 First-time setup, from this folder:
 
@@ -98,9 +98,9 @@ gh api -X POST repos/{owner}/erikdellenback.com/pages -f "source[branch]=main" -
 
 GitHub Pages on a free account requires the repository to be public. Nothing private is in this repo.
 
-## Pointing the domains at the site (GoDaddy)
+## Pointing the domain at the site (GoDaddy)
 
-GitHub Pages serves one custom domain per site. `erikdellenback.com` is the primary. The other two forward to it.
+`erikdellenback.com` is the only domain for this site. Erik's other domains (dellenback.com, hatnhoodie.com) are not part of it and nothing needs to be done with them.
 
 Until DNS is in place the site is at https://wyttmrgn.github.io/erikdellenback.com/ for previews. Do not add the `CNAME` file before step 2 below is done: as soon as it exists, GitHub redirects the preview address to erikdellenback.com, which will not resolve yet.
 
@@ -132,18 +132,15 @@ Check from a terminal:
 nslookup erikdellenback.com
 ```
 
-### 3. dellenback.com and hatnhoodie.com
+### 3. Easiest way for Erik to hand this off
 
-Simplest: in GoDaddy for each domain, Domain settings, Forwarding, permanent (301) forward to `https://erikdellenback.com`, "Forward only", not masking. Then test both `http://` and `https://` versions of each domain in a browser. If the `https://` version shows a certificate warning, GoDaddy's forwarder is not terminating TLS for that domain. The fix is free: move the three domains' nameservers to Cloudflare (registration stays at GoDaddy), keep erikdellenback.com as DNS-only records pointing at GitHub, and add a Redirect Rule on the other two. Cloudflare then answers the `https://` requests with a valid certificate before redirecting.
-
-If Hat n Hoodie later becomes its own consulting site, take the forward off hatnhoodie.com and give it its own repo and `CNAME`.
+GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik invites Wyatt with "Products and Domains" access, Wyatt can add the records above from his own login without ever seeing Erik's password, and Erik keeps ownership.
 
 ## Launch checklist
 
-1. Decide the GitHub account owner; create the repo there.
+1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
 2. Content blockers: hero still or video, real social URLs or none, Erik's sign-off on the designer-written lines (see `docs/ASSESSMENT.md`).
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.
-5. Forward the other two domains and test them over https.
-6. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.
-7. Google Search Console: verify with the same TXT record and submit `sitemap.xml`.
+5. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.
+6. Google Search Console: verify with the same TXT record and submit `sitemap.xml`.

@@ -1,6 +1,6 @@
 # Design assessment: erikdellenback.com
 
-Written 12 September 2026 for Wyatt, from a review of the hi-fi design handoff, Erik's own content notes and CV, all 23 supplied photos, and the seven reference sites Wyatt likes (getcoleman.com, timtebow.com, bobgoff.com, jonacuff.com, linmanuel.com, jennieallen.com, brenebrown.com). Four reviewers looked at the design through different lenses (content, visual design, audience, technical) and this document is the merged, de-duplicated result with the weak recommendations dropped.
+Written 12 September 2026 (updated the same day) for Wyatt, from a review of the hi-fi design handoff, Erik's own content notes and CV, all 23 supplied photos, and the seven reference sites Wyatt likes (getcoleman.com, timtebow.com, bobgoff.com, jonacuff.com, linmanuel.com, jennieallen.com, brenebrown.com). Four reviewers looked at the design through different lenses (content, visual design, audience, technical) and this document is the merged, de-duplicated result with the weak recommendations dropped.
 
 ## The short version
 
@@ -63,7 +63,7 @@ Net: the design is quieter, less commercial and more editorial than six of the s
 
 - **Crazy Experiences gallery** (Erik's own idea, and now a menu item pointing at the grid). The page he actually described: Bowden's last game, the ACC Championship, FSU v Alabama, Night to Shine, CURE Hospital, Haiti, sailfish at Casa Vieja, Fellowship Adventures, the food truck. Build it as its own page when the photos exist; several of the supplied files are too small (see photo plan).
 - **Speaking page.** Drafted in this repo from the CV and his key phrases; Erik edits. Five of seven reference sites have one. Jon Acuff's two-register pattern is the one to copy: a first-person paragraph, then a clearly labeled third-person bio event planners can paste into a program.
-- **Consulting page.** Drafted from the Mercy Seeds entry in the CV. His notes open with "Hat n Hoodie Consulting" and it is not clear whether that is a rename or a second brand; hatnhoodie.com should forward to this page once the name is settled.
+- **Consulting page.** Drafted from the Mercy Seeds entry in the CV. Hat n Hoodie is a separate consulting company Erik is starting and is deliberately kept off this site.
 - **A downloadable headshot** on the Speaking page, once a current one exists. Every event and press mention starts with "can you send a bio and photo".
 - **Night to Shine, by name, on the homepage.** In the Tebow work row at minimum; ideally a photo.
 - **Dates on the work list** (above).
@@ -108,26 +108,24 @@ Missing entirely: a current headshot, any family photo, Night to Shine, Haiti, H
 
 1. Do you approve or want to rewrite: "Husband. Father. Follower of Jesus.", "God is the paper. The rest is ink.", and the three section headings?
 2. Charlie Kirk: which caption, and is the photo staying on the homepage?
-3. Is Hat n Hoodie a new name for Mercy Seeds or a second brand? Which name goes on the Consulting page and on hatnhoodie.com?
-4. Are you taking speaking invitations through this site, from whom, and who fields them? Are Unqualified, Unsee, Tithing, The Lad and David's Anointing your talk titles?
-5. Which social accounts exist? Send the URLs; the footer links are off until then.
-6. A family photo and one family sentence for the end of the Story, if you are willing.
-7. A year and one line for each grid photo; names of the people in the For Others and faith-leaders photos for alt text.
-8. Do you have originals of the storm-walk photo, the CURE photo, a Night to Shine photo, a Haiti photo, and a current headshot? Can an FFV photographer shoot one?
-9. Which email should be public: the Gmail, an FFV address, or erik@erikdellenback.com?
-10. Is a podcast real or aspirational? Where do "Tim and Erik", "Spoken Word" and the Night to Shine video live?
-11. Ordained Pastor (CV) or Pastor of Ministry Partnerships (your notes): which title?
-12. Who should own the GitHub account and the GoDaddy login long term?
+3. Are you taking speaking invitations through this site, from whom, and who fields them? Are Unqualified, Unsee, Tithing, The Lad and David's Anointing your talk titles?
+4. Which social accounts exist? Send the URLs; the footer links are off until then.
+5. A family photo and one family sentence for the end of the Story, if you are willing.
+6. A year and one line for each grid photo; names of the people in the For Others and faith-leaders photos for alt text.
+7. Do you have originals of the storm-walk photo, the CURE photo, a Night to Shine photo, a Haiti photo, and a current headshot? Can an FFV photographer shoot one?
+8. Which email should be public: the Gmail, an FFV address, or erik@erikdellenback.com?
+9. Is a podcast real or aspirational? Where do "Tim and Erik", "Spoken Word" and the Night to Shine video live?
+10. Ordained Pastor (CV) or Pastor of Ministry Partnerships (your notes): which title?
+11. Would you give Wyatt delegate access to the GoDaddy account so he can enter the DNS records for you?
 
 ## Launch plan
 
-1. Decide the GitHub account owner (Erik's account with Wyatt as collaborator is the safest). Run `gh auth login` there, then the two commands in the README to create the repo and enable Pages.
-2. Confirm the site renders at the github.io address.
+1. Done: the repo is at github.com/wyttmrgn/erikdellenback.com under Wyatt's account, Pages is enabled, and the preview at wyttmrgn.github.io/erikdellenback.com renders.
+2. Erik owns the domain at GoDaddy; the simplest handoff is Delegate Access for Wyatt (README, step 3).
 3. In GitHub account settings, verify erikdellenback.com with the TXT record. Then add the four A records, four AAAA records and the www CNAME at GoDaddy (README table). Set the custom domain in the repo, wait for the check, enforce HTTPS.
-4. Forward dellenback.com and hatnhoodie.com at GoDaddy. Test both over https. If the https version throws a certificate warning, move the three domains' nameservers to Cloudflare (free) and redirect there.
-5. Before or right after: Erik's answers to the questions above, especially the hero, the captions and the designer-written lines.
-6. Share the link in iMessage to check the preview card; view on a phone, a tablet and a large monitor.
-7. Search Console: verify with the same TXT, submit the sitemap.
+4. Before or right after: Erik's answers to the questions above, especially the hero, the captions and the designer-written lines.
+5. Share the link in iMessage to check the preview card; view on a phone, a tablet and a large monitor.
+6. Search Console: verify with the same TXT, submit the sitemap.
 
 ## Already applied in this repo
 
