@@ -138,6 +138,6 @@ Missing entirely: a current headshot, any family photo, Night to Shine, Haiti, H
 - Cropped the podium photo above the child in frame.
 - Commented out the three dead social links; replaced the designer's invented clip titles with neutral placeholders.
 - Added a 404 page, a skip link that lands on main content, alt text that describes each photo, and social-card metadata with the roles in it.
-- README: added IPv6 records, the domain-verification step, and the HTTPS caveat for the forwarded domains.
+- README: added IPv6 records, the domain-verification step, and GoDaddy Delegate Access as the easiest DNS handoff.
 
 Not applied, waiting on Wyatt or Erik: hero image or video, caption rewrites, the intro line, work-list rows and dates, heading weight and hero name size, the family photo, the public email address, the swap of grid slots 3 and 6.
