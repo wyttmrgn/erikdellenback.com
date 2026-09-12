@@ -10,12 +10,14 @@
 
   <!-- Social sharing card -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Erik Dellenback">
   <meta property="og:title" content="Erik Dellenback">
-  <meta property="og:description" content="Husband. Father. Follower of Jesus.">
+  <meta property="og:description" content="Husband. Father. Follower of Jesus. CEO of Florida Family Voice, Florida's first Governor's Liaison for Faith and Community, founding president of the Tim Tebow Foundation.">
   <meta property="og:url" content="https://erikdellenback.com/">
   <meta property="og:image" content="https://erikdellenback.com/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Erik Dellenback walking a hurricane recovery site with Governor and First Lady DeSantis">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -23,9 +25,10 @@
   <!-- Fonts: Newsreader (serif, headings) + Karla (sans, body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
 
   <script type="application/ld+json">
   {
@@ -35,36 +38,39 @@
     "url": "https://erikdellenback.com/",
     "email": "mailto:erikdellenback@gmail.com",
     "jobTitle": "Chief Executive Officer, Florida Family Voice",
-    "address": { "@type": "PostalAddress", "addressRegion": "FL", "addressCountry": "US" }
+    "address": { "@type": "PostalAddress", "addressLocality": "St. Augustine", "addressRegion": "FL", "addressCountry": "US" }
   }
   </script>
 </head>
 <body>
-<a class="skip" href="#story">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
 <!-- ============================================================
      HERO
-     To use a muted looping video instead of the still, uncomment the
-     <video> below and set its src. The image stays as the poster.
+     The still <picture> is always there and doubles as the video
+     poster. The <video> stays hidden until js/site.js confirms the
+     visitor allows motion, picks the landscape or portrait file by
+     screen shape, and the clip can actually play. Drop the files in:
+       media/hero-landscape.mp4   16:9, for desktops and tablets
+       media/hero-portrait.mp4     9:16, for phones held upright
+     See README.md for the encoding recipe.
      ============================================================ -->
 <header id="top" class="hero">
   <picture class="hero__media">
     <source type="image/webp" srcset="images/hero-desantis-walk-640.webp 640w, images/hero-desantis-walk-1024.webp 1024w, images/hero-desantis-walk-1200.webp 1200w" sizes="100vw">
     <img src="images/hero-desantis-walk-1200.jpg" srcset="images/hero-desantis-walk-640.jpg 640w, images/hero-desantis-walk-1024.jpg 1024w, images/hero-desantis-walk-1200.jpg 1200w" sizes="100vw" alt="" width="1200" height="630" fetchpriority="high" decoding="sync">
   </picture>
-  <!--
-  <video class="hero__video" autoplay muted loop playsinline poster="images/hero-desantis-walk-1200.jpg">
-    <source src="media/hero.mp4" type="video/mp4">
-  </video>
-  -->
+  <video class="hero__video" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1" hidden
+         data-src-landscape="media/hero-landscape.mp4"
+         data-src-portrait="media/hero-portrait.mp4"></video>
   <div class="hero__overlay" aria-hidden="true"></div>
 
-  <nav class="nav" aria-label="Site">
-    <a href="#story">Story</a>
-    <a href="#people">People</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="topbar topbar--over">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-btn__label">Menu</span>
+      <span class="menu-btn__lines" aria-hidden="true"></span>
+    </button>
+  </div>
 
   <div class="hero__text">
     <h1 class="hero__name">Erik Dellenback</h1>
@@ -72,7 +78,31 @@
   </div>
 </header>
 
-<main>
+<!-- ============================================================
+     MENU  (Erik's list: About, Crazy Experiences, Speaking,
+     Consulting, Podcast, Contact). Podcast stays hidden until the
+     Listen section has real clips: remove `hidden` from both.
+     ============================================================ -->
+<div id="menu" class="menu" hidden>
+  <div class="menu__backdrop" data-menu-close></div>
+  <nav class="menu__panel" aria-label="Site">
+    <button class="menu__close" type="button" data-menu-close>Close</button>
+    <ul class="menu__list">
+      <li><a href="#story">About</a></li>
+      <li><a href="#people">Crazy Experiences</a></li>
+      <li><a href="speaking.html">Speaking</a></li>
+      <li><a href="consulting.html">Consulting</a></li>
+      <li hidden><a href="#listen">Podcast</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu__contact">
+      <a href="mailto:erikdellenback@gmail.com">erikdellenback@gmail.com</a>
+      <span>St. Augustine, Florida</span>
+    </div>
+  </nav>
+</div>
+
+<main id="main" tabindex="-1">
 
 <!-- ============================================================
      PEOPLE
@@ -84,8 +114,8 @@
     <figure class="people__item people__item--lead">
       <div class="frame" style="aspect-ratio:3/2">
         <picture>
-          <source type="image/webp" srcset="images/trump-oval-office-640.webp 640w, images/trump-oval-office-1024.webp 1024w, images/trump-oval-office-1600.webp 1600w, images/trump-oval-office-2200.webp 2200w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 62vw, 780px">
-          <img src="images/trump-oval-office-1024.jpg" srcset="images/trump-oval-office-640.jpg 640w, images/trump-oval-office-1024.jpg 1024w, images/trump-oval-office-1600.jpg 1600w, images/trump-oval-office-2200.jpg 2200w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 62vw, 780px" alt="Erik Dellenback with President Trump in the Oval Office" loading="lazy" decoding="async">
+          <source type="image/webp" srcset="images/trump-oval-office-640.webp 640w, images/trump-oval-office-1024.webp 1024w, images/trump-oval-office-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 62vw, 780px">
+          <img src="images/trump-oval-office-1024.jpg" srcset="images/trump-oval-office-640.jpg 640w, images/trump-oval-office-1024.jpg 1024w, images/trump-oval-office-1600.jpg 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 62vw, 780px" alt="Erik Dellenback standing beside President Trump at the Resolute Desk in the Oval Office" loading="lazy" decoding="async">
         </picture>
       </div>
       <figcaption class="caption">With President Trump, the Oval Office</figcaption>
@@ -95,7 +125,7 @@
       <div class="frame" style="aspect-ratio:3/4">
         <picture>
           <source type="image/webp" srcset="images/desantis-podium-640.webp 640w, images/desantis-podium-1024.webp 1024w, images/desantis-podium-1284.webp 1284w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/desantis-podium-640.jpg" srcset="images/desantis-podium-640.jpg 640w, images/desantis-podium-1024.jpg 1024w, images/desantis-podium-1284.jpg 1284w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback praying with Governor and First Lady DeSantis" loading="lazy" decoding="async">
+          <img src="images/desantis-podium-640.jpg" srcset="images/desantis-podium-640.jpg 640w, images/desantis-podium-1024.jpg 1024w, images/desantis-podium-1284.jpg 1284w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback praying at a podium bearing the seal of Florida, with Governor and First Lady DeSantis behind him" loading="lazy" decoding="async" style="object-position: 50% 20%">
         </picture>
       </div>
       <figcaption class="caption">Praying with Governor and First Lady DeSantis</figcaption>
@@ -105,7 +135,7 @@
       <div class="frame" style="aspect-ratio:1">
         <picture>
           <source type="image/webp" srcset="images/charlie-kirk-stage-640.webp 640w, images/charlie-kirk-stage-1024.webp 1024w, images/charlie-kirk-stage-1600.webp 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/charlie-kirk-stage-640.jpg" srcset="images/charlie-kirk-stage-640.jpg 640w, images/charlie-kirk-stage-1024.jpg 1024w, images/charlie-kirk-stage-1600.jpg 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback on stage with Charlie Kirk at a Florida Family Voice event" loading="lazy" decoding="async">
+          <img src="images/charlie-kirk-stage-640.jpg" srcset="images/charlie-kirk-stage-640.jpg 640w, images/charlie-kirk-stage-1024.jpg 1024w, images/charlie-kirk-stage-1600.jpg 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback seated on stage in conversation with Charlie Kirk at a Florida Family Voice event" loading="lazy" decoding="async">
         </picture>
       </div>
       <figcaption class="caption">On stage with Charlie Kirk, Florida Family Voice</figcaption>
@@ -115,7 +145,7 @@
       <div class="frame" style="aspect-ratio:1">
         <picture>
           <source type="image/webp" srcset="images/tebow-foundation-640.webp 640w, images/tebow-foundation-960.webp 960w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/tebow-foundation-640.jpg" srcset="images/tebow-foundation-640.jpg 640w, images/tebow-foundation-960.jpg 960w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback with Tim Tebow" loading="lazy" decoding="async">
+          <img src="images/tebow-foundation-640.jpg" srcset="images/tebow-foundation-640.jpg 640w, images/tebow-foundation-960.jpg 960w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Tim Tebow with his arm around Erik Dellenback in front of a Tim Tebow Foundation backdrop" loading="lazy" decoding="async">
         </picture>
       </div>
       <figcaption class="caption">With Tim Tebow, Tim Tebow Foundation</figcaption>
@@ -125,7 +155,7 @@
       <div class="frame" style="aspect-ratio:1">
         <picture>
           <source type="image/webp" srcset="images/chris-tomlin-640.webp 640w, images/chris-tomlin-1024.webp 1024w, images/chris-tomlin-1600.webp 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/chris-tomlin-640.jpg" srcset="images/chris-tomlin-640.jpg 640w, images/chris-tomlin-1024.jpg 1024w, images/chris-tomlin-1600.jpg 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback with Chris Tomlin and the For Others board" loading="lazy" decoding="async">
+          <img src="images/chris-tomlin-640.jpg" srcset="images/chris-tomlin-640.jpg 640w, images/chris-tomlin-1024.jpg 1024w, images/chris-tomlin-1600.jpg 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback with Chris Tomlin and the For Others board, standing in a line in a bright loft" loading="lazy" decoding="async">
         </picture>
       </div>
       <figcaption class="caption">With Chris Tomlin and the For Others board</figcaption>
@@ -135,7 +165,7 @@
       <div class="frame" style="aspect-ratio:4/3">
         <picture>
           <source type="image/webp" srcset="images/tebow-cure-640.webp 640w, images/tebow-cure-932.webp 932w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px">
-          <img src="images/tebow-cure-640.jpg" srcset="images/tebow-cure-640.jpg 640w, images/tebow-cure-932.jpg 932w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px" alt="Erik Dellenback and Tim Tebow at the Tebow CURE Hospital in Davao City" loading="lazy" decoding="async">
+          <img src="images/tebow-cure-640.jpg" srcset="images/tebow-cure-640.jpg 640w, images/tebow-cure-932.jpg 932w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px" alt="Erik Dellenback and Tim Tebow beside the mission plaque at the Tebow CURE Hospital in Davao City" loading="lazy" decoding="async">
         </picture>
       </div>
       <figcaption class="caption">Tebow CURE Hospital, Davao City</figcaption>
@@ -144,8 +174,8 @@
     <figure class="people__item people__item--half">
       <div class="frame" style="aspect-ratio:4/3">
         <picture>
-          <source type="image/webp" srcset="images/desantis-meeting-640.webp 640w, images/desantis-meeting-1024.webp 1024w, images/desantis-meeting-1600.webp 1600w, images/desantis-meeting-2200.webp 2200w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px">
-          <img src="images/desantis-meeting-1024.jpg" srcset="images/desantis-meeting-640.jpg 640w, images/desantis-meeting-1024.jpg 1024w, images/desantis-meeting-1600.jpg 1600w, images/desantis-meeting-2200.jpg 2200w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px" alt="Erik Dellenback with Governor DeSantis and Florida faith leaders" loading="lazy" decoding="async">
+          <source type="image/webp" srcset="images/desantis-meeting-640.webp 640w, images/desantis-meeting-1024.webp 1024w, images/desantis-meeting-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px">
+          <img src="images/desantis-meeting-1024.jpg" srcset="images/desantis-meeting-640.jpg 640w, images/desantis-meeting-1024.jpg 1024w, images/desantis-meeting-1600.jpg 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px" alt="Erik Dellenback at a conference table with Governor DeSantis and Florida faith leaders" loading="lazy" decoding="async">
         </picture>
       </div>
       <figcaption class="caption">With Governor DeSantis and Florida faith leaders</figcaption>
@@ -156,26 +186,27 @@
 
 <!-- ============================================================
      LISTEN  (hidden until real clips exist)
-     Remove the `hidden` attribute, then replace each href, title,
-     meta line and thumbnail. Titles below are designer placeholders.
+     Remove the `hidden` attribute here and on the Podcast menu item,
+     then replace each href, title, meta line and thumbnail. The
+     titles below are placeholders, not things Erik has said.
      ============================================================ -->
 <section id="listen" class="section" hidden>
   <h2 class="h2">A few things I've said out loud.</h2>
   <div class="clips">
     <a class="clip" href="#">
       <div class="clip__thumb"><span class="clip__play">Play</span></div>
-      <p class="clip__title">On saying yes before you know the cost</p>
-      <p class="caption">Podcast · 4 min</p>
+      <p class="clip__title">Clip title</p>
+      <p class="caption">Where it was said · length</p>
     </a>
     <a class="clip" href="#">
       <div class="clip__thumb"><span class="clip__play">Play</span></div>
-      <p class="clip__title">What Night to Shine taught me about dignity</p>
-      <p class="caption">Talk · 6 min</p>
+      <p class="clip__title">Clip title</p>
+      <p class="caption">Where it was said · length</p>
     </a>
     <a class="clip" href="#">
       <div class="clip__thumb"><span class="clip__play">Play</span></div>
-      <p class="clip__title">Why Hope Florida started with a phone call</p>
-      <p class="caption">Interview · 5 min</p>
+      <p class="clip__title">Clip title</p>
+      <p class="caption">Where it was said · length</p>
     </a>
   </div>
 </section>
@@ -187,8 +218,8 @@
   <div class="story">
     <div class="frame story__photo" style="aspect-ratio:3/4">
       <picture>
-        <source type="image/webp" srcset="images/erik-python-640.webp 640w, images/erik-python-1024.webp 1024w, images/erik-python-1512.webp 1512w" sizes="(max-width: 660px) 100vw, 520px">
-        <img src="images/erik-python-1024.jpg" srcset="images/erik-python-640.jpg 640w, images/erik-python-1024.jpg 1024w, images/erik-python-1512.jpg 1512w" sizes="(max-width: 660px) 100vw, 520px" alt="Erik Dellenback outdoors" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/erik-python-640.webp 640w, images/erik-python-1040.webp 1040w" sizes="(max-width: 660px) 100vw, 520px">
+        <img src="images/erik-python-640.jpg" srcset="images/erik-python-640.jpg 640w, images/erik-python-1040.jpg 1040w" sizes="(max-width: 660px) 100vw, 520px" alt="Erik Dellenback kneeling in tall grass in a hoodie and ball cap, holding a large python" loading="lazy" decoding="async">
       </picture>
     </div>
     <div class="story__text">
@@ -225,15 +256,18 @@
 
 <!-- ============================================================
      FOOTER / CONTACT
-     Social links are placeholders until Erik supplies the URLs.
+     Social links are commented out until Erik supplies real URLs;
+     dead links are worse than none.
      ============================================================ -->
 <footer id="contact" class="footer">
   <p class="footer__line">God is the paper. The rest is ink.</p>
   <div class="footer__links">
     <a href="mailto:erikdellenback@gmail.com">erikdellenback@gmail.com</a>
-    <a href="#">Instagram</a>
-    <a href="#">X</a>
-    <a href="#">LinkedIn</a>
+    <!--
+    <a href="https://instagram.com/">Instagram</a>
+    <a href="https://x.com/">X</a>
+    <a href="https://linkedin.com/in/">LinkedIn</a>
+    -->
   </div>
 </footer>
 
