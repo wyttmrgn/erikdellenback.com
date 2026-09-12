@@ -14,7 +14,6 @@ js/site.js                 the menu panel and the hero video logic
 images/                    responsive WebP + JPEG renditions from scripts/optimize-images.py
 media/                     hero video files go here (see below); empty until then
 favicon.svg                browser tab icon
-CNAME                      tells GitHub Pages which custom domain serves this site
 .nojekyll                  tells GitHub Pages to serve files as-is
 robots.txt, sitemap.xml    search engine basics
 scripts/optimize-images.py turns a source photo into the sizes the pages expect
@@ -101,7 +100,9 @@ GitHub Pages on a free account requires the repository to be public. Nothing pri
 
 ## Pointing the domains at the site (GoDaddy)
 
-GitHub Pages serves one custom domain per site. `erikdellenback.com` is the primary (that is what the `CNAME` file says). The other two forward to it.
+GitHub Pages serves one custom domain per site. `erikdellenback.com` is the primary. The other two forward to it.
+
+Until DNS is in place the site is at https://wyttmrgn.github.io/erikdellenback.com/ for previews. Do not add the `CNAME` file before step 2 below is done: as soon as it exists, GitHub redirects the preview address to erikdellenback.com, which will not resolve yet.
 
 ### 1. Verify the domain with GitHub first
 
@@ -121,9 +122,9 @@ In GoDaddy DNS, delete the parked `A` record for `@` and any existing forwarding
 | AAAA  | @    | 2606:50c0:8001::153           | 600 |
 | AAAA  | @    | 2606:50c0:8002::153           | 600 |
 | AAAA  | @    | 2606:50c0:8003::153           | 600 |
-| CNAME | www  | `<github-username>.github.io` | 600 |
+| CNAME | www  | `wyttmrgn.github.io` | 600 |
 
-Then in the repo: Settings, Pages, Custom domain `erikdellenback.com`, Save. When the DNS check passes (minutes to a day), tick **Enforce HTTPS**. `www.erikdellenback.com` redirects to the apex on its own.
+Then add the `CNAME` file to the repo root containing the single line `erikdellenback.com` and push (or set Settings, Pages, Custom domain `erikdellenback.com`, which creates the same file). When the DNS check passes (minutes to a day), tick **Enforce HTTPS**. `www.erikdellenback.com` redirects to the apex on its own.
 
 Check from a terminal:
 
