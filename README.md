@@ -81,7 +81,7 @@ Open http://localhost:8000.
 
 The site deploys from the `main` branch, root folder. Every push to `main` goes live in a minute or two.
 
-Decide first who owns the GitHub account: GitHub Pages ties the custom domain, its certificate and the `www` CNAME target to the account that owns the repository. Erik's own account (with Wyatt as collaborator) is the safest long-term home.
+Ownership: Wyatt owns this GitHub repository and the GitHub Pages site. Erik owns the three domains at GoDaddy. GitHub Pages ties the custom domain, its certificate and the `www` CNAME target to the account that owns the repository, so if the repo ever moves to another account, the domain verification and the `www` record have to be redone.
 
 First-time setup, from this folder:
 
