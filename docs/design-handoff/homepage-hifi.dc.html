@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet"><script src="./image-slot.js"></script><style>body{margin:0;background:#f6f2ea;color:#2a2621;font-family:Karla,system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:#2a2621;text-decoration:none}a:hover{color:#8a7a62}p{margin:0}html{scroll-behavior:smooth}</style></helmet>
+
+<div style="background:#f6f2ea">
+
+<!-- HERO -->
+<section id="top" data-screen-label="Hero" style="position:relative;height:100vh;min-height:560px;overflow:hidden;background:#2b2825">
+  <div style="position:absolute;inset:0"><image-slot id="hero-family" shape="rect" style="color:#f3eee5" src="./images/hero-desantis-walk.webp" placeholder="Candid photo: Erik outdoors with his family (landscape, 16:9 or wider)"></image-slot></div>
+  <sc-if value="{{ heroVideo }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;pointer-events:none">{{ heroVideoEl }}</div></sc-if>
+  <div style="position:absolute;inset:0;background:rgba(20,17,14,0.38);pointer-events:none"></div>
+  <nav style="position:absolute;top:0;left:0;right:0;display:flex;justify-content:center;gap:clamp(20px,4vw,44px);padding:28px 24px;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#f3eee5;font-weight:400">
+    <a href="#story" style="color:#f3eee5">Story</a><a href="#people" style="color:#f3eee5">People</a><a href="#work" style="color:#f3eee5">Work</a><a href="#contact" style="color:#f3eee5">Contact</a>
+  </nav>
+  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;pointer-events:none">
+    <h1 style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(18px,2.2vw,26px);letter-spacing:0.32em;text-transform:uppercase;color:#fbf8f2">Erik Dellenback</h1>
+    <p style="margin-top:14px;font-size:13px;letter-spacing:0.06em;color:#e9e3d8">Husband. Father. Follower of Jesus.</p>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<section id="people" data-screen-label="People" style="padding:clamp(72px,10vw,140px) clamp(20px,6vw,96px) clamp(40px,5vw,72px);max-width:1280px;margin:0 auto;box-sizing:border-box">
+  <h2 style="margin:0 0 clamp(28px,4vw,56px);font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.01em">The rooms I've been in.</h2>
+  <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.6vw,22px)">
+    <figure style="margin:0;grid-column:span 4;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:3/2"><image-slot id="p-trump" shape="rect" src="./images/trump-oval-office.jpg" placeholder="Photo with President Trump"></image-slot></div><figcaption style="font-size:12px;letter-spacing:0.02em;color:#7a716a">With President Trump, the Oval Office</figcaption></figure>
+    <figure style="margin:0;grid-column:span 2;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:3/4"><image-slot id="p-desantis" shape="rect" src="./images/desantis-podium.jpg" placeholder="Photo with Governor DeSantis"></image-slot></div><figcaption style="font-size:12px;letter-spacing:0.02em;color:#7a716a">Praying with Governor and First Lady DeSantis</figcaption></figure>
+    <figure style="margin:0;grid-column:span 2;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1"><image-slot id="p-kirk" shape="rect" src="./images/charlie-kirk-stage.jpg" placeholder="Photo with Charlie Kirk"></image-slot></div><figcaption style="font-size:12px;letter-spacing:0.02em;color:#7a716a">On stage with Charlie Kirk, Florida Family Voice</figcaption></figure>
+    <figure style="margin:0;grid-column:span 2;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1"><image-slot id="p-tebow" shape="rect" src="./images/tebow-foundation.jpg" placeholder="Photo with Tim Tebow"></image-slot></div><figcaption style="font-size:12px;letter-spacing:0.02em;color:#7a716a">With Tim Tebow, Tim Tebow Foundation</figcaption></figure>
+    <figure style="margin:0;grid-column:span 2;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:1"><image-slot id="p-tomlin" shape="rect" src="./images/chris-tomlin.jpg" placeholder="Photo with Chris Tomlin"></image-slot></div><figcaption style="font-size:12px;letter-spacing:0.02em;color:#7a716a">With Chris Tomlin and the For Others board</figcaption></figure>
+    <figure style="margin:0;grid-column:span 3;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/3"><image-slot id="p-tebow-2" shape="rect" src="./images/tebow-cure.jpg" placeholder="Second photo with Tim Tebow"></image-slot></div><figcaption style="font-size:12px;letter-spacing:0.02em;color:#7a716a">Tebow CURE Hospital, Davao City</figcaption></figure>
+    <figure style="margin:0;grid-column:span 3;display:flex;flex-direction:column;gap:10px"><div style="aspect-ratio:4/3"><image-slot id="p-desantis-2" shape="rect" src="./images/desantis-meeting.jpg" placeholder="Second photo with Governor DeSantis"></image-slot></div><figcaption style="font-size:12px;letter-spacing:0.02em;color:#7a716a">With Governor DeSantis and Florida faith leaders</figcaption></figure>
+  </div>
+</section>
+
+<!-- LISTEN -->
+<sc-if value="{{ showClips }}" hint-placeholder-val="{{ true }}">
+<section id="listen" data-screen-label="Listen" style="padding:clamp(48px,6vw,96px) clamp(20px,6vw,96px);max-width:1280px;margin:0 auto;box-sizing:border-box">
+  <h2 style="margin:0 0 clamp(28px,4vw,56px);font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.01em">A few things I've said out loud.</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(16px,2.4vw,32px)">
+    <sc-for list="{{ clips }}" as="c" hint-placeholder-count="3">
+      <a href="{{ c.href }}" style="display:flex;flex-direction:column;gap:12px" style-hover="color:#2a2621">
+        <div style="position:relative;aspect-ratio:16/9;background:#2b2825"><image-slot id="{{ c.id }}" shape="rect" style="color:#f3eee5" placeholder="{{ c.thumb }}"></image-slot><span style="position:absolute;left:14px;bottom:12px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#f3eee5;background:rgba(20,17,14,0.55);padding:6px 10px;pointer-events:none">Play</span></div>
+        <p style="font-family:Newsreader,Georgia,serif;font-size:19px;line-height:1.3">{{ c.title }}</p>
+        <p style="font-size:12px;letter-spacing:0.02em;color:#7a716a">{{ c.meta }}</p>
+      </a>
+    </sc-for>
+  </div>
+</section>
+</sc-if>
+
+<!-- STORY -->
+<section id="story" data-screen-label="Story" style="padding:clamp(48px,6vw,96px) clamp(20px,6vw,96px);max-width:1280px;margin:0 auto;box-sizing:border-box">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,80px);align-items:start">
+    <div style="aspect-ratio:3/4;max-width:520px"><image-slot id="story-candid" shape="rect" src="./images/erik-python.jpg" placeholder="Candid photo of Erik (portrait)"></image-slot></div>
+    <div style="max-width:520px">
+      <h2 style="margin:0 0 28px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.01em">The rest of it.</h2>
+      <div style="display:flex;flex-direction:column;gap:18px;font-size:16px;line-height:1.75;color:#3d3832;text-wrap:pretty">
+        <p>Hi, my name is Erik and as you check out my site, it is my hope and prayer that these words and pages both honor and glorify the Lord!</p>
+        <p>I've had a rather unique career with my last 25 years being spent in the business of football or next to Tim Tebow, Chris Tomlin and Governor Ron DeSantis, respectively. I want to share a little bit about those experiences and there are two things that I hope you can feel as you check it out.</p>
+        <p>First, God uses unqualified people. I don't think I've ever been qualified for a single role that I have done, but God is faithful and will take simple acts of obedience to get HIS work done.</p>
+        <p>Secondly, I was in Haiti years ago when a woman said to me, "you'll never unsee what you've seen today", and she was right, but more importantly, those words have become an anthem of my life. I believe each of us see, hear or experience moments, especially around the vulnerable and hurting, that never leave our mind and heart. Those moments will change the trajectory of my life and that is my story.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" data-screen-label="Work" style="padding:clamp(48px,6vw,96px) clamp(20px,6vw,96px) clamp(72px,10vw,140px);max-width:1280px;margin:0 auto;box-sizing:border-box">
+  <div style="max-width:520px">
+    <h2 style="margin:0 0 24px;font-family:Newsreader,Georgia,serif;font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.1;letter-spacing:-0.01em">What I've done.</h2>
+    <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+      <sc-for list="{{ work }}" as="w" hint-placeholder-count="7">
+        <li style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #e4ddd0;font-size:14px;color:#5e564e"><span>{{ w.org }}</span><span style="color:#9a9187;text-align:right">{{ w.role }}</span></li>
+      </sc-for>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" data-screen-label="Footer" style="border-top:1px solid #e4ddd0;padding:clamp(56px,7vw,96px) 24px;text-align:center">
+  <p style="font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(22px,2.6vw,32px);line-height:1.3;color:#2a2621">God is the paper. The rest is ink.</p>
+  <div style="margin-top:28px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:#7a716a">
+    <a href="mailto:erikdellenback@gmail.com" style="color:#7a716a">erikdellenback@gmail.com</a><a href="#" style="color:#7a716a">Instagram</a><a href="#" style="color:#7a716a">X</a><a href="#" style="color:#7a716a">LinkedIn</a>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroVideoSrc&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;,&quot;description&quot;:&quot;URL of a muted looping clip. Leave empty to use the photo.&quot;},&quot;showClips&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;,&quot;description&quot;:&quot;Show the podcast / speaking clips section&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const src = this.props.heroVideoSrc ?? '';
+    const heroVideo = !!src;
+    return {
+      heroVideo,
+      heroVideoEl: heroVideo ? React.createElement('video', { key: src, src, autoPlay: true, muted: true, loop: true, playsInline: true, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } }) : null,
+      showClips: this.props.showClips ?? true,
+      clips: [
+        { id: 'clip-1', href: '#', thumb: 'Podcast clip thumbnail', title: 'On saying yes before you know the cost', meta: 'Podcast · 4 min' },
+        { id: 'clip-2', href: '#', thumb: 'Speaking clip thumbnail', title: 'What Night to Shine taught me about dignity', meta: 'Talk · 6 min' },
+        { id: 'clip-3', href: '#', thumb: 'Interview clip thumbnail', title: 'Why Hope Florida started with a phone call', meta: 'Interview · 5 min' }
+      ],
+      work: [
+        { org: 'Florida Family Voice', role: 'Chief Executive Officer' },
+        { org: 'Hope Florida', role: 'Executive Director' },
+        { org: 'Executive Office of the Governor', role: "Florida's first Liaison for Faith and Community" },
+        { org: 'For Others', role: 'Founding Board Member, Interim President' },
+        { org: 'Tim Tebow Foundation', role: 'Founding President, Executive Director' },
+        { org: 'Gator Bowl Association', role: 'Vice President, Chief Marketing Officer' },
+        { org: 'Run the Race, He Calls Me Daughter', role: 'Executive Producer' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

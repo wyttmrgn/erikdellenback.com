@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+__pycache__/
+# Raw originals and private documents stay in the parent folder, never here.
+originals/
