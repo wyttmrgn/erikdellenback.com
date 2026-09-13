@@ -306,10 +306,12 @@ main:focus { outline: none; }
 .logos {
   list-style: none; margin: 0 auto; padding: 0; max-width: 960px;
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-  gap: 14px clamp(24px, 3.5vw, 40px);
+  gap: 22px clamp(28px, 3.6vw, 44px);
 }
 .logos li { display: flex; align-items: center; justify-content: center; }
-.logos__img { height: clamp(22px, 2.4vw, 32px); width: auto; max-width: 140px; object-fit: contain; }
+.logos__img { height: clamp(22px, 2.4vw, 32px); width: auto; max-width: 150px; object-fit: contain; }
+.logos__img--tall { height: clamp(40px, 4.2vw, 56px); max-width: 170px; }
+.logos__img--small { height: clamp(16px, 1.7vw, 22px); }
 .logos__name { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--org); }
 
 /* Footer ---------------------------------------------------------------- */
