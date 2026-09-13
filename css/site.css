@@ -276,9 +276,16 @@ main:focus { outline: none; }
 }
 .story__photo { max-width: var(--text-col); }
 .story__text { max-width: var(--text-col); }
+.story__coda {
+  margin-top: 28px;
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 19px; line-height: 1.5; color: var(--org);
+}
 
 /* Work ------------------------------------------------------------------ */
 .work { max-width: var(--text-col); }
+.work--center { margin: 0 auto; }
+.h2--center { text-align: center; }
 .work__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .work__list li {
   display: flex; justify-content: space-between; gap: 16px;
@@ -304,11 +311,58 @@ main:focus { outline: none; }
 .bio { max-width: var(--text-col); }
 .bio p { font-size: 14px; line-height: 1.7; color: var(--org); }
 
+/* Organizations (logo row) ---------------------------------------------- */
+.section--logos { text-align: center; }
+.logos {
+  list-style: none; margin: 0 auto; padding: 0; max-width: 1080px;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: clamp(18px, 3vw, 36px) clamp(24px, 4vw, 56px);
+}
+.logos li { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+.logos__img { height: clamp(28px, 4vw, 44px); width: auto; max-width: 170px; object-fit: contain; }
+.logos__name { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--org); }
+
 /* Footer ---------------------------------------------------------------- */
 .footer {
   border-top: 1px solid var(--rule);
-  padding: clamp(56px, 7vw, 96px) 24px;
+  padding: 0 24px clamp(56px, 7vw, 96px);
   text-align: center;
+}
+
+/* Ticker: one slow continuous line of Erik's sayings ---------------------- */
+.ticker {
+  margin: 0 -24px clamp(48px, 6vw, 80px);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+}
+.ticker__track {
+  display: flex; width: max-content;
+  animation: ticker-scroll 80s linear infinite;
+}
+.ticker:hover .ticker__track { animation-play-state: paused; }
+.ticker__list {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-shrink: 0;
+}
+.ticker__list li {
+  white-space: nowrap; padding: 0 32px; position: relative;
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: 18px; line-height: 1.4; color: var(--org);
+}
+.ticker__list li::after {
+  content: ""; position: absolute; right: -2px; top: 50%;
+  width: 4px; height: 4px; margin-top: -2px; background: var(--rule);
+}
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; }
+  .ticker__list { flex-wrap: wrap; justify-content: center; row-gap: 8px; }
+  .ticker__list[aria-hidden="true"] { display: none; }
+  .ticker__list li::after { display: none; }
 }
 .footer__line {
   font-family: var(--serif); font-style: italic; font-weight: 300;
