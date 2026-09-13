@@ -26,8 +26,8 @@
   --sans: Karla, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --pad-x: clamp(20px, 6vw, 96px);
-  --section-y: clamp(48px, 6vw, 96px);
-  --section-y-big: clamp(72px, 10vw, 140px);
+  --section-y: clamp(36px, 4.5vw, 64px);
+  --section-y-big: clamp(52px, 6.5vw, 88px);
   --max: 1280px;
   --text-col: 520px;
   --ease: 220ms ease;
@@ -68,17 +68,17 @@ main:focus { outline: none; }
 
 /* Shared type ----------------------------------------------------------- */
 .h2 {
-  margin: 0 0 clamp(28px, 4vw, 56px);
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(22px, 2.4vw, 30px);
-  line-height: 1.2;
-  letter-spacing: 0.16em;
+  margin: 0 0 clamp(20px, 3vw, 36px);
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink);
 }
-.h2--tight { margin-bottom: 28px; }
-.h2--page { margin-bottom: 28px; }
+.h2--tight { margin-bottom: 20px; }
+.h2--page { margin-bottom: 20px; }
 
 .eyebrow {
   margin: 0 0 14px;
@@ -105,7 +105,7 @@ main:focus { outline: none; }
   margin: 0 auto;
   padding: var(--section-y) var(--pad-x);
 }
-.section--first { padding-top: var(--section-y-big); padding-bottom: clamp(40px, 5vw, 72px); }
+.section--first { padding-top: var(--section-y-big); padding-bottom: clamp(28px, 3.5vw, 48px); }
 .section--last  { padding-bottom: var(--section-y-big); }
 
 .frame { position: relative; overflow: hidden; background: var(--media); }
@@ -277,7 +277,7 @@ main:focus { outline: none; }
 .story__photo { max-width: var(--text-col); }
 .story__text { max-width: var(--text-col); }
 .story__coda {
-  margin-top: 28px;
+  margin-top: 22px;
   font-family: var(--serif); font-style: italic; font-weight: 300;
   font-size: 19px; line-height: 1.5; color: var(--org);
 }
@@ -302,29 +302,29 @@ main:focus { outline: none; }
 
 /* Organizations (logo row) ---------------------------------------------- */
 .section--logos { text-align: center; }
-.section--logos .h2 { margin-bottom: clamp(28px, 3vw, 40px); }
+.section--logos .h2 { margin-bottom: clamp(20px, 2.5vw, 32px); }
 .logos {
-  list-style: none; margin: 0 auto; padding: 0; max-width: 960px;
+  list-style: none; margin: 0 auto; padding: 0; max-width: 1120px;
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-  gap: 22px clamp(28px, 3.6vw, 44px);
+  gap: 30px clamp(32px, 4.2vw, 60px);
 }
 .logos li { display: flex; align-items: center; justify-content: center; }
-.logos__img { height: clamp(22px, 2.4vw, 32px); width: auto; max-width: 150px; object-fit: contain; }
-.logos__img--tall { height: clamp(40px, 4.2vw, 56px); max-width: 170px; }
-.logos__img--small { height: clamp(16px, 1.7vw, 22px); }
+.logos__img { height: clamp(30px, 3.4vw, 48px); width: auto; max-width: 230px; object-fit: contain; }
+.logos__img--tall { height: clamp(56px, 6.2vw, 88px); max-width: 250px; }
+.logos__img--small { height: clamp(22px, 2.4vw, 34px); }
 .logos__name { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--org); }
 
 /* Footer ---------------------------------------------------------------- */
 .footer {
   border-top: 1px solid var(--rule);
-  padding: clamp(56px, 7vw, 96px) 24px;
+  padding: clamp(44px, 5.5vw, 72px) 24px;
   text-align: center;
 }
 
 /* Ticker: one slow continuous line of Erik's sayings ---------------------- */
 .ticker {
   position: relative;
-  margin: calc(-1 * clamp(56px, 7vw, 96px)) -24px clamp(48px, 6vw, 80px);
+  margin: calc(-1 * clamp(44px, 5.5vw, 72px)) -24px clamp(36px, 4.5vw, 56px);
   padding: 16px 0;
   border-bottom: 1px solid var(--rule);
   overflow: hidden;

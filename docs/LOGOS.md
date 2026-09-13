@@ -44,13 +44,13 @@ Twelve is the cap. The row renders logos at 22 to 32 pixels tall so they stay qu
 
 ## Status (13 September 2026)
 
-Eleven logos are live in `logos/`, chosen for standing, recognizability and how they hold up small: Florida Family Voice, the State of Florida seal (for the Governor's office), Tim Tebow Foundation, Night to Shine, For Others, The Church of Eleven22, Gator Bowl, ACC Championship, University of Florida, Auntie Anne's, CarePortal.
+Twelve logos are live in `logos/`, chosen for standing, recognizability and how they hold up small: Florida Family Voice, the State of Florida seal (for the Governor's office), Tim Tebow Foundation, Night to Shine, For Others, The Church of Eleven22, Gator Bowl, ACC Championship, University of Florida, Flagler College, Auntie Anne's, CarePortal.
 
 Left out, with the files kept in the parent folder under "Logos (source and spares)":
 
 - Hope Florida: the mark is plain, and the 2025 coverage of the foundation makes it a name to place deliberately, not by default. Erik's call.
 - Fellowship Adventures: detailed brown badge that turns to mud at 40 pixels, and low recognition outside its circle.
 - Planet Smoothie: loud pink; Auntie Anne's already tells the franchise chapter.
-- Flagler College: the only file found is a JPEG with a fake checkerboard baked in. Needs a real transparent PNG or SVG from the college.
+- Flagler College: added later the same day as the Flagler Saints shield, a proper transparent PNG.
 
 Notes on the files in use: the Florida Family Voice mark is the transition version with the "formerly" tagline cropped off; For Others was supplied as a white SVG and is recoloured to the site's ink; CarePortal, Auntie Anne's and University of Florida came on white and had the white removed.
