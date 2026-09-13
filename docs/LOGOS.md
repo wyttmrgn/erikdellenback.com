@@ -13,7 +13,7 @@ Put the files in a `logos/` folder at the repo root.
 - Full colour, the organization's own current mark. No greyscale versions, no screenshots, no logos with a white box around them.
 - SVG is best. If only a raster exists, a PNG at least 400 pixels tall on a transparent background.
 - Horizontal (wordmark or mark plus wordmark). Tall square marks work too; the row scales everything to the same height.
-- The row renders each logo at roughly 28 to 44 pixels tall, so fine detail will disappear. Pick the simplest official version.
+- The row renders each logo at roughly 22 to 32 pixels tall, so fine detail will disappear. Pick the simplest official version.
 
 ## Where to get them
 
@@ -40,4 +40,4 @@ Most organizations keep a press or brand page with downloadable logos. If not, a
 | Flagler College | Adjunct professor | College brand page |
 | University of Florida | Alumnus, Florida Blue Key | UF brand page (alumni use is allowed with their guidelines) |
 
-Trim the list freely. Eighteen logos is a lot; twelve strong ones read better than eighteen mixed ones.
+Twelve is the cap. The row renders logos at 22 to 32 pixels tall so they stay quiet on the cream ground; eighteen full-colour marks would be the loudest thing on the page. Eight of the eighteen names also appear in the work list directly below, so when logos arrive, favour the organizations the work list does not already name (Night to Shine, CarePortal, Eleven22, the ACC, the films, the university) and trim the rest.

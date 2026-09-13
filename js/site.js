@@ -55,6 +55,28 @@
   }
 
   /* ---------------------------------------------------------------------
+     Ticker: a visible Pause/Play control so the moving line can be stopped
+     on touch and keyboard (hover-pause is not available there), and the
+     animation is paused while the footer is off-screen.
+     ------------------------------------------------------------------- */
+  var ticker = document.querySelector('.ticker');
+  if (ticker) {
+    var tickerToggle = ticker.querySelector('.ticker__toggle');
+    if (tickerToggle && !reduceMotion) {
+      tickerToggle.hidden = false;
+      tickerToggle.addEventListener('click', function () {
+        var paused = ticker.classList.toggle('is-paused');
+        tickerToggle.textContent = paused ? 'Play' : 'Pause';
+      });
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        ticker.classList.toggle('is-offscreen', !entries[0].isIntersecting);
+      }).observe(ticker);
+    }
+  }
+
+  /* ---------------------------------------------------------------------
      Hero video. The still <picture> under the video is the poster. We only
      load a clip when the visitor allows motion and has not asked to save
      data. Phones held upright get the portrait file, everything else the

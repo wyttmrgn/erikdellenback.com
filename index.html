@@ -294,26 +294,40 @@
      dead links are worse than none.
      ============================================================ -->
 <footer id="contact" class="footer">
-  <!-- Slow scrolling line of Erik's own sayings. Edit the first list; the
-       second is a copy that makes the loop seamless. Pauses on hover and
-       becomes a static row for visitors who prefer reduced motion. -->
+  <!-- Slow scrolling line of Erik's own sayings. Edit the FIRST list only;
+       the other three are copies that keep the loop seamless on wide
+       screens (edit them to match). Pause/Play control for touch and
+       keyboard users; becomes a static wrapped row under reduced motion.
+       If you change the number of sayings, adjust the animation duration
+       in css/site.css (seconds = one list's width in px / 20). -->
   <div class="ticker">
     <div class="ticker__track">
       <ul class="ticker__list">
         <li>God uses unqualified people.</li>
         <li>You’ll never unsee what you’ve seen.</li>
-        <li>Faith: not #1 on the list, but rather the paper the list is written on.</li>
         <li>Stand in awe of God and help encourage others.</li>
         <li>Boast in Christ.</li>
       </ul>
       <ul class="ticker__list" aria-hidden="true">
         <li>God uses unqualified people.</li>
         <li>You’ll never unsee what you’ve seen.</li>
-        <li>Faith: not #1 on the list, but rather the paper the list is written on.</li>
+        <li>Stand in awe of God and help encourage others.</li>
+        <li>Boast in Christ.</li>
+      </ul>
+      <ul class="ticker__list" aria-hidden="true">
+        <li>God uses unqualified people.</li>
+        <li>You’ll never unsee what you’ve seen.</li>
+        <li>Stand in awe of God and help encourage others.</li>
+        <li>Boast in Christ.</li>
+      </ul>
+      <ul class="ticker__list" aria-hidden="true">
+        <li>God uses unqualified people.</li>
+        <li>You’ll never unsee what you’ve seen.</li>
         <li>Stand in awe of God and help encourage others.</li>
         <li>Boast in Christ.</li>
       </ul>
     </div>
+    <button class="ticker__toggle" type="button" hidden>Pause</button>
   </div>
   <p class="footer__line">God is the paper. The rest is ink.</p>
   <div class="footer__links">
