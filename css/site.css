@@ -70,10 +70,11 @@ main:focus { outline: none; }
 .h2 {
   margin: 0 0 clamp(28px, 4vw, 56px);
   font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(30px, 3.6vw, 48px);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  font-weight: 400;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 .h2--tight { margin-bottom: 28px; }

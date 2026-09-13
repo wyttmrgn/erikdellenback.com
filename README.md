@@ -29,7 +29,8 @@ Each page is a plain HTML file with a banner comment above every section.
 
 - **Menu** (Erik's list): About, Crazy Experiences, Speaking, Consulting, Podcast, Contact. The same block appears near the top of every page; keep them identical when you change one. The Podcast item and the Listen section both carry `hidden` until real clips exist.
 - **Copy**: edit the text directly. House rule: no em dashes anywhere.
-- **Work list**: add or remove `<li>` rows under `#work`.
+- **Logo row** (`#served`): each organization is a text name until its logo exists; see `docs/LOGOS.md`.
+- **Headings**: set in spaced serif caps by the `.h2` rule; write them in normal case in the HTML with no trailing period and CSS does the rest.
 - **Footer social links**: they are commented out in the footer until Erik supplies real URLs.
 - **Colours and type**: the variables at the top of `css/site.css`.
 
