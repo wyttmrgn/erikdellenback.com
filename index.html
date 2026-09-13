@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.classList.replace("no-js","js")</script>
   <script src="js/site.js" defer></script>
 
   <script type="application/ld+json">
@@ -107,82 +108,160 @@
 <main id="main" tabindex="-1">
 
 <!-- ============================================================
-     PEOPLE
+     TAGLINE BAND  (dark)  one beat of Erik's own words before any photo
      ============================================================ -->
-<section id="people" class="section section--first">
-  <h2 class="h2">The rooms I’ve been in</h2>
-  <div class="people">
+<section class="band band--dark tagline" aria-label="Tagline">
+  <div class="section tagline__inner reveal">
+    <h2 class="tagline__line">God uses unqualified people</h2>
+    <p class="tagline__sub">I don’t think I’ve ever been qualified for a single role that I have done.</p>
+  </div>
+</section>
 
-    <figure class="people__item people__item--lead">
-      <div class="frame" style="aspect-ratio:3/2">
+<!-- ============================================================
+     PEOPLE  (film strip)
+     Seven photos at one height, drifting left. Edit the FIRST list; the
+     second is a copy that makes the loop seamless. Pause/Play control;
+     static, hand-scrollable row under reduced motion.
+     ============================================================ -->
+<section id="people" class="band band--cream">
+  <div class="section section--head reveal">
+    <p class="eyebrow">01 · The people</p>
+    <h2 class="h2 h2--flush">The rooms I’ve been in</h2>
+  </div>
+  <div class="strip">
+    <div class="strip__track">
+      <ul class="strip__list">
+      <li class="strip__item">
+        <figure>
         <picture>
-          <source type="image/webp" srcset="images/trump-oval-office-640.webp 640w, images/trump-oval-office-1024.webp 1024w, images/trump-oval-office-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 62vw, 780px">
-          <img src="images/trump-oval-office-1024.jpg" srcset="images/trump-oval-office-640.jpg 640w, images/trump-oval-office-1024.jpg 1024w, images/trump-oval-office-1600.jpg 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 62vw, 780px" alt="Erik Dellenback standing beside President Trump at the Resolute Desk in the Oval Office" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/trump-oval-office-640.webp 640w, images/trump-oval-office-1024.webp 1024w, images/trump-oval-office-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/trump-oval-office-1024.jpg" srcset="images/trump-oval-office-640.jpg 640w, images/trump-oval-office-1024.jpg 1024w, images/trump-oval-office-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback standing beside President Trump at the Resolute Desk in the Oval Office" decoding="async">
         </picture>
-      </div>
-      <figcaption class="caption">With President Trump, the Oval Office</figcaption>
-    </figure>
-
-    <figure class="people__item people__item--tall">
-      <div class="frame" style="aspect-ratio:3/4">
+        <figcaption class="caption">With President Trump, the Oval Office</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
         <picture>
-          <source type="image/webp" srcset="images/desantis-podium-640.webp 640w, images/desantis-podium-1024.webp 1024w, images/desantis-podium-1284.webp 1284w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/desantis-podium-640.jpg" srcset="images/desantis-podium-640.jpg 640w, images/desantis-podium-1024.jpg 1024w, images/desantis-podium-1284.jpg 1284w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback praying at a podium bearing the seal of Florida, with Governor and First Lady DeSantis behind him" loading="lazy" decoding="async" style="object-position: 50% 20%">
+        <source type="image/webp" srcset="images/desantis-podium-640.webp 640w, images/desantis-podium-1024.webp 1024w, images/desantis-podium-1284.webp 1284w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/desantis-podium-640.jpg" srcset="images/desantis-podium-640.jpg 640w, images/desantis-podium-1024.jpg 1024w, images/desantis-podium-1284.jpg 1284w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback praying at a podium bearing the seal of Florida, with Governor and First Lady DeSantis behind him" decoding="async">
         </picture>
-      </div>
-      <figcaption class="caption">Praying with Governor and First Lady DeSantis</figcaption>
-    </figure>
-
-    <figure class="people__item">
-      <div class="frame" style="aspect-ratio:1">
+        <figcaption class="caption">Praying with Governor and First Lady DeSantis</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
         <picture>
-          <source type="image/webp" srcset="images/charlie-kirk-stage-640.webp 640w, images/charlie-kirk-stage-1024.webp 1024w, images/charlie-kirk-stage-1600.webp 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/charlie-kirk-stage-640.jpg" srcset="images/charlie-kirk-stage-640.jpg 640w, images/charlie-kirk-stage-1024.jpg 1024w, images/charlie-kirk-stage-1600.jpg 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback seated on stage in conversation with Charlie Kirk at a Florida Family Voice event" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/charlie-kirk-stage-640.webp 640w, images/charlie-kirk-stage-1024.webp 1024w, images/charlie-kirk-stage-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/charlie-kirk-stage-640.jpg" srcset="images/charlie-kirk-stage-640.jpg 640w, images/charlie-kirk-stage-1024.jpg 1024w, images/charlie-kirk-stage-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback seated on stage in conversation with Charlie Kirk at a Florida Family Voice event" decoding="async">
         </picture>
-      </div>
-      <figcaption class="caption">On stage with Charlie Kirk, Florida Family Voice</figcaption>
-    </figure>
-
-    <figure class="people__item">
-      <div class="frame" style="aspect-ratio:1">
+        <figcaption class="caption">On stage with Charlie Kirk, Florida Family Voice</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
         <picture>
-          <source type="image/webp" srcset="images/tebow-foundation-640.webp 640w, images/tebow-foundation-960.webp 960w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/tebow-foundation-640.jpg" srcset="images/tebow-foundation-640.jpg 640w, images/tebow-foundation-960.jpg 960w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Tim Tebow with his arm around Erik Dellenback in front of a Tim Tebow Foundation backdrop" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/tebow-foundation-640.webp 640w, images/tebow-foundation-960.webp 960w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/tebow-foundation-640.jpg" srcset="images/tebow-foundation-640.jpg 640w, images/tebow-foundation-960.jpg 960w" sizes="(max-width: 640px) 70vw, 700px" alt="Tim Tebow with his arm around Erik Dellenback in front of a Tim Tebow Foundation backdrop" decoding="async">
         </picture>
-      </div>
-      <figcaption class="caption">With Tim Tebow, Tim Tebow Foundation</figcaption>
-    </figure>
-
-    <figure class="people__item">
-      <div class="frame" style="aspect-ratio:1">
+        <figcaption class="caption">With Tim Tebow, Tim Tebow Foundation</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
         <picture>
-          <source type="image/webp" srcset="images/chris-tomlin-640.webp 640w, images/chris-tomlin-1024.webp 1024w, images/chris-tomlin-1600.webp 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px">
-          <img src="images/chris-tomlin-640.jpg" srcset="images/chris-tomlin-640.jpg 640w, images/chris-tomlin-1024.jpg 1024w, images/chris-tomlin-1600.jpg 1600w" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 31vw, 390px" alt="Erik Dellenback with Chris Tomlin and the For Others board, standing in a line in a bright loft" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/chris-tomlin-640.webp 640w, images/chris-tomlin-1024.webp 1024w, images/chris-tomlin-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/chris-tomlin-640.jpg" srcset="images/chris-tomlin-640.jpg 640w, images/chris-tomlin-1024.jpg 1024w, images/chris-tomlin-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback with Chris Tomlin and the For Others board, standing in a line in a bright loft" decoding="async">
         </picture>
-      </div>
-      <figcaption class="caption">With Chris Tomlin and the For Others board</figcaption>
-    </figure>
-
-    <figure class="people__item people__item--half">
-      <div class="frame" style="aspect-ratio:4/3">
+        <figcaption class="caption">With Chris Tomlin and the For Others board</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
         <picture>
-          <source type="image/webp" srcset="images/tebow-cure-640.webp 640w, images/tebow-cure-932.webp 932w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px">
-          <img src="images/tebow-cure-640.jpg" srcset="images/tebow-cure-640.jpg 640w, images/tebow-cure-932.jpg 932w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px" alt="Erik Dellenback and Tim Tebow beside the mission plaque at the Tebow CURE Hospital in Davao City" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/tebow-cure-640.webp 640w, images/tebow-cure-932.webp 932w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/tebow-cure-640.jpg" srcset="images/tebow-cure-640.jpg 640w, images/tebow-cure-932.jpg 932w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback and Tim Tebow beside the mission plaque at the Tebow CURE Hospital in Davao City" decoding="async">
         </picture>
-      </div>
-      <figcaption class="caption">Tebow CURE Hospital, Davao City</figcaption>
-    </figure>
-
-    <figure class="people__item people__item--half">
-      <div class="frame" style="aspect-ratio:4/3">
+        <figcaption class="caption">Tebow CURE Hospital, Davao City</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
         <picture>
-          <source type="image/webp" srcset="images/desantis-meeting-640.webp 640w, images/desantis-meeting-1024.webp 1024w, images/desantis-meeting-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px">
-          <img src="images/desantis-meeting-1024.jpg" srcset="images/desantis-meeting-640.jpg 640w, images/desantis-meeting-1024.jpg 1024w, images/desantis-meeting-1600.jpg 1600w" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 47vw, 590px" alt="Erik Dellenback at a conference table with Governor DeSantis and Florida faith leaders" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="images/desantis-meeting-640.webp 640w, images/desantis-meeting-1024.webp 1024w, images/desantis-meeting-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/desantis-meeting-1024.jpg" srcset="images/desantis-meeting-640.jpg 640w, images/desantis-meeting-1024.jpg 1024w, images/desantis-meeting-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback at a conference table with Governor DeSantis and Florida faith leaders" decoding="async">
         </picture>
-      </div>
-      <figcaption class="caption">With Governor DeSantis and Florida faith leaders</figcaption>
-    </figure>
-
+        <figcaption class="caption">With Governor DeSantis and Florida faith leaders</figcaption>
+        </figure>
+      </li>
+      </ul>
+      <ul class="strip__list" aria-hidden="true">
+      <li class="strip__item">
+        <figure>
+        <picture>
+        <source type="image/webp" srcset="images/trump-oval-office-640.webp 640w, images/trump-oval-office-1024.webp 1024w, images/trump-oval-office-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/trump-oval-office-1024.jpg" srcset="images/trump-oval-office-640.jpg 640w, images/trump-oval-office-1024.jpg 1024w, images/trump-oval-office-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback standing beside President Trump at the Resolute Desk in the Oval Office" decoding="async">
+        </picture>
+        <figcaption class="caption">With President Trump, the Oval Office</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
+        <picture>
+        <source type="image/webp" srcset="images/desantis-podium-640.webp 640w, images/desantis-podium-1024.webp 1024w, images/desantis-podium-1284.webp 1284w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/desantis-podium-640.jpg" srcset="images/desantis-podium-640.jpg 640w, images/desantis-podium-1024.jpg 1024w, images/desantis-podium-1284.jpg 1284w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback praying at a podium bearing the seal of Florida, with Governor and First Lady DeSantis behind him" decoding="async">
+        </picture>
+        <figcaption class="caption">Praying with Governor and First Lady DeSantis</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
+        <picture>
+        <source type="image/webp" srcset="images/charlie-kirk-stage-640.webp 640w, images/charlie-kirk-stage-1024.webp 1024w, images/charlie-kirk-stage-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/charlie-kirk-stage-640.jpg" srcset="images/charlie-kirk-stage-640.jpg 640w, images/charlie-kirk-stage-1024.jpg 1024w, images/charlie-kirk-stage-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback seated on stage in conversation with Charlie Kirk at a Florida Family Voice event" decoding="async">
+        </picture>
+        <figcaption class="caption">On stage with Charlie Kirk, Florida Family Voice</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
+        <picture>
+        <source type="image/webp" srcset="images/tebow-foundation-640.webp 640w, images/tebow-foundation-960.webp 960w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/tebow-foundation-640.jpg" srcset="images/tebow-foundation-640.jpg 640w, images/tebow-foundation-960.jpg 960w" sizes="(max-width: 640px) 70vw, 700px" alt="Tim Tebow with his arm around Erik Dellenback in front of a Tim Tebow Foundation backdrop" decoding="async">
+        </picture>
+        <figcaption class="caption">With Tim Tebow, Tim Tebow Foundation</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
+        <picture>
+        <source type="image/webp" srcset="images/chris-tomlin-640.webp 640w, images/chris-tomlin-1024.webp 1024w, images/chris-tomlin-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/chris-tomlin-640.jpg" srcset="images/chris-tomlin-640.jpg 640w, images/chris-tomlin-1024.jpg 1024w, images/chris-tomlin-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback with Chris Tomlin and the For Others board, standing in a line in a bright loft" decoding="async">
+        </picture>
+        <figcaption class="caption">With Chris Tomlin and the For Others board</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
+        <picture>
+        <source type="image/webp" srcset="images/tebow-cure-640.webp 640w, images/tebow-cure-932.webp 932w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/tebow-cure-640.jpg" srcset="images/tebow-cure-640.jpg 640w, images/tebow-cure-932.jpg 932w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback and Tim Tebow beside the mission plaque at the Tebow CURE Hospital in Davao City" decoding="async">
+        </picture>
+        <figcaption class="caption">Tebow CURE Hospital, Davao City</figcaption>
+        </figure>
+      </li>
+      <li class="strip__item">
+        <figure>
+        <picture>
+        <source type="image/webp" srcset="images/desantis-meeting-640.webp 640w, images/desantis-meeting-1024.webp 1024w, images/desantis-meeting-1600.webp 1600w" sizes="(max-width: 640px) 70vw, 700px">
+        <img src="images/desantis-meeting-1024.jpg" srcset="images/desantis-meeting-640.jpg 640w, images/desantis-meeting-1024.jpg 1024w, images/desantis-meeting-1600.jpg 1600w" sizes="(max-width: 640px) 70vw, 700px" alt="Erik Dellenback at a conference table with Governor DeSantis and Florida faith leaders" decoding="async">
+        </picture>
+        <figcaption class="caption">With Governor DeSantis and Florida faith leaders</figcaption>
+        </figure>
+      </li>
+      </ul>
+    </div>
+    <button class="strip__toggle" type="button" hidden>Pause</button>
   </div>
 </section>
 
@@ -192,7 +271,7 @@
      then replace each href, title, meta line and thumbnail. The
      titles below are placeholders, not things Erik has said.
      ============================================================ -->
-<section id="listen" class="section" hidden>
+<section id="listen" class="band band--cream section" hidden>
   <h2 class="h2">A few things I’ve said out loud</h2>
   <div class="clips">
     <a class="clip" href="#">
@@ -216,8 +295,8 @@
 <!-- ============================================================
      STORY
      ============================================================ -->
-<section id="story" class="section">
-  <div class="story">
+<section id="story" class="band band--cream">
+  <div class="section story reveal">
     <div class="frame story__photo" style="aspect-ratio:3/4">
       <picture>
         <source type="image/webp" srcset="images/erik-python-640.webp 640w, images/erik-python-1040.webp 1040w" sizes="(max-width: 660px) 100vw, 520px">
@@ -225,6 +304,7 @@
       </picture>
     </div>
     <div class="story__text">
+      <p class="eyebrow">02 · The story</p>
       <h2 class="h2 h2--tight">The rest of it</h2>
       <div class="prose">
         <p>Hi, my name is Erik and as you check out my site, it is my hope and prayer that these words and pages both honor and glorify the Lord! I’ve had a rather unique career with my last 25 years being spent in the business of football or next to Tim Tebow, Chris Tomlin and Governor Ron DeSantis, respectively. I want to share a little bit about those experiences and there are two things that I hope you can feel as you check it out.</p>
@@ -243,7 +323,9 @@
      For Others mark adds .logos__img--small. Order is roughly by
      prominence. See docs/LOGOS.md.
      ============================================================ -->
-<section id="served" class="section section--last section--logos">
+<section id="served" class="band band--sand section--logos">
+  <div class="section reveal">
+  <p class="eyebrow">03 · The company</p>
   <h2 class="h2 h2--center">In good company</h2>
   <ul class="logos">
     <li><img class="logos__img logos__img--tall" src="logos/florida-family-voice.png" alt="Florida Family Voice" loading="lazy" decoding="async"></li>
@@ -259,6 +341,7 @@
     <li><img class="logos__img" src="logos/auntie-annes.png" alt="Auntie Anne's" loading="lazy" decoding="async"></li>
     <li><img class="logos__img" src="logos/careportal.png" alt="CarePortal" loading="lazy" decoding="async"></li>
   </ul>
+  </div>
 </section>
 
 </main>

@@ -55,25 +55,42 @@
   }
 
   /* ---------------------------------------------------------------------
-     Ticker: a visible Pause/Play control so the moving line can be stopped
-     on touch and keyboard (hover-pause is not available there), and the
-     animation is paused while the footer is off-screen.
+     Marquees (the sayings ticker and the photo strip): a visible Pause/Play
+     control so the moving line can be stopped on touch and keyboard, and
+     the animation is paused while the element is off-screen.
      ------------------------------------------------------------------- */
-  var ticker = document.querySelector('.ticker');
-  if (ticker) {
-    var tickerToggle = ticker.querySelector('.ticker__toggle');
-    if (tickerToggle && !reduceMotion) {
-      tickerToggle.hidden = false;
-      tickerToggle.addEventListener('click', function () {
-        var paused = ticker.classList.toggle('is-paused');
-        tickerToggle.textContent = paused ? 'Play' : 'Pause';
+  function marquee(root, toggleSelector) {
+    var toggle = root.querySelector(toggleSelector);
+    if (toggle && !reduceMotion) {
+      toggle.hidden = false;
+      toggle.addEventListener('click', function () {
+        var paused = root.classList.toggle('is-paused');
+        toggle.textContent = paused ? 'Play' : 'Pause';
       });
     }
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        ticker.classList.toggle('is-offscreen', !entries[0].isIntersecting);
-      }).observe(ticker);
+        root.classList.toggle('is-offscreen', !entries[0].isIntersecting);
+      }).observe(root);
     }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.ticker'), function (el) { marquee(el, '.ticker__toggle'); });
+  Array.prototype.forEach.call(document.querySelectorAll('.strip'), function (el) { marquee(el, '.strip__toggle'); });
+
+  /* ---------------------------------------------------------------------
+     Reveal: sections fade up once as they enter view. Under reduced motion
+     the CSS shows everything immediately.
+     ------------------------------------------------------------------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reveals.length && 'IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12 });
+    Array.prototype.forEach.call(reveals, function (el) { io.observe(el); });
+  } else {
+    Array.prototype.forEach.call(reveals, function (el) { el.classList.add('is-visible'); });
   }
 
   /* ---------------------------------------------------------------------
