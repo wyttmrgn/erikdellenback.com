@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heading options · Erik Dellenback</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#f6f2ea; --ink:#2a2621; --org:#5e564e; --muted:#736a62; --rule:#e4ddd0; --hover:#8a7a62; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Karla, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:1100px; margin:0 auto; padding:48px 32px 96px; }
+    .intro { font-size:14px; color:var(--muted); letter-spacing:0.02em; margin:0 0 40px; max-width:640px; line-height:1.6; }
+    .opt { border-top:1px solid var(--rule); padding:40px 0 44px; }
+    .opt__tag { display:inline-block; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin:0 0 22px; }
+    .opt__tag b { color:var(--ink); font-weight:600; }
+    .opt__note { font-size:13px; color:var(--muted); line-height:1.6; max-width:640px; margin:22px 0 0; }
+    .row { display:flex; flex-direction:column; gap:22px; }
+    /* current */
+    .h-current { font-family:Newsreader, Georgia, serif; font-weight:300; font-size:clamp(30px,3.6vw,48px); line-height:1.1; letter-spacing:-0.01em; margin:0; }
+    /* A: editorial spaced caps, serif light */
+    .h-a { font-family:Newsreader, Georgia, serif; font-weight:400; font-size:clamp(22px,2.4vw,30px); line-height:1.2; letter-spacing:0.16em; text-transform:uppercase; margin:0; }
+    /* B: larger serif caps, tighter tracking */
+    .h-b { font-family:Newsreader, Georgia, serif; font-weight:300; font-size:clamp(30px,3.4vw,44px); line-height:1.1; letter-spacing:0.06em; text-transform:uppercase; margin:0; }
+    /* C: small sans caps label with hairline */
+    .h-c { font-family:Karla, system-ui, sans-serif; font-weight:500; font-size:15px; letter-spacing:0.26em; text-transform:uppercase; color:var(--ink); margin:0; display:flex; align-items:center; gap:18px; }
+    .h-c::after { content:""; flex:1; height:1px; background:var(--rule); }
+    /* D: bold sans caps, the speaker-site look */
+    .h-d { font-family:Karla, system-ui, sans-serif; font-weight:700; font-size:clamp(26px,3vw,36px); letter-spacing:0.04em; text-transform:uppercase; line-height:1.1; margin:0; }
+    /* E: eyebrow + serif caps */
+    .h-e { margin:0; }
+    .h-e small { display:block; font-family:Karla, system-ui, sans-serif; font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); margin-bottom:10px; }
+    .h-e span { font-family:Newsreader, Georgia, serif; font-weight:400; font-size:clamp(24px,2.6vw,32px); letter-spacing:0.12em; text-transform:uppercase; line-height:1.2; }
+    .hero-ref { font-family:Newsreader, Georgia, serif; font-weight:300; font-size:26px; letter-spacing:0.32em; text-transform:uppercase; color:#fbf8f2; background:#2b2825; display:inline-block; padding:22px 32px; margin:0 0 8px; }
+    .names { display:flex; flex-wrap:wrap; gap:14px 40px; margin-top:22px; }
+    .names span { font-family:Karla, system-ui, sans-serif; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--org); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <p class="intro">Section heading options, set in the site's own fonts and colours. Each block shows the same three headings. For reference, the hero name is already spaced serif caps:</p>
+  <p class="hero-ref">Erik Dellenback</p>
+
+  <div class="opt">
+    <p class="opt__tag"><b>Current</b> · Newsreader light, sentence case, full stop</p>
+    <div class="row">
+      <h2 class="h-current">The rooms I’ve been in.</h2>
+      <h2 class="h-current">The rest of it.</h2>
+      <h2 class="h-current">In good company.</h2>
+    </div>
+  </div>
+
+  <div class="opt">
+    <p class="opt__tag"><b>A</b> · Newsreader regular, spaced caps (0.16em), 22 to 30px</p>
+    <div class="row">
+      <h2 class="h-a">The rooms I’ve been in</h2>
+      <h2 class="h-a">The rest of it</h2>
+      <h2 class="h-a">In good company</h2>
+    </div>
+    <p class="opt__note">Same treatment as the hero name, one size up. Reads as editorial caps (Jennie Allen, magazine section heads). Quiet, consistent, and it makes the whole site feel like one voice. This is the one I would pick.</p>
+  </div>
+
+  <div class="opt">
+    <p class="opt__tag"><b>B</b> · Newsreader light, caps at display size (30 to 44px), light tracking</p>
+    <div class="row">
+      <h2 class="h-b">The rooms I’ve been in</h2>
+      <h2 class="h-b">The rest of it</h2>
+      <h2 class="h-b">In good company</h2>
+    </div>
+    <p class="opt__note">Keeps the current size, just capitalised. Bigger presence, slightly less refined than A because light serif caps at this size can look thin.</p>
+  </div>
+
+  <div class="opt">
+    <p class="opt__tag"><b>C</b> · Karla medium, small caps label (15px, 0.26em) with a hairline running to the edge</p>
+    <div class="row">
+      <h2 class="h-c">The rooms I’ve been in</h2>
+      <h2 class="h-c">The rest of it</h2>
+      <h2 class="h-c">In good company</h2>
+    </div>
+    <p class="opt__note">Headings become labels; the photos and the story carry the page. Very calm, very Brene Brown. Risk: on a long page the sections can feel unannounced.</p>
+  </div>
+
+  <div class="opt">
+    <p class="opt__tag"><b>D</b> · Karla bold caps (26 to 36px), the speaker-site look (Acuff, Tebow)</p>
+    <div class="row">
+      <h2 class="h-d">The rooms I’ve been in</h2>
+      <h2 class="h-d">The rest of it</h2>
+      <h2 class="h-d">In good company</h2>
+    </div>
+    <p class="opt__note">Closest to most of the reference sites. Louder and more commercial; it pulls the design toward the funnel sites and away from the quiet editorial feel, but it is unmistakably a section heading.</p>
+  </div>
+
+  <div class="opt">
+    <p class="opt__tag"><b>E</b> · Small sans eyebrow above serif spaced caps</p>
+    <div class="row">
+      <h2 class="h-e"><small>People</small><span>The rooms I’ve been in</span></h2>
+      <h2 class="h-e"><small>Story</small><span>The rest of it</span></h2>
+      <h2 class="h-e"><small>Organizations</small><span>In good company</span></h2>
+    </div>
+    <p class="opt__note">Two tiers: a one-word label that matches the menu, then the heading in A's style. Helps visitors who arrive from the menu know where they landed. Slightly more furniture on the page.</p>
+  </div>
+
+  <div class="opt">
+    <p class="opt__tag"><b>Header candidates for the logo row</b> · shown in style A</p>
+    <div class="row">
+      <h2 class="h-a">In good company</h2>
+      <h2 class="h-a">The company I’ve kept</h2>
+      <h2 class="h-a">Who I’ve served alongside</h2>
+      <h2 class="h-a">Where I’ve been planted</h2>
+      <h2 class="h-a">Rooms, teams and callings</h2>
+    </div>
+    <div class="names">
+      <span>Florida Family Voice</span><span>Tim Tebow Foundation</span><span>Night to Shine</span><span>Hope Florida</span><span>Executive Office of the Governor</span><span>For Others</span><span>The Church of Eleven22</span><span>Gator Bowl</span><span>CarePortal</span><span>University of Florida</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
