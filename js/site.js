@@ -2,6 +2,9 @@
 (function () {
   'use strict';
 
+  // Styles that depend on this script (the reveal fade) only switch on once it is running.
+  document.documentElement.classList.replace('no-js', 'js');
+
   var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------------------------------------------------------------------
@@ -61,11 +64,26 @@
      ------------------------------------------------------------------- */
   function marquee(root, toggleSelector) {
     var toggle = root.querySelector(toggleSelector);
+    var isStrip = root.classList.contains('strip');
+    if (reduceMotion && isStrip) {
+      // static, hand-scrollable row: make it reachable from the keyboard
+      root.setAttribute('tabindex', '0');
+      root.setAttribute('role', 'region');
+      root.setAttribute('aria-label', 'Photos, scrolls sideways');
+    }
+    if (isStrip && !reduceMotion) {
+      // hold a steady 30px per second whatever the list width (it shrinks with the viewport)
+      var list = root.querySelector('.strip__list');
+      var track = root.querySelector('.strip__track');
+      if (list && track && list.offsetWidth) track.style.animationDuration = Math.round(list.offsetWidth / 30) + 's';
+    }
     if (toggle && !reduceMotion) {
       toggle.hidden = false;
       toggle.addEventListener('click', function () {
         var paused = root.classList.toggle('is-paused');
-        toggle.textContent = paused ? 'Play' : 'Pause';
+        var verb = paused ? 'Play' : 'Pause';
+        toggle.textContent = verb;
+        toggle.setAttribute('aria-label', verb + ' ' + (toggle.getAttribute('data-subject') || ''));
       });
     }
     if ('IntersectionObserver' in window) {
