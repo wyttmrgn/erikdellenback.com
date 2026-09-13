@@ -5,7 +5,7 @@ Personal website for Erik Dellenback. Plain HTML, CSS and one small script. No b
 ## What is here
 
 ```
-index.html                 homepage (hero, people grid, listen, story, work, footer)
+index.html                 homepage (hero, people grid, listen, story, logo row, footer)
 speaking.html              draft Speaking page (facts from Erik's CV; Erik to edit)
 consulting.html            draft Consulting page (Mercy Seeds; Erik to edit)
 404.html                   served by GitHub Pages for any missing URL

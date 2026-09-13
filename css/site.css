@@ -77,7 +77,6 @@ main:focus { outline: none; }
   color: var(--ink);
 }
 .h2--tight { margin-bottom: 28px; }
-.h2--work { margin-bottom: 24px; }
 .h2--page { margin-bottom: 28px; }
 
 .eyebrow {
@@ -282,18 +281,7 @@ main:focus { outline: none; }
   font-size: 19px; line-height: 1.5; color: var(--org);
 }
 
-/* Work ------------------------------------------------------------------ */
-.work { max-width: var(--text-col); }
-.work--center { margin: 0 auto; }
 .h2--center { text-align: center; }
-.work__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-.work__list li {
-  display: flex; justify-content: space-between; gap: 16px;
-  padding: 12px 0; border-bottom: 1px solid var(--rule);
-  font-size: 14px; color: var(--org);
-}
-.work__list li > span:first-child { flex: 0 1 auto; min-width: 40%; }
-.work__role { color: var(--role); text-align: right; }
 
 /* Subpages (speaking, consulting, 404) ---------------------------------- */
 .page { max-width: var(--max); margin: 0 auto; }
