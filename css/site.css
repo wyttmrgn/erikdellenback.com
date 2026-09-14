@@ -97,12 +97,12 @@ main:focus { outline: none; }
 .prose a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .prose a:hover { color: var(--gold-strong); }
 
-/* Marker highlight: a gold stroke behind the lower half of the words ------ */
+/* Highlight: Erik's own key words in bold gold with a thin gold rule ------- */
 .hl {
-  background: linear-gradient(to top, rgba(209, 168, 111, 0.34) 0, rgba(209, 168, 111, 0.34) 0.42em, transparent 0.42em);
-  color: var(--text); font-weight: 500;
-  padding: 0 0.12em; margin: 0 -0.12em;
-  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  background: none;
+  color: var(--gold-strong); font-weight: 700;
+  text-decoration: underline; text-decoration-color: rgba(209, 168, 111, 0.6);
+  text-decoration-thickness: 2px; text-underline-offset: 0.26em; text-decoration-skip-ink: none;
 }
 
 /* Bands and layout ------------------------------------------------------ */
