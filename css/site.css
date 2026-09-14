@@ -97,6 +97,14 @@ main:focus { outline: none; }
 .prose a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .prose a:hover { color: var(--gold-strong); }
 
+/* Marker highlight: a gold stroke behind the lower half of the words ------ */
+.hl {
+  background: linear-gradient(to top, rgba(209, 168, 111, 0.34) 0, rgba(209, 168, 111, 0.34) 0.42em, transparent 0.42em);
+  color: var(--text); font-weight: 500;
+  padding: 0 0.12em; margin: 0 -0.12em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+
 /* Bands and layout ------------------------------------------------------ */
 .band { padding: var(--section-y) 0; }
 .band--navy  { background: var(--navy); }
@@ -284,9 +292,7 @@ main:focus { outline: none; }
   font-size: 20px; line-height: 1.5; color: var(--muted);
 }
 .cta {
-  margin-top: clamp(40px, 5vw, 64px);
-  padding-top: clamp(32px, 4vw, 48px);
-  border-top: 1px solid var(--rule);
+  margin-top: clamp(28px, 3.5vw, 44px);
   text-align: center;
 }
 .cta__line {
