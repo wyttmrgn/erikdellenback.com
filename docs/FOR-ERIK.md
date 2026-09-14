@@ -17,7 +17,6 @@ The site is hosted on GitHub under Wyatt's account. Your domain is at GoDaddy un
 A designer wrote these, not you. They are on the site now. Keep, change, or replace with your own words:
 
 - Under your name on the first screen: "Husband. Father. Follower of Jesus."
-- The last line of the page: "God is the paper. The rest is ink." (Your own version was "Faith is not #1 on the list, but rather the paper the list is written on.")
 - Section headings: "The rooms I've been in." / "The rest of it." / "What I've done."
 
 ## 3. The photos

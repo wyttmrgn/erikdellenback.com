@@ -70,7 +70,15 @@
     }
     var list = strip.querySelector('.strip__list');
     var track = strip.querySelector('.strip__track');
-    if (list && track && list.offsetWidth) track.style.animationDuration = Math.round(list.offsetWidth / 30) + 's';
+    var timer = null;
+    function setSpeed() {
+      // the images carry width/height so the list measures right before they load;
+      // re-measure after load and on resize anyway
+      if (list && track && list.offsetWidth > 200) track.style.animationDuration = Math.round(list.offsetWidth / 30) + 's';
+    }
+    setSpeed();
+    window.addEventListener('load', setSpeed);
+    window.addEventListener('resize', function () { clearTimeout(timer); timer = setTimeout(setSpeed, 150); });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
         strip.classList.toggle('is-offscreen', !entries[0].isIntersecting);

@@ -30,7 +30,7 @@ Raw photo originals and Erik's CV stay in the parent folder on Wyatt's machine. 
 Each page is a plain HTML file with a banner comment above every section.
 
 - **Menu** (Erik's list): About, Crazy Experiences, Speaking, Consulting, Podcast, Contact. The same block appears near the top of every page; keep them identical when you change one. The Podcast item and the Listen section both carry `hidden` until real clips exist.
-- **Photo strip**: the seven photos are listed twice in `index.html` (the copy keeps the loop seamless); edit both. Captions sit on the photo.
+- **Photo strip**: the seven photos are listed twice in `index.html` (the copy keeps the loop seamless); edit both. Captions sit on the photo. It has no on-page stop: it only stops under the OS reduced-motion setting and while scrolled out of view (a known WCAG 2.2.2 gap accepted by the client).
 - **Closing call** at the end of the story: the bold line and the gold underlined link are in the `.cta` block.
 - **Copy**: edit the text directly. House rule: no em dashes anywhere.
 - **Logo row** (`#served`): twelve logo files in `logos/`; see `docs/LOGOS.md` for what is in, what is out and how to add one.

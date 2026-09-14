@@ -40,7 +40,7 @@ Most organizations keep a press or brand page with downloadable logos. If not, a
 | Flagler College | Adjunct professor | College brand page |
 | University of Florida | Alumnus, Florida Blue Key | UF brand page (alumni use is allowed with their guidelines) |
 
-Twelve is the cap. The row renders logos at 22 to 32 pixels tall so they stay quiet on the cream ground; eighteen full-colour marks would be the loudest thing on the page. Eight of the eighteen names also appear in the work list directly below, so when logos arrive, favour the organizations the work list does not already name (Night to Shine, CarePortal, Eleven22, the ACC, the films, the university) and trim the rest.
+Twelve is the cap. The row renders logos at 30 to 88 pixels tall on the white panel. Eight of the eighteen names also appear in the work list directly below, so when logos arrive, favour the organizations the work list does not already name (Night to Shine, CarePortal, Eleven22, the ACC, the films, the university) and trim the rest.
 
 ## Status (13 September 2026)
 
