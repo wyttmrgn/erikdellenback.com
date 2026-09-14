@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palette · Erik Dellenback</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#131a26; color:#eef1f5; font-family:Karla, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:1100px; margin:0 auto; padding:48px 32px 96px; }
+    h1 { font-size:14px; letter-spacing:0.28em; text-transform:uppercase; margin:0 0 8px; }
+    p.intro { color:#97a1b2; max-width:640px; line-height:1.6; margin:0 0 36px; font-size:14px; }
+    h2 { font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#97a1b2; margin:40px 0 14px; }
+    .row { display:flex; flex-wrap:wrap; gap:14px; }
+    .sw { width:150px; }
+    .sw i { display:block; height:72px; border:1px solid rgba(255,255,255,.1); }
+    .sw b { display:block; margin-top:8px; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; }
+    .sw span { display:block; font-size:12px; color:#97a1b2; font-family:ui-monospace, Menlo, monospace; }
+    .frames { display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; }
+    .frames img { width:100%; display:block; }
+    .demo { margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .card { padding:24px; }
+    .card h3 { margin:0 0 8px; font-weight:700; text-transform:uppercase; font-size:22px; letter-spacing:0.04em; }
+    .card p { margin:0; font-size:15px; line-height:1.7; }
+    .card .link { display:inline-block; margin-top:14px; font-family:Newsreader, serif; text-transform:uppercase; font-size:22px; color:#d1a86f; border-bottom:4px solid #d1a86f; padding-bottom:2px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Palette from the video</h1>
+  <p class="intro">Fifty-six frames were sampled from the hero loop, two per second, and the colours below are the ones that recur across the different rooms: the dark stages and suits, the navy of the Florida Family Voice backdrop and the Tebow set, and the warm gold of the backdrop, the wood and the couch.</p>
+
+  <h2>Sampled from the footage</h2>
+  <div class="row">
+    <div class="sw"><i style="background:#020202"></i><b>Stage black</b><span>#020202 · 11%</span></div>
+    <div class="sw"><i style="background:#374754"></i><b>Podium navy</b><span>#374754</span></div>
+    <div class="sw"><i style="background:#091654"></i><b>Suit and flag navy</b><span>#091654</span></div>
+    <div class="sw"><i style="background:#c6a770"></i><b>Backdrop gold</b><span>#c6a770</span></div>
+    <div class="sw"><i style="background:#c8a17c"></i><b>Wood</b><span>#c8a17c</span></div>
+    <div class="sw"><i style="background:#bc6645"></i><b>Podium orange</b><span>#bc6645</span></div>
+  </div>
+
+  <h2>The system built from them</h2>
+  <div class="row">
+    <div class="sw"><i style="background:#131a26"></i><b>Primary · navy</b><span>#131a26</span></div>
+    <div class="sw"><i style="background:#1c2633"></i><b>Slate (story)</b><span>#1c2633</span></div>
+    <div class="sw"><i style="background:#0c1119"></i><b>Deep (footer)</b><span>#0c1119</span></div>
+    <div class="sw"><i style="background:#d1a86f"></i><b>Secondary · gold</b><span>#d1a86f</span></div>
+    <div class="sw"><i style="background:#ffffff"></i><b>Light (logos)</b><span>#ffffff</span></div>
+    <div class="sw"><i style="background:#cfd6e0"></i><b>Body text</b><span>#cfd6e0</span></div>
+  </div>
+  <p class="intro" style="margin-top:18px">White is the only colour not from the footage. It is there for one reason: twelve full-colour logos need a light panel behind them, or half of them (Tim Tebow Foundation, University of Florida, CarePortal, Auntie Anne's) disappear into navy.</p>
+
+  <h2>Alternates, if the gold reads too warm</h2>
+  <div class="row">
+    <div class="sw"><i style="background:#bc6645"></i><b>Terracotta</b><span>#bc6645</span></div>
+    <div class="sw"><i style="background:#e0b979"></i><b>Brighter gold</b><span>#e0b979</span></div>
+    <div class="sw"><i style="background:#4a7fb0"></i><b>FFV blue</b><span>#4a7fb0</span></div>
+  </div>
+
+  <div class="demo">
+    <div class="card" style="background:#1c2633">
+      <h3>Stand in awe of God</h3>
+      <p>Body text on the slate ground, gold for the one thing you can click.</p>
+      <a class="link" href="#">Invite Erik to speak</a>
+    </div>
+    <div class="card" style="background:#ffffff;color:#131a26">
+      <h3>In good company</h3>
+      <p>The light panel: logos keep their own colours here.</p>
+    </div>
+  </div>
+
+  <h2>The frames</h2>
+  <div class="frames">
+    <img src="../images/hero-still-640.jpg" alt="">
+    <img src="../images/charlie-kirk-stage-640.jpg" alt="">
+    <img src="../images/tebow-foundation-640.jpg" alt="">
+    <img src="../images/desantis-meeting-640.jpg" alt="">
+  </div>
+</div>
+</body>
+</html>

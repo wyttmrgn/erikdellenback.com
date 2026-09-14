@@ -1,4 +1,4 @@
-/* Erik Dellenback site: menu panel and hero video. No dependencies. */
+/* Erik Dellenback site: menu panel, photo strip, reveal, hero video. No dependencies. */
 (function () {
   'use strict';
 
@@ -23,8 +23,7 @@
       if (closing) { clearTimeout(closing); closing = null; }
       lastFocus = document.activeElement;
       menu.hidden = false;
-      // force a reflow so the slide-in transition runs after display changes
-      void menu.offsetWidth;
+      void menu.offsetWidth; // force a reflow so the slide-in transition runs
       menu.classList.add('is-open');
       btn.setAttribute('aria-expanded', 'true');
       if (label) label.textContent = 'Close';
@@ -58,42 +57,26 @@
   }
 
   /* ---------------------------------------------------------------------
-     Marquees (the sayings ticker and the photo strip): a visible Pause/Play
-     control so the moving line can be stopped on touch and keyboard, and
-     the animation is paused while the element is off-screen.
+     Photo strip: holds a steady 30px per second whatever the list width,
+     and stops animating while it is scrolled out of view. Under reduced
+     motion it is a static row, reachable and scrollable from the keyboard.
      ------------------------------------------------------------------- */
-  function marquee(root, toggleSelector) {
-    var toggle = root.querySelector(toggleSelector);
-    var isStrip = root.classList.contains('strip');
-    if (reduceMotion && isStrip) {
-      // static, hand-scrollable row: make it reachable from the keyboard
-      root.setAttribute('tabindex', '0');
-      root.setAttribute('role', 'region');
-      root.setAttribute('aria-label', 'Photos, scrolls sideways');
+  Array.prototype.forEach.call(document.querySelectorAll('.strip'), function (strip) {
+    if (reduceMotion) {
+      strip.setAttribute('tabindex', '0');
+      strip.setAttribute('role', 'region');
+      strip.setAttribute('aria-label', 'Photos, scrolls sideways');
+      return;
     }
-    if (isStrip && !reduceMotion) {
-      // hold a steady 30px per second whatever the list width (it shrinks with the viewport)
-      var list = root.querySelector('.strip__list');
-      var track = root.querySelector('.strip__track');
-      if (list && track && list.offsetWidth) track.style.animationDuration = Math.round(list.offsetWidth / 30) + 's';
-    }
-    if (toggle && !reduceMotion) {
-      toggle.hidden = false;
-      toggle.addEventListener('click', function () {
-        var paused = root.classList.toggle('is-paused');
-        var verb = paused ? 'Play' : 'Pause';
-        toggle.textContent = verb;
-        toggle.setAttribute('aria-label', verb + ' ' + (toggle.getAttribute('data-subject') || ''));
-      });
-    }
+    var list = strip.querySelector('.strip__list');
+    var track = strip.querySelector('.strip__track');
+    if (list && track && list.offsetWidth) track.style.animationDuration = Math.round(list.offsetWidth / 30) + 's';
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        root.classList.toggle('is-offscreen', !entries[0].isIntersecting);
-      }).observe(root);
+        strip.classList.toggle('is-offscreen', !entries[0].isIntersecting);
+      }).observe(strip);
     }
-  }
-  Array.prototype.forEach.call(document.querySelectorAll('.ticker'), function (el) { marquee(el, '.ticker__toggle'); });
-  Array.prototype.forEach.call(document.querySelectorAll('.strip'), function (el) { marquee(el, '.strip__toggle'); });
+  });
 
   /* ---------------------------------------------------------------------
      Reveal: sections fade up once as they enter view. Under reduced motion

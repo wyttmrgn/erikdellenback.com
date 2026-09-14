@@ -5,7 +5,7 @@ Personal website for Erik Dellenback. Plain HTML, CSS and one small script. No b
 ## What is here
 
 ```
-index.html                 homepage (hero, people grid, listen, story, logo row, footer)
+index.html                 homepage (hero video, photo strip, listen, story and closing call, logo row, footer)
 speaking.html              draft Speaking page (facts from Erik's CV; Erik to edit)
 consulting.html            draft Consulting page (Mercy Seeds; Erik to edit)
 404.html                   served by GitHub Pages for any missing URL
@@ -18,7 +18,9 @@ favicon.svg                browser tab icon
 robots.txt, sitemap.xml    search engine basics
 scripts/optimize-images.py turns a source photo into the sizes the pages expect
 docs/design-handoff/       the original design files this site was built from
-docs/ASSESSMENT.md         what to keep, change and add, with the reasoning
+docs/ASSESSMENT.md         the original design review (many of its items have since been decided)
+docs/palette.html          where the colours came from
+docs/LOGOS.md              the logo row: what is in, what is out, and why
 ```
 
 Raw photo originals and Erik's CV stay in the parent folder on Wyatt's machine. They are never committed.
@@ -28,11 +30,13 @@ Raw photo originals and Erik's CV stay in the parent folder on Wyatt's machine. 
 Each page is a plain HTML file with a banner comment above every section.
 
 - **Menu** (Erik's list): About, Crazy Experiences, Speaking, Consulting, Podcast, Contact. The same block appears near the top of every page; keep them identical when you change one. The Podcast item and the Listen section both carry `hidden` until real clips exist.
+- **Photo strip**: the seven photos are listed twice in `index.html` (the copy keeps the loop seamless); edit both. Captions sit on the photo.
+- **Closing call** at the end of the story: the bold line and the gold underlined link are in the `.cta` block.
 - **Copy**: edit the text directly. House rule: no em dashes anywhere.
-- **Logo row** (`#served`): each organization is a text name until its logo exists; see `docs/LOGOS.md`.
-- **Headings**: set in spaced serif caps by the `.h2` rule; write them in normal case in the HTML with no trailing period and CSS does the rest.
+- **Logo row** (`#served`): twelve logo files in `logos/`; see `docs/LOGOS.md` for what is in, what is out and how to add one.
+- **Headings**: Karla bold caps via the `.h2` rule; write them in normal case in the HTML with no trailing period and CSS does the rest.
 - **Footer social links**: they are commented out in the footer until Erik supplies real URLs.
-- **Colours and type**: the variables at the top of `css/site.css`.
+- **Colours and type**: the variables at the top of `css/site.css`. The palette came from the hero video (see `docs/palette.html`): navy ground, gold accent, a white panel for the logos.
 
 ### Adding or swapping a photo
 
