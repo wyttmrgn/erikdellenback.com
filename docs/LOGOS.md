@@ -54,3 +54,9 @@ Left out, with the files kept in the parent folder under "Logos (source and spar
 - Flagler College: added later the same day as the Flagler Saints shield, a proper transparent PNG.
 
 Notes on the files in use: the Florida Family Voice mark is the transition version with the "formerly" tagline cropped off; For Others was supplied as a white SVG and is recoloured to the site's ink; CarePortal, Auntie Anne's and University of Florida came on white and had the white removed.
+
+## Update (14 September 2026): Erik's own files
+
+Erik sent 24 files. Three replaced what was live: the Governor's Faith and Community Initiative seal (the mark of the office he built) in place of the plain state seal; the Toyota Gator Bowl mark (the sponsor during his years there) in place of TaxSlayer; and For Others stays as our vector, recoloured to the site's navy. The rest were duplicates, lower quality, or JPEGs with a fake checkerboard baked in (Eagle Scout, the Flagler academic mark).
+
+New material for the other pages, saved in the parent folder under "Logos (source and spares)/from Erik 2026-09-14": Joey's Custard, Planet Smoothie, the Fellowship Adventures mark, Florida Blue Key, illumiNations, the Tim Tebow Foundation Celebrity Golf Classic, and the two film posters (low resolution, thumbnail use only).
