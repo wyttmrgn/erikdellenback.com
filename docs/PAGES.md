@@ -24,7 +24,7 @@ The menu has six items. Two are sections of the homepage today (About, Crazy Exp
 3. **Boards, honors and callings, white panel.** Logos: The Church of Eleven22, Fellowship Adventures, illumiNations, Florida Blue Key, plus text for Eagle Scout and the Faith and Community Advisory Council.
 4. **The films, navy.** Run the Race and He Calls Me Daughter as two poster thumbnails with one line each (the posters Erik sent are small; fine at thumbnail size, and they are the studios' artwork, so they should link out).
 
-## Crazy Experiences (new page, when the photos exist)
+## Crazy Experiences (built 14 September 2026 from the Dropbox batch)
 
 The page Erik described in his own notes: photos with a line of text on hover. A masonry grid, each photo with its caption revealed on hover or tap: Bobby Bowden's last game, the python, the sailfish at Casa Vieja, the Auntie Anne's food truck on the beach, the Oval Office prayer, the Tebow Celebrity Golf Classic, Haiti, Night to Shine. Half of these need better originals from Erik; the homepage strip covers the best of what we have today.
 
@@ -48,3 +48,15 @@ The footer is the contact for now: the email, and the menu's Contact item lands 
 2. Consulting.
 3. About, once Erik sends a portrait; the timeline can be built before that.
 4. Crazy Experiences, once the photo originals arrive.
+
+## Crazy Experiences: captions that still need Erik
+
+Built with fourteen photos. These captions are placeholders until Erik gives a place and a year:
+
+- "In chambers" (the photo with the judge): who, where, when.
+- "2,552 baptized": which church and beach, and the year.
+- "Turkey season" and "Pheasant hunt": where, and who is in the pheasant photo.
+- "Pro-Family Legislative Network": the city and year.
+- "Sailfish, Casa Vieja Lodge": year.
+
+Left out on purpose: the "Vote No on 4" photo (a campaign image; Erik's call), the official headshot (saved for the About page), and the "FullSizeRender" items in the zip, which were Dropbox link files rather than photos.

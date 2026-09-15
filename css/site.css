@@ -315,7 +315,8 @@ main:focus { outline: none; }
 }
 .split__photo { aspect-ratio: 5 / 4; overflow: hidden; background: var(--media); }
 .split__photo img { width: 100%; height: 100%; object-fit: cover; }
-@media (max-width: 760px) { .split { grid-template-columns: 1fr; } .split__photo { max-width: 520px; } }
+@media (min-width: 901px) { .split__photo { aspect-ratio: 1 / 1; } }
+@media (max-width: 900px) { .split { grid-template-columns: 1fr; } .split__photo { max-width: 520px; } }
 .pull {
   margin: 0 0 18px;
   font-family: var(--serif); font-style: italic; font-weight: 300;
@@ -332,11 +333,40 @@ main:focus { outline: none; }
   font-size: clamp(17px, 1.7vw, 21px); letter-spacing: 0.05em; line-height: 1.2; color: var(--text);
 }
 .talks__line { margin: 8px 0 0; font-size: 16px; line-height: 1.7; color: var(--body); max-width: 680px; }
-.press { max-width: 760px; }
-.press .prose { font-size: 16px; line-height: 1.75; }
+@media (min-width: 901px) {
+  .talks li { display: grid; grid-template-columns: minmax(200px, 280px) minmax(0, 1fr); column-gap: clamp(24px, 4vw, 48px); align-items: baseline; }
+  .talks__line { margin: 0; max-width: none; }
+}
+.press { max-width: var(--text-col); }
+.press .prose { font-size: 17px; line-height: 1.8; }
 .press__contact { margin-top: 24px; font-size: 15px; color: var(--muted); }
-.press__contact a { color: var(--gold); }
+.press__contact a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .press__contact a:hover { color: var(--gold-strong); }
+
+/* Experiences gallery ---------------------------------------------------- */
+.gallery__hint { margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.gallery { columns: 3; column-gap: 12px; }
+@media (max-width: 1000px) { .gallery { columns: 2; } }
+@media (max-width: 560px) { .gallery { columns: 1; } }
+.tile { position: relative; margin: 0 0 12px; break-inside: avoid; background: var(--media); overflow: hidden; }
+.tile img { width: 100%; height: auto; display: block; transition: transform 600ms ease; }
+.tile:hover img, .tile:focus-within img, .tile:focus-visible img { transform: scale(1.03); }
+.tile__cap {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 56px 16px 14px;
+  background: linear-gradient(to top, rgba(6, 9, 14, 0.88) 0%, rgba(6, 9, 14, 0.7) 40%, rgba(6, 9, 14, 0) 100%);
+  color: #fff; opacity: 0; transform: translateY(8px);
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+.tile:hover .tile__cap, .tile:focus-within .tile__cap, .tile:focus-visible .tile__cap { opacity: 1; transform: none; }
+.tile__label { display: block; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-strong); }
+.tile__line { display: block; margin-top: 4px; font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.3; text-wrap: balance; }
+.tile:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+@media (hover: none) { .tile__cap { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .tile img, .tile__cap { transition: none; }
+  .tile:hover img, .tile:focus-within img { transform: none; }
+}
 
 /* Organizations (logo row on the light panel) ------------------------------ */
 .section--logos { text-align: center; }
@@ -351,7 +381,7 @@ main:focus { outline: none; }
 .logos__img--tall { height: clamp(56px, 6.2vw, 88px); max-width: 250px; }
 .logos__img--small { height: clamp(22px, 2.4vw, 34px); }
 
-/* Subpages (speaking, consulting, 404) ---------------------------------- */
+/* Subpages (consulting, 404) --------------------------------------------- */
 .page { max-width: var(--max); margin: 0 auto; }
 .page .section { padding-top: clamp(32px, 5vw, 64px); padding-bottom: clamp(32px, 5vw, 64px); }
 .page__cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 5vw, 80px); align-items: start; }
@@ -359,8 +389,6 @@ main:focus { outline: none; }
 .plain-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .plain-list li { padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; color: var(--body); }
 .plain-list li:first-child { border-top: 1px solid var(--rule); }
-.bio { max-width: 600px; }
-.bio p { font-size: 16px; line-height: 1.7; color: var(--body); }
 
 /* Footer ---------------------------------------------------------------- */
 .footer {
