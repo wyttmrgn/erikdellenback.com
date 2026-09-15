@@ -307,6 +307,37 @@ main:focus { outline: none; }
 .cta__stroke { position: absolute; left: -1%; bottom: 0; width: 102%; height: 10px; color: var(--gold); }
 .cta__link:hover .cta__stroke { color: var(--gold-strong); }
 
+/* Speaking page ---------------------------------------------------------- */
+.h2--xl { font-size: clamp(30px, 3.6vw, 44px); }
+.split {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(28px, 5vw, 72px); align-items: center;
+}
+.split__photo { aspect-ratio: 5 / 4; overflow: hidden; background: var(--media); }
+.split__photo img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 760px) { .split { grid-template-columns: 1fr; } .split__photo { max-width: 520px; } }
+.pull {
+  margin: 0 0 18px;
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: clamp(19px, 2vw, 24px); line-height: 1.45; color: var(--body); text-wrap: pretty;
+}
+.cta--left { text-align: left; margin-top: clamp(20px, 2.5vw, 32px); }
+.cta--left .cta__link { margin-top: 0; }
+.talks { list-style: none; margin: 0; padding: 0; max-width: 800px; }
+.talks li { padding: 20px 0; border-bottom: 1px solid var(--rule); }
+.talks li:first-child { border-top: 1px solid var(--rule); }
+.talks__title {
+  margin: 0;
+  font-family: var(--sans); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(17px, 1.7vw, 21px); letter-spacing: 0.05em; line-height: 1.2; color: var(--text);
+}
+.talks__line { margin: 8px 0 0; font-size: 16px; line-height: 1.7; color: var(--body); max-width: 680px; }
+.press { max-width: 760px; }
+.press .prose { font-size: 16px; line-height: 1.75; }
+.press__contact { margin-top: 24px; font-size: 15px; color: var(--muted); }
+.press__contact a { color: var(--gold); }
+.press__contact a:hover { color: var(--gold-strong); }
+
 /* Organizations (logo row on the light panel) ------------------------------ */
 .section--logos { text-align: center; }
 .section--logos .h2 { margin-bottom: clamp(20px, 2.5vw, 32px); }
