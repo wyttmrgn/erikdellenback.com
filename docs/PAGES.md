@@ -58,5 +58,8 @@ Built with fourteen photos. These captions are placeholders until Erik gives a p
 - "Turkey season" and "Pheasant hunt": where, and who is in the pheasant photo.
 - "Pro-Family Legislative Network": the city and year.
 - "Sailfish, Casa Vieja Lodge": year.
+- "Tim Tebow Foundation office": the visitor looks like Senator Marco Rubio; confirm before naming him.
+- "With Governor Rick Scott": the woman appears to be First Lady Ann Scott; confirm before naming her.
+- The opening quote is a placeholder line of Erik's ("I want to share a little bit about those experiences") until the Haiti and Night to Shine photos arrive; then restore "I believe each of us see, hear or experience moments, especially around the vulnerable and hurting, that never leave our mind and heart."
 
 Left out on purpose: the "Vote No on 4" photo (a campaign image; Erik's call), the official headshot (saved for the About page), and the "FullSizeRender" items in the zip, which were Dropbox link files rather than photos.
