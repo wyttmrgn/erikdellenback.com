@@ -11,10 +11,10 @@ The menu has six items. Two are sections of the homepage today (About, Crazy Exp
 3. **Rooms he has spoken in, white panel.** A logo row for this page only: Florida Family Voice, CarePortal Conference, The Church of Eleven22, Tim Tebow Foundation, the Florida Children and Youth Cabinet (state seal). All of these appear in the hero video, so they are true.
 4. **For programs and press, navy.** The third-person bio (already written), a "download headshot" link once a headshot exists, and the same gold link again.
 
-## Consulting (Mercy Seeds)
+## Consulting (built 15 September 2026)
 
 1. **Opening band, navy.** "MERCY SEEDS CONSULTING", the two paragraphs already drafted, gold link "Start a conversation".
-2. **What he has built, run and owned, white panel.** A logo row instead of the current text list: Tim Tebow Foundation, For Others, Florida Family Voice, the Governor's Faith and Community Initiative seal, Fellowship Adventures, Auntie Anne's, Planet Smoothie, Joey's Custard. The three restaurants are the point here: he has run for-profit businesses, not only ministries. This is where those logos earn their place.
+2. **What he has built, run and owned, white panel.** A logo row instead of the current text list: Tim Tebow Foundation, For Others, Florida Family Voice, the Governor's Faith and Community Initiative seal, Auntie Anne's, Planet Smoothie, Joey's Custard. Fellowship Adventures is a board seat, so it waits for the About page. The three restaurants are the point here: he has run for-profit businesses, not only ministries. This is where those logos earn their place.
 3. **Who it is for, slate.** Three short columns: individuals and families of influence, ministries and nonprofits, businesses. Needs a sentence each from Erik.
 
 ## About (new page; the homepage keeps the short story)
@@ -45,9 +45,9 @@ The footer is the contact for now: the email, and the menu's Contact item lands 
 ## Order of work
 
 1. Speaking (the closing call on the homepage already points at it).
-2. Consulting.
+2. Consulting. Built.
 3. About, once Erik sends a portrait; the timeline can be built before that.
-4. Crazy Experiences, once the photo originals arrive.
+4. Crazy Experiences. Built; captions pending Erik.
 
 ## Crazy Experiences: captions that still need Erik
 

@@ -60,3 +60,7 @@ Notes on the files in use: the Florida Family Voice mark is the transition versi
 Erik sent 24 files. Three replaced what was live: the Governor's Faith and Community Initiative seal (the mark of the office he built) in place of the plain state seal; the Toyota Gator Bowl mark (the sponsor during his years there) in place of TaxSlayer; and For Others stays as our vector, recoloured to the site's navy. The rest were duplicates, lower quality, or JPEGs with a fake checkerboard baked in (Eagle Scout, the Flagler academic mark).
 
 New material for the other pages, saved in the parent folder under "Logos (source and spares)/from Erik 2026-09-14": Joey's Custard, Planet Smoothie, the Fellowship Adventures mark, Florida Blue Key, illumiNations, the Tim Tebow Foundation Celebrity Golf Classic, and the two film posters (low resolution, thumbnail use only).
+
+## Update (15 September 2026): the Consulting page
+
+Three more files are now in `logos/`, processed the same way (alpha trimmed, 200 px tall): `planet-smoothie.png` (the wordmark cropped out of its white square), `joeys-custard.png`, and `fellowship-adventures.png`. The Consulting page's "What he's built, run and owned" row uses Planet Smoothie and Joey's Custard alongside five homepage logos. Fellowship Adventures is a board seat in the CV, not something he ran, so its file waits for the About page's boards row. The homepage row is unchanged at twelve; the Speaking page reuses five of them.

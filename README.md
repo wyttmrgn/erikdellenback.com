@@ -6,8 +6,9 @@ Personal website for Erik Dellenback. Plain HTML, CSS and one small script. No b
 
 ```
 index.html                 homepage (hero video, photo strip, listen, story and closing call, logo row, footer)
-speaking.html              draft Speaking page (facts from Erik's CV; Erik to edit)
-consulting.html            draft Consulting page (Mercy Seeds; Erik to edit)
+speaking.html              Speaking page (three talk lines still need Erik)
+consulting.html            Consulting page (Mercy Seeds; copy drafted from Erik's CV, Erik to edit)
+experiences.html           Crazy Experiences photo gallery (captions pending Erik)
 404.html                   served by GitHub Pages for any missing URL
 css/site.css               all styles; design tokens are the CSS variables at the top
 js/site.js                 the menu panel and the hero video logic
@@ -21,6 +22,10 @@ docs/design-handoff/       the original design files this site was built from
 docs/ASSESSMENT.md         the original design review (many of its items have since been decided)
 docs/palette.html          where the colours came from
 docs/LOGOS.md              the logo row: what is in, what is out, and why
+docs/PAGES.md              the layout plan for every page the menu points to
+docs/FOOTAGE-PERMISSIONS.md where the hero video clips came from, and the permission emails
+docs/FOR-ERIK.md           THE running list of everything still needed from Erik, written as a
+                           copy-and-paste email. Update it whenever a question is answered or added.
 ```
 
 Raw photo originals and Erik's CV stay in the parent folder on Wyatt's machine. They are never committed.
@@ -105,7 +110,7 @@ GitHub Pages on a free account requires the repository to be public. Nothing pri
 
 ## Pointing the domain at the site (GoDaddy)
 
-`erikdellenback.com` is the only domain for this site. Erik's other domains (dellenback.com, hatnhoodie.com) are not part of it and nothing needs to be done with them.
+`erikdellenback.com` is the only domain for this site. Erik's other domains are not part of it and nothing needs to be done with them.
 
 Until DNS is in place the site is at https://wyttmrgn.github.io/erikdellenback.com/ for previews. Do not add the `CNAME` file before step 2 below is done: as soon as it exists, GitHub redirects the preview address to erikdellenback.com, which will not resolve yet.
 
@@ -144,7 +149,7 @@ GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik
 ## Launch checklist
 
 1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
-2. Content blockers: hero still or video, real social URLs or none, Erik's sign-off on the designer-written lines (see `docs/ASSESSMENT.md`).
+2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the Charlie Kirk caption, Erik's sign-off on the designer-written lines, captions, photos).
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.
 5. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.

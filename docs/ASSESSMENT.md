@@ -63,7 +63,7 @@ Net: the design is quieter, less commercial and more editorial than six of the s
 
 - **Crazy Experiences gallery** (Erik's own idea, and now a menu item pointing at the grid). The page he actually described: Bowden's last game, the ACC Championship, FSU v Alabama, Night to Shine, CURE Hospital, Haiti, sailfish at Casa Vieja, Fellowship Adventures, the food truck. Build it as its own page when the photos exist; several of the supplied files are too small (see photo plan).
 - **Speaking page.** Drafted in this repo from the CV and his key phrases; Erik edits. Five of seven reference sites have one. Jon Acuff's two-register pattern is the one to copy: a first-person paragraph, then a clearly labeled third-person bio event planners can paste into a program.
-- **Consulting page.** Drafted from the Mercy Seeds entry in the CV. Hat n Hoodie is a separate consulting company Erik is starting and is deliberately kept off this site.
+- **Consulting page.** Drafted from the Mercy Seeds entry in the CV. Erik's other consulting company is deliberately kept off this site.
 - **A downloadable headshot** on the Speaking page, once a current one exists. Every event and press mention starts with "can you send a bio and photo".
 - **Night to Shine, by name, on the homepage.** In the Tebow work row at minimum; ideally a photo.
 - **Dates on the work list** (above).

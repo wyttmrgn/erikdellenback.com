@@ -385,14 +385,20 @@ main:focus { outline: none; }
 .logos__img--tall { height: clamp(56px, 6.2vw, 88px); max-width: 250px; }
 .logos__img--small { height: clamp(22px, 2.4vw, 34px); }
 
-/* Subpages (consulting, 404) --------------------------------------------- */
+/* Consulting: who it is for ---------------------------------------------- */
+.who { display: grid; gap: clamp(24px, 4vw, 48px); max-width: 1000px; }
+@media (min-width: 901px) { .who { grid-template-columns: repeat(3, 1fr); } }
+.who + .press__contact { margin-top: clamp(28px, 3.5vw, 44px); }
+.who__title {
+  margin: 0 0 10px; padding-top: 16px; border-top: 1px solid var(--rule);
+  font-family: var(--sans); font-weight: 700; text-transform: uppercase;
+  font-size: clamp(16px, 1.5vw, 19px); letter-spacing: 0.05em; line-height: 1.25; color: var(--text);
+}
+.who__line { margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); }
+
+/* Subpages (404) ---------------------------------------------------------- */
 .page { max-width: var(--max); margin: 0 auto; }
 .page .section { padding-top: clamp(32px, 5vw, 64px); padding-bottom: clamp(32px, 5vw, 64px); }
-.page__cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 5vw, 80px); align-items: start; }
-.page__col { max-width: 560px; }
-.plain-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-.plain-list li { padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 16px; color: var(--body); }
-.plain-list li:first-child { border-top: 1px solid var(--rule); }
 
 /* Footer ---------------------------------------------------------------- */
 .footer {
