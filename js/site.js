@@ -96,7 +96,7 @@
       entries.forEach(function (entry) {
         if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
     Array.prototype.forEach.call(reveals, function (el) { io.observe(el); });
   } else {
     Array.prototype.forEach.call(reveals, function (el) { el.classList.add('is-visible'); });
@@ -154,6 +154,52 @@
       }
 
       pick();
+    }
+  }
+
+  // Contact form: preselect the topic from ?topic=, set the subject, and
+  // send with fetch so the visitor stays on the page. Without JS the form
+  // still posts normally and Formspree shows its own thank-you page.
+  var form = document.querySelector('.form[data-form]');
+  if (form) {
+    var status = form.querySelector('.form__status');
+    var topic = form.querySelector('[name="topic"]');
+    var subject = form.querySelector('[name="_subject"]');
+    var submit = form.querySelector('.form__submit');
+    if (!submit || !status) return;
+    try {
+      var wanted = (window.location.search.match(/[?&]topic=([^&]+)/) || [])[1];
+      if (wanted && topic) {
+        wanted = decodeURIComponent(wanted).toLowerCase();
+        Array.prototype.forEach.call(topic.options, function (o) { if (o.value.toLowerCase() === wanted) topic.value = o.value; });
+      }
+    } catch (e) {}
+    function setSubject() { if (subject && topic) subject.value = 'Website: ' + topic.value; }
+    if (topic) topic.addEventListener('change', setSubject);
+    setSubject();
+    if ((form.getAttribute('action') || '').indexOf('FORM_ID') !== -1) {
+      submit.disabled = true;
+      Array.prototype.forEach.call(form.querySelectorAll('input, select, textarea'), function (el) { el.disabled = true; });
+      status.textContent = 'This form is being connected. Please check back shortly.';
+      form.insertBefore(status, form.firstChild);
+    } else if (window.fetch && window.FormData) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity || form.checkValidity()) {
+          submit.disabled = true; status.className = 'form__status'; status.textContent = 'Sending…';
+          fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+            .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(function () {
+              Array.prototype.forEach.call(form.querySelectorAll('.form__row, .form__submit'), function (el) { el.hidden = true; });
+              status.className = 'form__status form__status--ok';
+              status.textContent = 'Thank you. Your message is on its way to Erik.';
+            })
+            .catch(function () {
+              submit.disabled = false;
+              status.textContent = 'Something went wrong and the message did not send. Please try again in a minute.';
+            });
+        } else if (form.reportValidity) form.reportValidity();
+      });
     }
   }
 })();

@@ -64,3 +64,7 @@ New material for the other pages, saved in the parent folder under "Logos (sourc
 ## Update (15 September 2026): the Consulting page
 
 Three more files are now in `logos/`, processed the same way (alpha trimmed, 200 px tall): `planet-smoothie.png` (the wordmark cropped out of its white square), `joeys-custard.png`, and `fellowship-adventures.png`. The Consulting page's "What he's built, run and owned" row uses Planet Smoothie and Joey's Custard alongside five homepage logos. Fellowship Adventures is a board seat in the CV, not something he ran, so its file waits for the About page's boards row. The homepage row is unchanged at twelve; the Speaking page reuses five of them.
+
+## Update (17 September 2026): About and In good company
+
+`florida-blue-key.png` and `illuminations.png` are now in `logos/` for the About page's "Boards, honors and callings" row, alongside Eleven22 and Fellowship Adventures. `good-company.html` reuses the homepage logos on white tiles. The homepage logos are links into that page and lift slightly on hover with a one-line role underneath.

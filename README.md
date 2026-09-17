@@ -9,16 +9,18 @@ index.html                 homepage (hero video, photo strip, listen, story and 
 speaking.html              Speaking page (three talk lines still need Erik)
 consulting.html            Consulting page (Hat n Hoodie Consulting; copy drafted from Erik's CV, Erik to edit)
 experiences.html           Crazy Experiences photo gallery (captions pending Erik)
+about.html                 About: headshot, Things I love, the career timeline, boards and honors, films
+good-company.html          In good company: every logo on the homepage, with what Erik did there
+contact.html               the contact form (Formspree; see below). No email address appears anywhere on the site
 404.html                   served by GitHub Pages for any missing URL
 css/site.css               all styles; design tokens are the CSS variables at the top
-js/site.js                 the menu panel and the hero video logic
+js/site.js                 the menu panel, photo strip speed, reveal, hero video and the contact form
 images/                    responsive WebP + JPEG renditions from scripts/optimize-images.py
 media/                     hero video files go here (see below); empty until then
 favicon.svg                browser tab icon
 .nojekyll                  tells GitHub Pages to serve files as-is
 robots.txt, sitemap.xml    search engine basics
 scripts/optimize-images.py turns a source photo into the sizes the pages expect
-docs/design-handoff/       the original design files this site was built from
 docs/ASSESSMENT.md         the original design review (many of its items have since been decided)
 docs/palette.html          where the colours came from
 docs/LOGOS.md              the logo row: what is in, what is out, and why
@@ -28,7 +30,7 @@ docs/FOR-ERIK.md           THE running list of everything still needed from Erik
                            copy-and-paste email. Update it whenever a question is answered or added.
 ```
 
-Raw photo originals and Erik's CV stay in the parent folder on Wyatt's machine. They are never committed.
+Raw photo originals, Erik's CV and the original design handoff (it carries his email address) stay in the parent folder on Wyatt's machine. They are never committed.
 
 ## Editing
 
@@ -38,7 +40,7 @@ Each page is a plain HTML file with a banner comment above every section.
 - **Photo strip**: the seven photos are listed twice in `index.html` (the copy keeps the loop seamless); edit both. Captions sit on the photo. It has no on-page stop: it only stops under the OS reduced-motion setting and while scrolled out of view (a known WCAG 2.2.2 gap accepted by the client).
 - **Closing call** at the end of the story: the bold line and the gold underlined link are in the `.cta` block.
 - **Copy**: edit the text directly. House rule: no em dashes anywhere.
-- **Logo row** (`#served`): twelve logo files in `logos/`; see `docs/LOGOS.md` for what is in, what is out and how to add one.
+- **Logo row** (`#served`): 17 logo files in `logos/`; see `docs/LOGOS.md` for what is in, what is out and how to add one.
 - **Headings**: Karla bold caps via the `.h2` rule; write them in normal case in the HTML with no trailing period and CSS does the rest.
 - **Footer social links**: they are commented out in the footer until Erik supplies real URLs.
 - **Colours and type**: the variables at the top of `css/site.css`. The palette came from the hero video (see `docs/palette.html`): navy ground, gold accent, a white panel for the logos.
@@ -85,6 +87,20 @@ python -m http.server 8000
 ```
 
 Open http://localhost:8000.
+
+## The contact form (no email address on the site)
+
+Erik asked that the site never show an email address. Every "email Erik" link now goes to `contact.html`, which posts to [Formspree](https://formspree.io). The recipient address lives in the Formspree account, not in the HTML, so it is never exposed. The page's JS sends the form with `fetch` so the visitor stays on the page; without JS the form still posts and Formspree shows its own pages (its reCAPTCHA check first, if that is left on, then its thank-you page). A hidden `_gotcha` field catches simple bots.
+
+To connect it (one time, about five minutes):
+
+1. Sign up at formspree.io (Wyatt's account) and create a form. Set the recipient to the inbox Erik chooses. Formspree emails that inbox a confirmation link; Erik clicks it once.
+2. Copy the form id from the endpoint it gives you (`https://formspree.io/f/abcdwxyz`).
+3. In `contact.html`, replace `FORM_ID` in the form's `action` with that id. Until then the page (with JavaScript on) shows "This form is being connected" and disables the fields and the Send button.
+   In the form's settings on formspree.io, look at Spam protection: leave reCAPTCHA on if you like; it only appears to visitors without JavaScript, since the site's own submit path posts in the background and the honeypot plus Formspree's filtering cover it.
+4. Push. Send a test message from the live page and check it arrives with the subject "Website: Speaking" (the subject follows the topic the visitor picks). Test once more with JavaScript off to see Formspree's own pages.
+
+The free plan allows 50 messages a month, which is plenty; the paid plan adds a custom thank-you page and file uploads if they are ever wanted. Links elsewhere on the site preselect the topic with `contact.html?topic=speaking`, `consulting` or `press`.
 
 ## Deploying
 
@@ -150,6 +166,7 @@ GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik
 
 1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
 2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the Charlie Kirk caption, Erik's sign-off on the designer-written lines, captions, photos).
+   Also: create the Formspree form and replace `FORM_ID` in `contact.html` (see "The contact form" above).
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.
 5. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.

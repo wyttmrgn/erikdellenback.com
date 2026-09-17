@@ -6,3 +6,5 @@ __pycache__/
 # Raw originals and private documents stay in the parent folder, never here.
 originals/
 .claude/
+# The design handoff carries Erik's email address; the originals are in the parent folder zip.
+docs/design-handoff/
