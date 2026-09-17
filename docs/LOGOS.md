@@ -32,7 +32,7 @@ Most organizations keep a press or brand page with downloadable logos. If not, a
 | ACC Football Championship | Founding director | Ask the ACC; they may prefer the conference mark |
 | CarePortal | Statewide partner, conference speaker | CarePortal brand page |
 | Fellowship Adventures | Chairman | Erik has the files |
-| Mercy Seeds Consulting | Founder | Erik has the files |
+| Hat n Hoodie Consulting (was Mercy Seeds) | Founder | no logo received yet; would sit on the Consulting page opener |
 | Run the Race | Executive producer | Distributor press kit |
 | He Calls Me Daughter | Executive producer | Production company |
 | Auntie Anne's | Franchisee | Franchise brand portal (ask) |

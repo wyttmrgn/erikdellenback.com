@@ -11,9 +11,9 @@ The menu has six items. Two are sections of the homepage today (About, Crazy Exp
 3. **Rooms he has spoken in, white panel.** A logo row for this page only: Florida Family Voice, CarePortal Conference, The Church of Eleven22, Tim Tebow Foundation, the Florida Children and Youth Cabinet (state seal). All of these appear in the hero video, so they are true.
 4. **For programs and press, navy.** The third-person bio (already written), a "download headshot" link once a headshot exists, and the same gold link again.
 
-## Consulting (built 15 September 2026)
+## Consulting (built 15 September 2026; renamed Hat n Hoodie Consulting on 17 September at Erik's request)
 
-1. **Opening band, navy.** "MERCY SEEDS CONSULTING", the two paragraphs already drafted, gold link "Start a conversation".
+1. **Opening band, navy.** "HAT N HOODIE CONSULTING" (was Mercy Seeds), the two paragraphs already drafted, gold link "Start a conversation".
 2. **What he has built, run and owned, white panel.** A logo row instead of the current text list: Tim Tebow Foundation, For Others, Florida Family Voice, the Governor's Faith and Community Initiative seal, Auntie Anne's, Planet Smoothie, Joey's Custard. Fellowship Adventures is a board seat, so it waits for the About page. The three restaurants are the point here: he has run for-profit businesses, not only ministries. This is where those logos earn their place.
 3. **Who it is for, slate.** Three short columns: individuals and families of influence, ministries and nonprofits, businesses. Needs a sentence each from Erik.
 

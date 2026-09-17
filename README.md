@@ -7,7 +7,7 @@ Personal website for Erik Dellenback. Plain HTML, CSS and one small script. No b
 ```
 index.html                 homepage (hero video, photo strip, listen, story and closing call, logo row, footer)
 speaking.html              Speaking page (three talk lines still need Erik)
-consulting.html            Consulting page (Mercy Seeds; copy drafted from Erik's CV, Erik to edit)
+consulting.html            Consulting page (Hat n Hoodie Consulting; copy drafted from Erik's CV, Erik to edit)
 experiences.html           Crazy Experiences photo gallery (captions pending Erik)
 404.html                   served by GitHub Pages for any missing URL
 css/site.css               all styles; design tokens are the CSS variables at the top

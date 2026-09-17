@@ -36,7 +36,7 @@ I wrote these (except "Crazy experiences", which is your own name for it). They 
 - The last line of your story reads "Galatians – boast in Christ", straight from your notes. Keep it as is, give me the verse you mean (Galatians 6:14?), or take it out.
 - The line under it, above the "Invite Erik to speak" link: "Stand in awe of God and help encourage others" (yours, from your notes; confirm you want it there)
 - On the Speaking page: everything except your own quotes, especially the bio under "For programs and press". Organizers will paste it into programs word for word. The numbers are from your CV; confirm they are current and that you are fine with your city in it.
-- On the Consulting page: everything, since it was written from your CV. Especially the three short "who it's for" lines.
+- On the Consulting page: everything, since it was written from your CV. Especially the three short "who it's for" lines. It now says Hat n Hoodie Consulting, as you asked: confirm the exact spelling and capitalization you use, and send the logo if there is one.
 
 
 4. THE CHARLIE KIRK PHOTO
