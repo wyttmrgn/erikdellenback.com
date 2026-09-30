@@ -332,6 +332,10 @@ main:focus { outline: none; }
   .talks__line { margin: 0; max-width: none; }
 }
 .press { max-width: var(--text-col); }
+.press--center { margin-left: auto; margin-right: auto; }
+.press--center .h2 { text-align: center; }
+.press--center-head .pull, .press--center-head .press__contact { text-align: center; }
+.press--center-head .split__logo { margin-left: auto; margin-right: auto; }
 .press .prose { font-size: 17px; line-height: 1.8; }
 .press__contact { margin-top: 24px; font-size: 15px; color: var(--muted); }
 .press__contact a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
@@ -415,14 +419,16 @@ main:focus { outline: none; }
 .cta--on-light .cta__link:hover .cta__stroke { color: var(--navy); }
 
 /* Contact form ------------------------------------------------------------ */
-.form { max-width: 560px; margin-top: clamp(20px, 2.5vw, 32px); color-scheme: dark; }
+.form { max-width: 560px; margin: clamp(20px, 2.5vw, 32px) auto 0; color-scheme: dark; }
 .form__row { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
 .form label { font-family: var(--sans); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
 .form input, .form select, .form textarea {
   width: 100%; box-sizing: border-box; padding: 12px 14px; margin: 0;
   font: inherit; font-size: 16px; line-height: 1.4; color: var(--text);
-  background: rgba(255, 255, 255, 0.04); border: 1px solid var(--rule); border-radius: 0;
+  background: rgba(255, 255, 255, 0.09); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 0;
 }
+.form select { color-scheme: dark; }
+.form select option { background: var(--slate); color: var(--text); }
 .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--gold); outline-offset: 2px; border-color: var(--gold); }
 .form textarea { min-height: 160px; resize: vertical; }
 .form .form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; padding: 0; border: 0; opacity: 0; }
@@ -435,19 +441,24 @@ main:focus { outline: none; }
 .form__submit:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .form__submit[disabled] { opacity: 0.5; cursor: default; background: transparent; color: var(--gold); }
 .form__status { margin: 16px 0 0; font-size: 15px; line-height: 1.6; color: var(--body); min-height: 1.6em; }
+.form > .form__status:first-child { margin: 0 0 18px; color: var(--gold-strong); }
 .form__status--ok { color: var(--gold-strong); }
 
 /* About ------------------------------------------------------------------- */
 .split__photo.split__photo--portrait { aspect-ratio: 3 / 4; }
-.loves { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-.love { background: var(--navy); overflow: hidden; }
-.love__photo { aspect-ratio: 4 / 3; background: var(--media); }
+.loves { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 1000px) { .loves { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .loves { grid-template-columns: 1fr; } }
+.love { display: flex; flex-direction: column; background: var(--navy); overflow: hidden; }
+.love__photo { aspect-ratio: 1 / 1; min-height: 0; flex: 0 0 auto; overflow: hidden; background: var(--media); }
 .love__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .love__body { padding: 18px 20px 22px; }
-.love--text { align-self: start; }
-.love--text .love__body { padding-top: 26px; border-top: 3px solid var(--gold); }
+.love--text { justify-content: center; border-top: 3px solid var(--gold); background: linear-gradient(180deg, rgba(209, 168, 111, 0.1), rgba(209, 168, 111, 0) 55%), var(--navy); }
+.love--text .love__body { padding: 30px 24px; }
 .love__title { margin: 0 0 8px; font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 15px; color: var(--text); }
 .love__line { margin: 0; font-size: 15px; line-height: 1.65; color: var(--body); }
+.love--text .love__title { font-size: 17px; margin-bottom: 12px; }
+.love--text .love__line { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--text); text-wrap: pretty; }
 
 /* In good company --------------------------------------------------------- */
 .orgs { list-style: none; margin: 0; padding: 0; }
