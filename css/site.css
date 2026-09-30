@@ -198,10 +198,6 @@ main:focus { outline: none; }
 }
 .menu__list a:hover, .menu__list a[aria-current="page"] { color: var(--gold); }
 
-  margin-top: 40px;
-  display: flex; flex-direction: column; gap: 10px;
-  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
-}
 
 /* Hero ------------------------------------------------------------------ */
 .hero {
