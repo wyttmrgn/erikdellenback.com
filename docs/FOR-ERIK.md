@@ -50,7 +50,8 @@ The video at the top uses clips from CarePortal, the Patros men's series, the Ti
 - TD Autographs and TD Speaking: listed by name only under Businesses owned. Your CV's line about the four private companies you built for Tim Tebow sits on the Tebow Foundation entry. Give me a line for each, or tell me to take them off.
 - The Church card on the About page: your note had "(also?)". It now reads "but I also love the whole capital C Church around the world". Keep the "also", or drop it?
 - The homepage photo strip keeps two photos that are not in your sixteen: praying at the podium with the Governor and First Lady, and the Tebow CURE Hospital. Keep them there, or swap them?
-- Haiti United is listed under Projects with only your word "Collaboration" under it. One line on what it is, please.
+- Haiti United is listed under Projects with only your word "Collaboration" under it. One line on what it is, please. I used the logo from haiti-united.com, where you and Elizabeth are listed as hosts; say if they would rather it not be there.
+- TD Speaking has no logo anywhere online, so it is text only. TD Autographs uses the mark from tdautographs.com.
 - Your full bio says 2,200 faith institutions and 5,600 nonprofit partners; your CV says 2,000 and 6,000. The site now uses the bio's numbers everywhere. Confirm.
 - Your CV says you are Florida's liaison to the "Florida Policy Alliance" of 38 state policy councils. Is that the Family Policy Alliance? I left the name out until you say.
 

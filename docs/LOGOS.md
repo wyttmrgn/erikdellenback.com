@@ -72,3 +72,7 @@ Three more files are now in `logos/`, processed the same way (alpha trimmed, 200
 ## Update (30 September 2026): Erik's logo list
 
 Erik sent his Hat n Hoodie Consulting mark (black line art on transparent): `hat-n-hoodie.png` for white panels and `hat-n-hoodie-light.png` (recoloured to the site's text colour) for the navy opener on the Consulting page. He asked for a different ACC Championship logo, so the round blue badge was replaced by the Dr Pepper ACC Championship shield from his own files (white removed); the old badge is in the parent folder. The homepage row is now three groups in his order; the food truck and Haiti United have no logo and are text chips; the two film posters stand in as logos under Projects. illumiNations is not on his list and is no longer shown.
+
+## Update (30 September 2026, later): logos for the Career entries that had none
+
+Found on the organizations' own sites (sources in the parent folder, "Logos (source and spares)/found 2026-09-30/SOURCES.txt"): Haiti United (black mark, also on the homepage Projects row now), Florida Foundation for Correctional Excellence, the Florida Faith and Community Advisory Council mark, TD Autographs (a 100 px white mark from tdautographs.com, recoloured navy for the white tile), and an Eagle Scout badge (old clip art on white, white removed; Scouting America's official PNG sits behind a page a script cannot fetch, so a better one can be saved by hand). TD Speaking has no logo anywhere online and stays text only.
