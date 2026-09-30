@@ -57,7 +57,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     Photo strip: holds a steady 30px per second whatever the list width,
+     Photo strip: holds a steady 45px per second whatever the list width,
      and stops animating while it is scrolled out of view. Under reduced
      motion it is a static row, reachable and scrollable from the keyboard.
      ------------------------------------------------------------------- */
@@ -74,7 +74,7 @@
     function setSpeed() {
       // the images carry width/height so the list measures right before they load;
       // re-measure after load and on resize anyway
-      if (list && track && list.offsetWidth > 200) track.style.animationDuration = Math.round(list.offsetWidth / 30) + 's';
+      if (list && track && list.offsetWidth > 200) track.style.animationDuration = Math.round(list.offsetWidth / 45) + 's';
     }
     setSpeed();
     window.addEventListener('load', setSpeed);
@@ -161,12 +161,11 @@
   // send with fetch so the visitor stays on the page. Without JS the form
   // still posts normally and Formspree shows its own thank-you page.
   var form = document.querySelector('.form[data-form]');
-  if (form) {
+  if (form && form.querySelector('.form__submit') && form.querySelector('.form__status')) {
     var status = form.querySelector('.form__status');
     var topic = form.querySelector('[name="topic"]');
     var subject = form.querySelector('[name="_subject"]');
     var submit = form.querySelector('.form__submit');
-    if (!submit || !status) return;
     try {
       var wanted = (window.location.search.match(/[?&]topic=([^&]+)/) || [])[1];
       if (wanted && topic) {
@@ -179,7 +178,6 @@
     setSubject();
     if ((form.getAttribute('action') || '').indexOf('FORM_ID') !== -1) {
       submit.disabled = true;
-      Array.prototype.forEach.call(form.querySelectorAll('input, select, textarea'), function (el) { el.disabled = true; });
       status.textContent = 'This form is being connected. Please check back shortly.';
       form.insertBefore(status, form.firstChild);
     } else if (window.fetch && window.FormData) {
@@ -201,5 +199,23 @@
         } else if (form.reportValidity) form.reportValidity();
       });
     }
+  }
+
+  // Photo lightbox: any .tile__link opens its full photo in the <dialog>.
+  var box = document.querySelector('.lightbox');
+  if (box && typeof box.showModal === 'function') {
+    var boxImg = box.querySelector('.lightbox__img'); var boxCap = box.querySelector('.lightbox__cap');
+    Array.prototype.forEach.call(document.querySelectorAll('.tile__link'), function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var img = link.querySelector('img');
+        boxImg.src = link.getAttribute('href'); boxImg.alt = img ? img.alt : '';
+        boxCap.textContent = link.getAttribute('data-caption') || '';
+        if (img && img.naturalWidth) boxImg.style.aspectRatio = img.naturalWidth + ' / ' + img.naturalHeight;
+        box.showModal();
+      });
+    });
+    box.addEventListener('click', function (e) { if (e.target === box || e.target.hasAttribute('data-lightbox-close')) box.close(); });
+    box.addEventListener('close', function () { boxImg.removeAttribute('src'); });
   }
 })();

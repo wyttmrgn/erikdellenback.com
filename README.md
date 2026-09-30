@@ -6,15 +6,15 @@ Personal website for Erik Dellenback. Plain HTML, CSS and one small script. No b
 
 ```
 index.html                 homepage (hero video, photo strip, listen, story and closing call, logo row, footer)
-speaking.html              Speaking page (three talk lines still need Erik)
-consulting.html            Consulting page (Hat n Hoodie Consulting; copy drafted from Erik's CV, Erik to edit)
-experiences.html           Crazy Experiences photo gallery (captions pending Erik)
-about.html                 About: headshot, Things I love, the career timeline, boards and honors, films
-good-company.html          In good company: every logo on the homepage, with what Erik did there
+speaking.html              Speaking: Erik's invitation, his speaking topics, link to the form
+consulting.html            Consulting: Hat n Hoodie Consulting, Erik's copy and logo, who it is for
+about.html                 About: headshot, Erik's short bio, Some things I love, his full bio (downloadable headshot)
+career.html                Career and experiences: clients and employers, businesses owned, projects, boards; every homepage logo links here
+moments.html               Impactful moments: the photo gallery, hover captions, click to enlarge
 contact.html               the contact form (Formspree; see below). No email address appears anywhere on the site
 404.html                   served by GitHub Pages for any missing URL
 css/site.css               all styles; design tokens are the CSS variables at the top
-js/site.js                 the menu panel, photo strip speed, reveal, hero video and the contact form
+js/site.js                 the menu panel, photo strip speed, reveal, hero video, contact form and the photo lightbox
 images/                    responsive WebP + JPEG renditions from scripts/optimize-images.py
 media/                     hero video files go here (see below); empty until then
 favicon.svg                browser tab icon
@@ -36,11 +36,11 @@ Raw photo originals, Erik's CV and the original design handoff (it carries his e
 
 Each page is a plain HTML file with a banner comment above every section.
 
-- **Menu** (Erik's list): About, Crazy Experiences, Speaking, Consulting, Podcast, Contact. The same block appears near the top of every page; keep them identical when you change one. The Podcast item and the Listen section both carry `hidden` until real clips exist.
+- **Menu** (Erik's list, 30 September 2026): About, Career, Impactful Moments, Speaking, Consulting, Contact. There is no Podcast item; the homepage Listen section (`#listen`) stays `hidden` until real clips exist. The same block appears near the top of every page; keep them identical when you change one. The Podcast item and the Listen section both carry `hidden` until real clips exist.
 - **Photo strip**: the seven photos are listed twice in `index.html` (the copy keeps the loop seamless); edit both. Captions sit on the photo. It has no on-page stop: it only stops under the OS reduced-motion setting and while scrolled out of view (a known WCAG 2.2.2 gap accepted by the client).
 - **Closing call** at the end of the story: the bold line and the gold underlined link are in the `.cta` block.
 - **Copy**: edit the text directly. House rule: no em dashes anywhere.
-- **Logo row** (`#served`): 17 logo files in `logos/`; see `docs/LOGOS.md` for what is in, what is out and how to add one.
+- **Logo row** (`#served`): 19 logo files in `logos/`, shown in three groups (clients and employers, businesses owned, projects); see `docs/LOGOS.md` for what is in, what is out and how to add one.
 - **Headings**: Karla bold caps via the `.h2` rule; write them in normal case in the HTML with no trailing period and CSS does the rest.
 - **Footer social links**: they are commented out in the footer until Erik supplies real URLs.
 - **Colours and type**: the variables at the top of `css/site.css`. The palette came from the hero video (see `docs/palette.html`): navy ground, gold accent, a white panel for the logos.
@@ -96,7 +96,7 @@ To connect it (one time, about five minutes):
 
 1. Sign up at formspree.io (Wyatt's account) and create a form. Set the recipient to the inbox Erik chooses. Formspree emails that inbox a confirmation link; Erik clicks it once.
 2. Copy the form id from the endpoint it gives you (`https://formspree.io/f/abcdwxyz`).
-3. In `contact.html`, replace `FORM_ID` in the form's `action` with that id. Until then the page (with JavaScript on) shows "This form is being connected" and disables the fields and the Send button.
+3. In `contact.html`, replace `FORM_ID` in the form's `action` with that id. Until then the page (with JavaScript on) shows "This form is being connected" at the top of the form and disables only the Send button; the fields stay usable.
    In the form's settings on formspree.io, look at Spam protection: leave reCAPTCHA on if you like; it only appears to visitors without JavaScript, since the site's own submit path posts in the background and the honeypot plus Formspree's filtering cover it.
 4. Push. Send a test message from the live page and check it arrives with the subject "Website: Speaking" (the subject follows the topic the visitor picks). Test once more with JavaScript off to see Formspree's own pages.
 
@@ -165,7 +165,7 @@ GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik
 ## Launch checklist
 
 1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
-2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the Charlie Kirk caption, Erik's sign-off on the designer-written lines, captions, photos).
+2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the form inbox, the footage permissions, the family photo, a few captions).
    Also: create the Formspree form and replace `FORM_ID` in `contact.html` (see "The contact form" above).
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.

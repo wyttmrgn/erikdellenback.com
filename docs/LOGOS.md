@@ -26,7 +26,7 @@ Most organizations keep a press or brand page with downloadable logos. If not, a
 | Night to Shine | Started it | Same as above |
 | Hope Florida | Executive director | State of Florida / Hope Florida site |
 | Executive Office of the Governor | Faith and Community Liaison | State seal, or the Governor's office |
-| For Others | Founding board member, interim president | Ask the foundation |
+| For Others | Founding board member, interim CEO and President | Ask the foundation |
 | The Church of Eleven22 | Ordained pastor | Church communications team |
 | Gator Bowl | Vice president, CMO | Gator Bowl Association (the current sponsor name changes; use the association mark) |
 | ACC Football Championship | Founding director | Ask the ACC; they may prefer the conference mark |
@@ -67,4 +67,8 @@ Three more files are now in `logos/`, processed the same way (alpha trimmed, 200
 
 ## Update (17 September 2026): About and In good company
 
-`florida-blue-key.png` and `illuminations.png` are now in `logos/` for the About page's "Boards, honors and callings" row, alongside Eleven22 and Fellowship Adventures. `good-company.html` reuses the homepage logos on white tiles. The homepage logos are links into that page and lift slightly on hover with a one-line role underneath.
+`florida-blue-key.png` and `illuminations.png` are now in `logos/` for the About page's "Boards, honors and callings" row, alongside Eleven22 and Fellowship Adventures. `good-company.html` (now `career.html`) reuses the homepage logos on white tiles. The homepage logos are links into that page and lift slightly on hover with a one-line role underneath.
+
+## Update (30 September 2026): Erik's logo list
+
+Erik sent his Hat n Hoodie Consulting mark (black line art on transparent): `hat-n-hoodie.png` for white panels and `hat-n-hoodie-light.png` (recoloured to the site's text colour) for the navy opener on the Consulting page. He asked for a different ACC Championship logo, so the round blue badge was replaced by the Dr Pepper ACC Championship shield from his own files (white removed); the old badge is in the parent folder. The homepage row is now three groups in his order; the food truck and Haiti United have no logo and are text chips; the two film posters stand in as logos under Projects. illumiNations is not on his list and is no longer shown.
