@@ -56,6 +56,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 main { flex: 1 0 auto; width: 100%; }
+/* The hidden attribute always wins, even over rules that set display (the form rows after sending). */
+[hidden] { display: none !important; }
 body.menu-open { overflow: hidden; }
 
 p { margin: 0; }
@@ -462,7 +464,7 @@ main:focus { outline: none; }
 .form__submit[disabled] { opacity: 0.5; cursor: default; background: transparent; color: var(--gold); }
 .form__status { margin: 16px 0 0; font-size: 15px; line-height: 1.6; color: var(--body); min-height: 1.6em; }
 .form > .form__status:first-child { margin: 0 0 18px; color: var(--gold-strong); text-wrap: balance; }
-.form__status--ok { color: var(--gold-strong); }
+.form__status--ok { color: var(--gold-strong); text-align: center; font-size: 17px; }
 
 /* About ------------------------------------------------------------------- */
 .split__photo.split__photo--portrait { aspect-ratio: 3 / 4; }
