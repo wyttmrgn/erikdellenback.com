@@ -186,8 +186,15 @@
         if (!form.checkValidity || form.checkValidity()) {
           submit.disabled = true; status.className = 'form__status'; status.textContent = 'Sending…';
           fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-            .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-            .then(function () {
+            .then(function (r) {
+              // Formspree refused the background send (for example its reCAPTCHA is
+              // switched on for this form): hand over to a normal form post, which
+              // takes the visitor through Formspree's own check and thank-you page.
+              if (!r.ok) { status.textContent = 'One more step on the next page…'; form.submit(); return null; }
+              return r.json();
+            })
+            .then(function (data) {
+              if (data === null) return;
               Array.prototype.forEach.call(form.querySelectorAll('.form__row, .form__submit'), function (el) { el.hidden = true; });
               status.className = 'form__status form__status--ok';
               status.textContent = 'Thank you. Your message is on its way to Erik.';
