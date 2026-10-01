@@ -24,9 +24,9 @@ Below is what is still open, in order of what matters most.
 The site is hosted on GitHub under my account. Your domain is at GoDaddy under yours. Easiest way to connect them: log in to GoDaddy, open your account settings, choose Delegate Access, then Invite, and invite YOUR-GODADDY-EMAIL-HERE with "Products and Domains" access (it has to be that exact address, the one on my GoDaddy login). You never share a password, you stay the owner, you can remove me any time, and I enter the records myself. If you would rather do it yourself, I will send you the ten lines to type in.
 
 
-2. THE INBOX FOR THE CONTACT FORM (the Send button stays off until this is answered)
+2. THE INBOX FOR THE CONTACT FORM
 
-The dropdown you tried was locked while the form was unconnected; that is fixed, everything on the form works except Send. Messages need somewhere to land: your Gmail, a Florida Family Voice address, someone on your team who handles requests, or a new address on your domain. Tell me which. You will get one confirmation email from the form service to click, and that is it.
+The contact form works now. The dropdown you tried was locked while it was unconnected; that is fixed. For the moment messages come to me and I forward them. Tell me where they should go instead: your Gmail, a Florida Family Voice address, someone on your team who handles requests, or a new address on your domain. You will get one confirmation email from the form service to click, and that is it.
 
 
 3. PERMISSION EMAILS FOR THE VIDEO (four of them, written out at the bottom of this message)
@@ -64,7 +64,7 @@ The video at the top uses clips from CarePortal, the Patros men's series, the Ti
 - Where can people watch Run the Race and He Calls Me Daughter? The posters are on the site; I will link them once I know where. The posters are the studios' artwork: are you fine with them on the site, or should I check with the production companies?
 
 
-Once the domain is connected, the form has an inbox, and the four footage replies are in (or those clips are swapped), the site is live at erikdellenback.com the same day. Everything else can be added as it comes in.
+Once the domain is connected and the four footage replies are in (or those clips are swapped), the site is live at erikdellenback.com the same day. Everything else can be added as it comes in.
 
 Wyatt
 

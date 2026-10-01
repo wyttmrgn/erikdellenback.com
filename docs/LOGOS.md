@@ -76,3 +76,7 @@ Erik sent his Hat n Hoodie Consulting mark (black line art on transparent): `hat
 ## Update (30 September 2026, later): logos for the Career entries that had none
 
 Found on the organizations' own sites (sources in the parent folder, "Logos (source and spares)/found 2026-09-30/SOURCES.txt"): Haiti United (black mark, also on the homepage Projects row now), Florida Foundation for Correctional Excellence, the Florida Faith and Community Advisory Council mark, TD Autographs (a 100 px white mark from tdautographs.com, recoloured navy for the white tile), and an Eagle Scout badge (old clip art on white, white removed; Scouting America's official PNG sits behind a page a script cannot fetch, so a better one can be saved by hand). TD Speaking has no logo anywhere online and stays text only.
+
+## Update (1 October 2026): Erik's sketch for the homepage row
+
+Erik sent a hand-drawn layout for "In good company" and asked for the page to follow it: "Employers and clients" in two rows of five (the first ending at Eleven22), "Businesses owned" as four logos with no separate food truck entry, and "Projects" as Haiti United, the two films and Night to Shine. The food truck text chip is gone from the homepage; the truck is still mentioned in the Auntie Anne's entry on the Career page.

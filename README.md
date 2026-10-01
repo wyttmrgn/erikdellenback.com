@@ -96,7 +96,7 @@ To connect it (one time, about five minutes):
 
 1. Sign up at formspree.io (Wyatt's account) and create a form. Set the recipient to the inbox Erik chooses. Formspree emails that inbox a confirmation link; Erik clicks it once.
 2. Copy the form id from the endpoint it gives you (`https://formspree.io/f/abcdwxyz`).
-3. In `contact.html`, replace `FORM_ID` in the form's `action` with that id. Until then the page (with JavaScript on) shows "This form is being connected" at the top of the form and disables only the Send button; the fields stay usable.
+3. In `contact.html`, put that id in the form's `action`. Done on 1 October 2026: the form is live at `https://formspree.io/f/xdekvydd`, in Wyatt's Formspree account, delivering to Wyatt's inbox until Erik names his. To change who receives messages, change the form's email in the Formspree dashboard; nothing on the site needs to change. (If the action ever contains the placeholder `FORM_ID` again, the page shows "This form is being connected" and disables Send.)
    In the form's settings on formspree.io, under Spam protection, turn reCAPTCHA off. Formspree's default reCAPTCHA is a separate page that does not work with a background send; with it off, messages go through without the visitor leaving the site, and the honeypot field plus Formspree's own spam filter still apply. If it is left on, the site falls back to a normal form post and the visitor completes the check on Formspree's page.
 4. Push. Send a test message from the live page and check it arrives with the subject "Website: Speaking" (the subject follows the topic the visitor picks). Test once more with JavaScript off to see Formspree's own pages.
 
@@ -166,7 +166,7 @@ GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik
 
 1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
 2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the form inbox, the footage permissions, the family photo, a few captions).
-   Also: create the Formspree form and replace `FORM_ID` in `contact.html` (see "The contact form" above).
+   The contact form is connected; switch its recipient to Erik's inbox in Formspree once he names one.
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.
 5. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.
