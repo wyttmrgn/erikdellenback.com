@@ -1,6 +1,6 @@
 # Running list for Erik
 
-This is the one list. Everything we still need from Erik lives here, written as an email so Wyatt can copy from the line below the rule and paste it. When Erik answers something, delete it here. When something new comes up, add it here. Two things before pasting: push first (the link in the email is the live preview and shows only what is pushed), and fill in the GoDaddy email address in item 1 in the mail client, not in this file. Last updated 30 September 2026, after Erik's change document.
+This is the one list. Everything we still need from Erik lives here, written as an email so Wyatt can copy from the line below the rule and paste it. When Erik answers something, delete it here. When something new comes up, add it here. Two things before pasting: push first (the link in the email is the live preview and shows only what is pushed), and fill in the GoDaddy email address in item 1 in the mail client, not in this file. Last updated 2 October 2026, after an audit of every line of Erik's change document, sketch and meeting notes against the live site.
 
 ---
 
@@ -12,7 +12,7 @@ Everything from your change document that did not need new material from you is 
 
 https://wyttmrgn.github.io/erikdellenback.com/
 
-Your words replaced mine on the homepage, About, Speaking, Consulting and Impactful Moments (the new name for the gallery). The menu is About, Career, Impactful Moments, Speaking, Consulting, Contact. Every logo on the homepage opens the Career page. Photos in the gallery enlarge when clicked, and the strip on the homepage runs faster. Your Hat n Hoodie logo is on the Consulting page and in the logo row. The America Reads the Bible photo is in the gallery. The bottom of every page carries a small "Site by Morgan Web Co" line linking to my company; say so if you would rather it were not there.
+Your words replaced mine on the homepage, About, Speaking, Consulting and Impactful Moments (the new name for the gallery). The menu is About, Career, Impactful Moments, Speaking, Consulting, Contact. Every logo on the homepage opens the Career page. Photos in the gallery enlarge when clicked, and the strip on the homepage runs faster. Your Hat n Hoodie logo is on the Consulting page and in the logo row. The America Reads the Bible photo is in the gallery. "In good company" on the homepage follows your sketch: Employers and clients in two rows, four businesses, then the projects. The contact form works. Every organization on the Career page now has its logo except TD Speaking, which has none anywhere online. The bottom of every page carries a small "Site by Morgan Web Co" line linking to my company; say so if you would rather it were not there.
 
 I proofread your text lightly as I went, nothing changed in meaning. Typos: I've for Ive, can't, an Eagle Scout, simply to be remembered, make faith a priority, several businesses. Style: nonprofit without the hyphen throughout, a few commas ("people, places", "projects, organizations", "well-known, amazing"), lower-case crisis and faith, and your talk titles in sentence case. Three small word-level fixes from a proofread: "breadth" for "width" of clients on the Consulting page, a semicolon in "The Lord isn't just #1 on my list; He is...", and the last paragraph of your bio split back into two sentences ("He is a graduate... He and his wife, Elizabeth..."). Say if you want any of it back exactly as written.
 
@@ -47,11 +47,14 @@ The video at the top uses clips from CarePortal, the Patros men's series, the Ti
 
 - Praying in the Oval Office and Bobby Bowden's last game: you asked to zoom or circle yourself. I zoomed the gallery tiles toward you (far left in the Oval Office; the green jacket at right at the Gator Bowl). Clicking a tile shows the whole photo. Right person? You also gave no category for these two: the Oval Office one is labelled Government like your Trump photo, and the Bowden one has no label. Which of your categories do you want on them?
 - America Reads the Bible: the caption uses your words, "Reading at America Reads the Bible for 250". If "for 250" means the America 250 celebration and you want it spelled out, say so.
-- TD Autographs and TD Speaking: listed by name only under Businesses owned. Your CV's line about the four private companies you built for Tim Tebow sits on the Tebow Foundation entry. Give me a line for each, or tell me to take them off.
+- TD Autographs and TD Speaking: listed under Businesses owned with no description. TD Autographs uses the mark from tdautographs.com; TD Speaking shows its name because no logo exists. Your CV's line about the four private companies you built for Tim Tebow sits on the Tebow Foundation entry. Give me a line for each, or tell me to take them off.
+- Your sketch had no food truck, so it is off the homepage row. It is still mentioned in the Auntie Anne's entry on the Career page and in your bio.
+- On the Career page the two films sit under Projects with Night to Shine and Haiti United, as on your sketch, not under Boards and recognition. Say if you want them moved.
+- The gallery photos are arranged to keep the columns even, not in the order of your list. Say if the order matters to you.
+- On the homepage, "deserved or been fully qualified" is picked out in gold. Say if you would rather it were plain.
 - The Church card on the About page: your note had "(also?)". It now reads "but I also love the whole capital C Church around the world". Keep the "also", or drop it?
 - The homepage photo strip keeps two photos that are not in your sixteen: praying at the podium with the Governor and First Lady, and the Tebow CURE Hospital. Keep them there, or swap them?
 - Haiti United is listed under Projects with only your word "Collaboration" under it. One line on what it is, please. I used the logo from haiti-united.com, where you and Elizabeth are listed as hosts; say if they would rather it not be there.
-- TD Speaking has no logo anywhere online, so it is text only. TD Autographs uses the mark from tdautographs.com.
 - Your full bio says 2,200 faith institutions and 5,600 nonprofit partners; your CV says 2,000 and 6,000. The site now uses the bio's numbers everywhere. Confirm.
 - Your CV says you are Florida's liaison to the "Florida Policy Alliance" of 38 state policy councils. Is that the Family Policy Alliance? I left the name out until you say.
 
