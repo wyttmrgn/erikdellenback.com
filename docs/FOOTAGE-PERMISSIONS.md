@@ -28,7 +28,7 @@ Erik asked for the shot with the shorts to go. Wyatt's new desktop edit (master 
 Two things follow:
 
 - **The new clip needs a source line.** Record where the Florida flags footage came from (it looks like an official State of Florida or Governor's office video) and whether anyone needs to be asked. Until Wyatt adds that, treat it as unconfirmed.
-- **The Patros request is still needed for now.** The phone video (`media/hero-portrait.mp4`) still uses the Patros close-up. Once the phone cut is replaced too, source 4 drops out entirely and the request to Man Up and Go is no longer needed.
+- **The Patros request is still needed.** The phone video (`media/hero-portrait.mp4`) keeps the Patros close-up, where the shorts are not in frame, and Wyatt confirmed on 2 October that the phone cut is staying as it is. Source 4 therefore stays on the list, for the phone video only.
 
 ## Update (2 October 2026): the clips are screen recordings
 
