@@ -1,6 +1,6 @@
 # Running list for Erik
 
-This is the one list. Everything we still need from Erik lives here, written as an email so Wyatt can copy from the line below the rule and paste it. When Erik answers something, delete it here. When something new comes up, add it here. Two things before pasting: push first (the link in the email is the live preview and shows only what is pushed), and fill in the GoDaddy email address in item 1 in the mail client, not in this file. Last updated 2 October 2026, after an audit of every line of Erik's change document, sketch and meeting notes against the live site.
+This is the one list. Everything we still need from Erik lives here, written as an email so Wyatt can copy from the line below the rule and paste it. When Erik answers something, delete it here. When something new comes up, add it here. Two things before pasting: push first (the link in the email is the live preview and shows only what is pushed), and fill in the GoDaddy email address in item 1 in the mail client, not in this file. Last updated 2 October 2026 (new desktop video in), after an audit of every line of Erik's change document, sketch and meeting notes against the live site.
 
 ---
 
@@ -31,7 +31,7 @@ The contact form works now. The dropdown you tried was locked while it was uncon
 
 3. PERMISSION EMAILS FOR THE VIDEO (four of them, written out at the bottom of this message)
 
-The video at the top uses clips from CarePortal, the Patros men's series, the Tim Tebow Foundation and the Florida Coalition for Children. The footage belongs to them, not to us, and we want a yes in writing before the site is on your domain. Send the four emails below from your Florida Family Voice address and forward me the replies. Two of them need a name only you know: who at the Tim Tebow Foundation and at the Florida Coalition for Children should they go to? If anyone is slow or says no, that clip gets swapped for your own Florida Family Voice footage and nothing else changes. The clip with the two of you in shorts (the Patros interview) is being re-cut in my next edit, zoomed in or removed; if it comes out, the Patros email is not needed.
+The video at the top uses clips from CarePortal, the Patros men's series, the Tim Tebow Foundation and the Florida Coalition for Children. The footage belongs to them, not to us, and we want a yes in writing before the site is on your domain. Send the four emails below from your Florida Family Voice address and forward me the replies. Two of them need a name only you know: who at the Tim Tebow Foundation and at the Florida Coalition for Children should they go to? If anyone is slow or says no, that clip gets swapped for your own Florida Family Voice footage and nothing else changes. The clip with the shorts is gone from the desktop video; in its place is the footage of you in front of the Florida flags. The phone version still uses a close-up from that same Patros interview until I re-cut it too. Once that is done the Patros email is not needed, so hold that one for now and send the other three.
 
 
 4. PHOTOS YOUR PAGES ARE WAITING FOR (full-size originals through a shared folder, not text copies)

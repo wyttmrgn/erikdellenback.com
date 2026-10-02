@@ -21,6 +21,15 @@ Notes:
 - Clip 6 is the one to watch. The Coalition's YouTube channel is small and the same meeting was broadcast by The Florida Channel, so their 30-second clip may be an excerpt of the broadcast rather than their own recording. Ask them which; if it is the broadcast, ask WFSU instead or drop the clip.
 - Keep every reply (a forwarded email is enough) in the parent folder on Wyatt's machine, not in this repo.
 
+## Update (2 October 2026): new desktop cut
+
+Erik asked for the shot with the shorts to go. Wyatt's new desktop edit (master kept in the parent folder as "Erik Hero Video (master, 1002 desktop).mp4") replaces both Patros shots (source 4: the solo close-up at 10.6 s and the two-shot at 12.2 s) with two angles of Erik speaking in front of Florida flags (10.6 to 12.8 s and 12.8 to 14.3 s). Everything else is unchanged: cuts at 3.5, 7.3, 10.6, 12.8, 14.3, 18.1, 19.1, 21.9 and 25.2 seconds.
+
+Two things follow:
+
+- **The new clip needs a source line.** Record where the Florida flags footage came from (it looks like an official State of Florida or Governor's office video) and whether anyone needs to be asked. Until Wyatt adds that, treat it as unconfirmed.
+- **The Patros request is still needed for now.** The phone video (`media/hero-portrait.mp4`) still uses the Patros close-up. Once the phone cut is replaced too, source 4 drops out entirely and the request to Man Up and Go is no longer needed.
+
 ## Where to send the requests
 
 | Organization | Route |
