@@ -67,14 +67,14 @@ The script only loads a clip when the visitor has not asked for reduced motion o
 Encoding with ffmpeg, from a source clip `hero-source.mov`:
 
 ```bash
-ffmpeg -i hero-source.mov -t 12 -an -vf "scale=1920:-2,fps=24" -c:v libx264 -profile:v high -pix_fmt yuv420p -crf 26 -preset slow -movflags +faststart media/hero-landscape.mp4
+ffmpeg -i hero-source.mov -an -vf "scale=1920:-2" -c:v libx264 -profile:v high -pix_fmt yuv420p -crf 28 -preset slow -movflags +faststart media/hero-landscape.mp4
 ```
 
 ```bash
-ffmpeg -i hero-source.mov -t 12 -an -vf "crop=ih*9/16:ih:(iw-ih*9/16)/2:0,scale=720:-2,fps=24" -c:v libx264 -profile:v high -pix_fmt yuv420p -crf 27 -preset slow -movflags +faststart media/hero-portrait.mp4
+ffmpeg -i hero-portrait-source.mov -an -vf "scale=720:-2" -c:v libx264 -profile:v high -pix_fmt yuv420p -crf 28 -preset slow -movflags +faststart media/hero-portrait.mp4
 ```
 
-The portrait command crops the centre of the landscape frame. If Erik is not in the centre, change the third crop value (the x offset) or export a separate portrait edit from the editing software. Then export the first frame as the new still and run it through the image script:
+Keep the edit's own frame rate: do not add an `fps=` filter. Converting a 30 fps edit to 24 drops one frame in five and makes every shot stutter (this was the setting until 2 October 2026). The portrait file is encoded from its own vertical edit, not cropped from the landscape one. If a shot still stutters after encoding, the cause is in the edit: a clip shot at 24 fps (or captured at a lower rate) sitting on a 30 fps timeline repeats frames. Fix it in the editor, not here. Then export the first frame as the new still and run it through the image script:
 
 ```bash
 ffmpeg -i media/hero-landscape.mp4 -frames:v 1 -q:v 2 hero-still.jpg
