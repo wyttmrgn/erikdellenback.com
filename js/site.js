@@ -218,11 +218,11 @@
         var img = link.querySelector('img');
         boxImg.src = link.getAttribute('href'); boxImg.alt = img ? img.alt : '';
         boxCap.textContent = link.getAttribute('data-caption') || '';
-        if (img && img.naturalWidth) boxImg.style.aspectRatio = img.naturalWidth + ' / ' + img.naturalHeight;
+        boxImg.style.aspectRatio = link.getAttribute('data-ratio') || '';
         box.showModal();
       });
     });
     box.addEventListener('click', function (e) { if (e.target === box || e.target.hasAttribute('data-lightbox-close')) box.close(); });
-    box.addEventListener('close', function () { boxImg.removeAttribute('src'); });
+    box.addEventListener('close', function () { boxImg.removeAttribute('src'); boxImg.style.aspectRatio = ''; });
   }
 })();
