@@ -166,8 +166,13 @@ GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik
 
 1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
 2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the form inbox, the footage permissions, the family photo, a few captions).
-   The contact form is connected; switch its recipient to Erik's inbox in Formspree once he names one.
+   The contact form works today on Formspree (Wyatt's account, delivering to Wyatt). It moves to the Morgan Web Co forms setup on launch day; see step 5.
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.
-5. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.
-6. Google Search Console: verify with the same TXT record and submit `sitemap.xml`.
+5. Move the contact form to the Morgan Web Co forms setup, once the site answers on erikdellenback.com (doing it earlier would mean registering the preview address and redoing it):
+   - add erikdellenback.com as a site in the Morgan Web Co forms setup and get its key or endpoint, with Erik's chosen inbox as the recipient;
+   - in `contact.html` change where the form posts and rename the two helper fields to what that service expects (for Web3Forms: `action` to `https://api.web3forms.com/submit`, a hidden `access_key`, `subject` instead of `_subject`, a `botcheck` checkbox instead of `_gotcha`), and update the form block in `js/site.js` to match;
+   - push, then send a test from the form on erikdellenback.com and confirm it arrives with the subject "Website: Speaking";
+   - delete the Formspree form and update "The contact form" section above.
+6. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.
+7. Google Search Console: verify with the same TXT record and submit `sitemap.xml`.
