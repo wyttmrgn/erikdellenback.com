@@ -30,6 +30,14 @@ Two things follow:
 - **The new clip needs a source line.** Record where the Florida flags footage came from (it looks like an official State of Florida or Governor's office video) and whether anyone needs to be asked. Until Wyatt adds that, treat it as unconfirmed.
 - **The Patros request is still needed for now.** The phone video (`media/hero-portrait.mp4`) still uses the Patros close-up. Once the phone cut is replaced too, source 4 drops out entirely and the request to Man Up and Go is no longer needed.
 
+## Update (2 October 2026): the clips are screen recordings
+
+Every clip except the Florida flags footage was screen-recorded from YouTube or Facebook. A screen recorder captures at its own rate, so it drops some frames and doubles others; measured in the edit, the stage, Charlie Kirk, podcast and stage-with-couch shots repeat about one frame in five, and the FFV podium, Tim Tebow and council-chamber shots repeat 30 to 40 percent of their frames. That is the stutter in the hero video. The fix is real files in place of the captures:
+
+- **Florida Family Voice clips (sources 2 and 3):** FFV owns them. Erik can ask whoever produced the gala videos for the original files, or have the channel's owner download them from YouTube Studio.
+- **Everyone else:** each permission email below now also asks for the original file or a download link.
+- **Until files arrive:** re-capture at 60 frames a second (OBS can; the Windows Snipping Tool cannot) with the video playing at full resolution, which catches every frame of a 24 or 30 fps video.
+
 ## Where to send the requests
 
 | Organization | Route |
@@ -54,7 +62,7 @@ I'm building a personal website (erikdellenback.com) and my hero banner is a sho
 
 May I use it? It plays muted, with a dark overlay and my name over it, on my site only. I'm glad to credit CarePortal in the site notes, and I'll take it down the same day if you ever ask.
 
-A simple "yes" by reply is all I need. Thank you for the conference and for what you do.
+A simple "yes" by reply is all I need. And if you have the original file of that talk, or can share a download link, I would be grateful: a clean copy plays more smoothly than one captured from YouTube. Thank you for the conference and for what you do.
 
 Erik Dellenback
 
@@ -68,7 +76,7 @@ Thank you again for having me on the "Man As..." series. I'm building a personal
 
 It plays muted with a dark overlay and my name over it, on my site only. Happy to credit Patros, and I'll remove it any time you ask.
 
-Would you reply with a yes if that's all right?
+Would you reply with a yes if that's all right? If you can also share the original file or a download link, even better; a clean copy plays more smoothly than one captured from YouTube.
 
 Erik Dellenback
 
@@ -82,7 +90,7 @@ I'm putting together a personal website (erikdellenback.com), and the banner is 
 
 May I use it? It plays muted with a dark overlay and my name over it, on my site only. I'll credit the Foundation and will take it down the moment anyone asks. Since Tim is in the frame, please let me know if he'd rather I cut it to a section with just me.
 
-A quick yes by reply is all I need. Grateful as always.
+A quick yes by reply is all I need. If the Foundation still has the original file, I would love a copy; the version I have was captured from a web page and stutters. Grateful as always.
 
 Erik
 
@@ -95,6 +103,8 @@ Hi [name],
 I'm building a personal website (erikdellenback.com) with a short, silent video loop at the top. I'd like to include a few seconds of the clip your team posted of my remarks to the Florida Children and Youth Cabinet on September 30, 2020 (youtube.com/watch?v=BmjO38SPTIg).
 
 Two questions: is that your own recording from the room, or an excerpt from The Florida Channel's broadcast? And if it's yours, may I use about five seconds of it, muted, with a dark overlay and my name over it, on my site only? I'll credit the Coalition and remove it on request.
+
+If it is yours and you can share the original file, that would help too; a clean copy plays more smoothly than one captured from YouTube.
 
 Thank you for the work you do for Florida's kids.
 

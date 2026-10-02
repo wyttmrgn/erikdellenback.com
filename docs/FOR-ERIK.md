@@ -31,7 +31,7 @@ The contact form works now. The dropdown you tried was locked while it was uncon
 
 3. PERMISSION EMAILS FOR THE VIDEO (four of them, written out at the bottom of this message)
 
-The video at the top uses clips from CarePortal, the Patros men's series, the Tim Tebow Foundation and the Florida Coalition for Children. The footage belongs to them, not to us, and we want a yes in writing before the site is on your domain. Send the four emails below from your Florida Family Voice address and forward me the replies. Two of them need a name only you know: who at the Tim Tebow Foundation and at the Florida Coalition for Children should they go to? If anyone is slow or says no, that clip gets swapped for your own Florida Family Voice footage and nothing else changes. The clip with the shorts is gone from the desktop video; in its place is the footage of you in front of the Florida flags. The phone version still uses a close-up from that same Patros interview until I re-cut it too. Once that is done the Patros email is not needed, so hold that one for now and send the other three.
+The video at the top uses clips from CarePortal, the Patros men's series, the Tim Tebow Foundation and the Florida Coalition for Children. The footage belongs to them, not to us, and we want a yes in writing before the site is on your domain. Send the four emails below from your Florida Family Voice address and forward me the replies. Each one also asks for the original file: the clips in the video were captured from YouTube, which is why some of them stutter, and a real file fixes that. For the two clips that are Florida Family Voice's own (the Charlie Kirk conversation and your gala speech), could whoever produced those videos send me the original files? Two of them need a name only you know: who at the Tim Tebow Foundation and at the Florida Coalition for Children should they go to? If anyone is slow or says no, that clip gets swapped for your own Florida Family Voice footage and nothing else changes. The clip with the shorts is gone from the desktop video; in its place is the footage of you in front of the Florida flags. The phone version still uses a close-up from that same Patros interview until I re-cut it too. Once that is done the Patros email is not needed, so hold that one for now and send the other three.
 
 
 4. PHOTOS YOUR PAGES ARE WAITING FOR (full-size originals through a shared folder, not text copies)
@@ -86,7 +86,7 @@ I'm building a personal website (erikdellenback.com) and my hero banner is a sho
 
 May I use it? It plays muted, with a dark overlay and my name over it, on my site only. I'm glad to credit CarePortal in the site notes, and I'll take it down the same day if you ever ask.
 
-A simple "yes" by reply is all I need. Thank you for the conference and for what you do.
+A simple "yes" by reply is all I need. And if you have the original file of that talk, or can share a download link, I would be grateful: a clean copy plays more smoothly than one captured from YouTube. Thank you for the conference and for what you do.
 
 Erik Dellenback
 
@@ -100,7 +100,7 @@ Thank you again for having me on the "Man As..." series. I'm building a personal
 
 It plays muted with a dark overlay and my name over it, on my site only. Happy to credit Patros, and I'll remove it any time you ask.
 
-Would you reply with a yes if that's all right?
+Would you reply with a yes if that's all right? If you can also share the original file or a download link, even better; a clean copy plays more smoothly than one captured from YouTube.
 
 Erik Dellenback
 
@@ -114,7 +114,7 @@ I'm putting together a personal website (erikdellenback.com), and the banner is 
 
 May I use it? It plays muted with a dark overlay and my name over it, on my site only. I'll credit the Foundation and will take it down the moment anyone asks. Since Tim is in the frame, please let me know if he'd rather I cut it to a section with just me.
 
-A quick yes by reply is all I need. Grateful as always.
+A quick yes by reply is all I need. If the Foundation still has the original file, I would love a copy; the version I have was captured from a web page and stutters. Grateful as always.
 
 Erik
 
@@ -127,6 +127,8 @@ Hi [name],
 I'm building a personal website (erikdellenback.com) with a short, silent video loop at the top. I'd like to include a few seconds of the clip your team posted of my remarks to the Florida Children and Youth Cabinet on September 30, 2020 (youtube.com/watch?v=BmjO38SPTIg).
 
 Two questions: is that your own recording from the room, or an excerpt from The Florida Channel's broadcast? And if it's yours, may I use about five seconds of it, muted, with a dark overlay and my name over it, on my site only? I'll credit the Coalition and remove it on request.
+
+If it is yours and you can share the original file, that would help too; a clean copy plays more smoothly than one captured from YouTube.
 
 Thank you for the work you do for Florida's kids.
 
