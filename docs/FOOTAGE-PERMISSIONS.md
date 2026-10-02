@@ -4,6 +4,10 @@ The hero loop is cut from six source videos. Copyright in each belongs to whoeve
 
 Looked up 12 September 2026 from each video's page and the publisher's website.
 
+## Status (2 October 2026): cleared by Erik
+
+Erik told Wyatt by phone on 2 October 2026 that the video clips are safe to use. He knows the people behind each one, so the permission emails below are no longer a launch blocker and nobody is waiting on replies. The drafts stay here in case a written yes is ever wanted, and the standing fallback still applies: if an owner objects, swap that clip for Florida Family Voice's own footage and re-export. Asking the owners for original files is still worthwhile for a different reason, the stutter (see the update further down).
+
 ## The sources
 
 | # | Video | Published by | Segment used | Status |

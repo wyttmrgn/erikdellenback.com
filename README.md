@@ -165,7 +165,7 @@ GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik
 ## Launch checklist
 
 1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
-2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the form inbox, the footage permissions, the family photo, a few captions).
+2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the form inbox, the family photo, a few one-line answers). Erik confirmed by phone on 2 October 2026 that the video clips are safe to use, so footage permission is not a blocker.
    The contact form works today on Formspree (Wyatt's account, delivering to Wyatt). It moves to the Morgan Web Co forms setup on launch day; see step 5.
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.
