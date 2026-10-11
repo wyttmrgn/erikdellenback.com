@@ -285,6 +285,7 @@ main:focus { outline: none; }
 /* Story: words only, then the closing call ------------------------------- */
 .story { max-width: calc(var(--text-col) + 2 * var(--pad-x)); }
 .story .prose { font-size: 17px; }
+.story__ref { display: block; margin-top: 10px; font-family: var(--sans); font-style: normal; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
 .story__coda {
   font-family: var(--serif); font-style: italic; font-weight: 300;
   font-size: 20px; line-height: 1.5; color: var(--muted);
@@ -319,6 +320,7 @@ main:focus { outline: none; }
 .split__photo img { width: 100%; height: 100%; object-fit: cover; }
 @media (min-width: 901px) { .split__photo { aspect-ratio: 1 / 1; } }
 @media (max-width: 900px) { .split { grid-template-columns: 1fr; } .split__photo { max-width: 520px; } }
+.prose .voice { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.55; color: var(--text); text-wrap: pretty; }
 .pull {
   margin: 0 0 18px;
   font-family: var(--serif); font-style: italic; font-weight: 300;
@@ -355,11 +357,15 @@ main:focus { outline: none; }
 
 /* Experiences gallery ---------------------------------------------------- */
 .gallery__hint { margin: 0; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.gallery { columns: 3; column-gap: 12px; }
-@media (max-width: 1000px) { .gallery { columns: 2; } }
-@media (max-width: 560px) { .gallery { columns: 1; } }
-.tile { position: relative; margin: 0 0 12px; break-inside: avoid; background: var(--media); overflow: hidden; }
-.tile img { width: 100%; height: auto; display: block; transition: transform 600ms ease; }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 1000px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .gallery { grid-template-columns: 1fr; } }
+.tile { position: relative; margin: 0; background: var(--media); overflow: hidden; }
+.tile img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform 600ms ease; }
+.tile img[src*="beach-baptism"] { object-position: 50% 35%; }
+.tile img[src*="sailfish"] { object-position: 50% 45%; }
+.tile img[src*="python-hunt"], .tile img[src*="gov-scott"] { object-position: 50% 0%; }
+.tile img[src*="tebow-foundation"] { object-position: 50% 20%; }
 .tile:hover img, .tile:focus-within img { transform: scale(1.03); }
 .tile__cap {
   position: absolute; left: 0; right: 0; bottom: 0;
@@ -482,15 +488,13 @@ main:focus { outline: none; }
 .love--text { justify-content: center; border-top: 3px solid var(--gold); background: linear-gradient(180deg, rgba(209, 168, 111, 0.1), rgba(209, 168, 111, 0) 55%), var(--navy); }
 .love--text .love__body { padding: 30px 24px; }
 .love__title { margin: 0 0 8px; font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 15px; color: var(--text); }
-.love__line { margin: 0; font-size: 15px; line-height: 1.65; color: var(--body); }
+.love__line { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--text); text-wrap: pretty; }
 .love--text .love__title { font-size: 17px; margin-bottom: 12px; }
-.love--text .love__line { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--text); text-wrap: pretty; }
 @media (min-width: 561px) and (max-width: 1000px) { .love--text { order: -1; justify-content: flex-start; } }
 @media (min-width: 1001px) {
   .love--text { justify-content: flex-start; }
   .love--text .love__body { padding-top: clamp(48px, 5vw, 84px); }
   .love--text .love__title { font-size: 19px; margin-bottom: 16px; }
-  .love--text .love__line { font-size: clamp(20px, 1.9vw, 25px); line-height: 1.45; }
 }
 
 /* In good company --------------------------------------------------------- */
@@ -510,6 +514,18 @@ main:focus { outline: none; }
 .org__line a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .org__line a:hover { color: var(--gold-strong); }
 @media (max-width: 640px) { .org { grid-template-columns: 1fr; } .org__logo { max-width: 220px; min-height: 106px; } }
+.band--career { --rule: rgba(19, 26, 38, 0.14); }
+.band--career .org__logo { background: transparent; padding: 0; min-height: 0; }
+.band--career .org__logo img { width: 170px; max-width: 170px; max-height: 84px; }
+.band--career .org__logo img[src*="td-autographs"] { width: 100px; }
+@media (max-width: 640px) { .band--career .org__logo { align-items: flex-start; } }
+.band--career .org__name { color: var(--ink); }
+.band--career .org__role { color: var(--navy); font-weight: 700; }
+.band--career .org__role span { color: var(--muted-ink); font-weight: 400; }
+.band--career .org__line { color: #2d3645; }
+.band--career .org__line a { color: var(--navy); }
+.band--career .org__line a:hover { color: var(--slate); }
+.band--career .org__line + .org__line { margin-top: 10px; }
 .org__logo--word { font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; color: var(--navy); }
 
 /* 30 September round: grouped logos, story names, lightbox, consulting ------ */
@@ -522,7 +538,7 @@ main:focus { outline: none; }
 .logos__group { margin-top: clamp(36px, 4vw, 52px); }
 .logos--next { margin-top: 30px; }
 .logos__group:first-of-type { margin-top: 0; }
-.logos__title { margin: 0 0 22px; font-family: var(--sans); font-weight: 700; font-size: clamp(14px, 1.2vw, 17px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); }
+.logos__title { margin: 0 0 28px; font-family: var(--sans); font-weight: 700; font-size: clamp(17px, 1.5vw, 22px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 9px; }
 .split__logo { display: block; width: 104px; height: auto; margin-bottom: 18px; }
 .areas { columns: 2; column-gap: 32px; margin: 0; padding-left: 1.2em; font-size: 16px; line-height: 1.7; color: var(--body); }
 .areas li { break-inside: avoid; padding: 2px 0; }

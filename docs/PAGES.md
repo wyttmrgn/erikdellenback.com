@@ -83,3 +83,16 @@ Erik sent "Erik Web Page Changes.docx" (kept in the parent folder) after reviewi
 - **Contact.** The fields stay usable while the form is unconnected (only Send is disabled); Erik read the disabled dropdown as broken.
 
 Still needing him: the family photo, a "picture of a list" for The Lord card, the Night to Shine and Haiti photos, the form inbox, the domain, and the video clip (Wyatt's edit). See `docs/FOR-ERIK.md`.
+
+## Update (11 October 2026): Erik's round two
+
+From "Erik Dellenback Website - Round 2.docx" (copy in the parent folder). All built the same day:
+
+- **Homepage.** "some" dropped from the hero line; Galatians 6:14 written out in full under the story; "Home" first in the menu on every page; the three logo group headings larger with a gold underline.
+- **About.** His new second paragraph (organizational leader; sports marketing to public policy; husband, father and follower of Jesus); every "Some things I love" caption in the first-person italic; "Joey’s Custard, an ice cream shop on Sanibel Island" in the full bio.
+- **Impactful moments.** The ring stays on the Bowden photo and comes off the Oval Office one (zoom kept); nine captions in his new wording, Bowden labelled Sports; the gallery is an even four-across grid (two on tablets, one on phones) in the order of his original list, which answers "pictures seem lopsided"; the enlargement still shows the whole photo.
+- **Speaking.** His revised invitation line; "literally" removed; "The lad still ate" line reworded; four topics added (holding loosely, course corrections, bailing the boat, Jesus as Savior and Lord).
+- **Consulting.** "...sat in the actual chair of leadership"; the Belichick paragraph in his revised wording, italic as first person.
+- **Career.** First-person opening line (Dr. Seuss); the list sits on a white band so the logos need no boxes; Gator Bowl before UF; every entry's role, dates and text in his wording, including the two TD companies, Haiti United (co-founder and host) and Night to Shine (2014).
+
+Still from Erik: the family photo and the "picture of a list" for the About page, the form inbox, the domain.
