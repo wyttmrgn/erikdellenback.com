@@ -8,7 +8,7 @@ Personal website for Erik Dellenback. Plain HTML, CSS and one small script. No b
 index.html                 homepage (hero video, photo strip, listen, story and closing call, logo row, footer)
 speaking.html              Speaking: Erik's invitation, his speaking topics, link to the form
 consulting.html            Consulting: Hat n Hoodie Consulting, Erik's copy and logo, who it is for
-about.html                 About: headshot, Erik's short bio, Some things I love, his full bio (downloadable headshot)
+about.html                 About: headshot, Erik's short bio, Some things Erik loves, his full bio (downloadable headshot)
 career.html                Career and experiences: clients and employers, businesses owned, projects, boards; every homepage logo links here
 moments.html               Impactful moments: the photo gallery, hover captions, click to enlarge
 contact.html               the contact form (Formspree; see below). No email address appears anywhere on the site
@@ -126,7 +126,7 @@ GitHub Pages on a free account requires the repository to be public. Nothing pri
 
 ## Pointing the domain at the site (GoDaddy)
 
-`erikdellenback.com` is the only domain for this site. Erik's other domains are not part of it and nothing needs to be done with them.
+Three of Erik's domains reach this site (confirmed by Erik on 6 November 2026). `erikdellenback.com` is the main address, `dellenback.com` forwards to it, and `hatnhoodie.com` forwards to the Consulting page. All three sit in Erik's GoDaddy account, and Wyatt has delegate access to it.
 
 Until DNS is in place the site is at https://wyttmrgn.github.io/erikdellenback.com/ for previews. Do not add the `CNAME` file before step 2 below is done: as soon as it exists, GitHub redirects the preview address to erikdellenback.com, which will not resolve yet.
 
@@ -136,7 +136,7 @@ GitHub account Settings, Pages, "Add a domain", enter `erikdellenback.com`. GitH
 
 ### 2. DNS records for erikdellenback.com
 
-In GoDaddy DNS, delete the parked `A` record for `@` and any existing forwarding, then add:
+In GoDaddy DNS, delete the parked `A` records for `@` (`15.197.148.33` and `3.33.130.190` as of November 2026) and any existing forwarding, then add the records below. GitHub warns that a leftover `A` record can stop the HTTPS certificate from being issued.
 
 | Type  | Name | Value                         | TTL |
 |-------|------|-------------------------------|-----|
@@ -158,17 +158,26 @@ Check from a terminal:
 nslookup erikdellenback.com
 ```
 
-### 3. Easiest way for Erik to hand this off
+### 3. Forward the other two domains
 
-GoDaddy has Delegate Access (account Settings, Delegate Access, Invite). If Erik invites Wyatt with "Products and Domains" access, Wyatt can add the records above from his own login without ever seeing Erik's password, and Erik keeps ownership.
+A GitHub Pages site takes one custom domain, and GitHub says to redirect any others at the domain provider. GoDaddy's forwarding is free. Both domains currently show a GoDaddy Website Builder "Launching Soon" page, and that connection may have to be removed first (Domain Settings, DNS, Remove next to the site).
+
+For each domain: DNS, Forwarding, Add Forwarding, choose the root domain, Permanent (301), Forward only.
+
+| Domain           | Forward to                                  |
+|------------------|---------------------------------------------|
+| `dellenback.com` | `https://erikdellenback.com`                |
+| `hatnhoodie.com` | `https://erikdellenback.com/consulting.html` |
+
+Then test `https://` and `https://www.` on both. A plain visit should land on the right page with no certificate warning. Both domains send a two-year HSTS header today, so a browser that has visited them cannot click past a certificate error if one appears during the switch. If GoDaddy's forwarding misbehaves, move those two domains to Cloudflare redirect rules, since morganwebco.com is already on Cloudflare.
 
 ## Launch checklist
 
 1. Done: the repo lives at https://github.com/wyttmrgn/erikdellenback.com and Pages is enabled.
-2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the domain, the form inbox, the family photo, a few one-line answers). Erik confirmed by phone on 2 October 2026 that the video clips are safe to use, so footage permission is not a blocker.
+2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the form inbox, the family photo, a few one-line answers). Delegate access to GoDaddy arrived on 6 November 2026. Erik confirmed by phone on 2 October 2026 that the video clips are safe to use, so footage permission is not a blocker.
    The contact form works today on Formspree (Wyatt's account, delivering to Wyatt). It moves to the Morgan Web Co forms setup on launch day; see step 5.
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
-4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS.
+4. Verify the domain (TXT), add DNS, set the custom domain, wait, Enforce HTTPS. Then forward `dellenback.com` and `hatnhoodie.com` and test both, as in step 3 of the section above.
 5. Move the contact form to the Morgan Web Co forms setup, once the site answers on erikdellenback.com (doing it earlier would mean registering the preview address and redoing it):
    - add erikdellenback.com as a site in the Morgan Web Co forms setup and get its key or endpoint, with Erik's chosen inbox as the recipient;
    - in `contact.html` change where the form posts and rename the two helper fields to what that service expects (for Web3Forms: `action` to `https://api.web3forms.com/submit`, a hidden `access_key`, `subject` instead of `_subject`, a `botcheck` checkbox instead of `_gotcha`), and update the form block in `js/site.js` to match;

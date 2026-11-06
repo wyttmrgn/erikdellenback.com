@@ -96,3 +96,15 @@ From "Erik Dellenback Website - Round 2.docx" (copy in the parent folder). All b
 - **Career.** First-person opening line (Dr. Seuss); the list sits on a white band so the logos need no boxes; Gator Bowl before UF; every entry's role, dates and text in his wording, including the two TD companies, Haiti United (co-founder and host) and Night to Shine (2014).
 
 Still from Erik: the family photo and the "picture of a list" for the About page, the form inbox, the domain.
+
+## Update (6 November 2026): the copywriter's edits
+
+From "Erik Website Edits.docx", which Erik sent after a professional copywriter reviewed the site (copy in the parent folder). Red text was new wording and struck text came out; black text was also checked word for word against the pages.
+
+- **Everything moves to third person except the homepage letter and the two quotations.** Erik's round-two rule was that italics mark first person, so third-person text is now roman: the Career opener (only the book title stays italic), the Consulting story paragraph and the "Some things Erik loves" captions.
+- **Homepage.** The letter is reworded and signed, the three names now sit in the sentence instead of on their own gold line, Galatians gains "(ESV)", and "What he did at each one" is gone while the "See the full career" link stays.
+- **About and Speaking.** The quotations gain quote marks and an attribution line. The bio adds Hope Florida and the card heading becomes "His family".
+- **Career.** Every entry is rewritten, Flagler and Eagle Scout gain a line, the duplicate For Others board entry is removed, Florida Family Voice adds "and Board Member", and the last group is "Other boards & recognition".
+- **Consulting and Speaking.** Most lines are rewritten. "The lad still ate" is now one title, and "cross section" became "intersection".
+
+The dashes in the document's attributions are drawn in CSS, so the site copy still contains no em dash.

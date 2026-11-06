@@ -1,28 +1,28 @@
 # Running list for Erik
 
-This is the one list. The email between the two rules below is short on purpose and ready to paste: the subject line is its first line, and the permission drafts are no longer needed (they stay in `docs/FOOTAGE-PERMISSIONS.md`). Before sending: push first (the link is the live preview), and replace YOUR-GODADDY-EMAIL-HERE in the mail client, not in this file. When Erik answers something, delete it here; when something new comes up, add it. Last updated 11 October 2026: his round-two document is built; the Career lines, Haiti United and the photo categories are answered, so only the domain, the two photos and the form inbox remain. Sent to Erik that day as a four-item email; by phone the same day he said the video clips are safe to use, so the permission item is closed and the version below carries the three that remain.
+This is the one list. The email between the two rules below is short on purpose and ready to paste as a reply. Send it once the edits are live on the preview or the domain, and replace LINK-HERE with whichever address is up. When Erik answers something, delete it here; when something new comes up, add it. Last updated 6 November 2026: his copywriter's document is built, GoDaddy delegate access works, and he confirmed hatnhoodie.com goes to the Consulting page. He did not answer the form inbox or the two photos.
 
 ---
 
-Subject: Round two is in; three things I still need
+Hi Erik,
 
-Erik,
+Thank you for the document and the access. It was easy to follow. All of the edits are in, and hatNhoodie.com is set to go to the Consulting page. Take a look:
 
-Your changes are in. Take a look on your phone and on a computer:
+LINK-HERE
 
-https://wyttmrgn.github.io/erikdellenback.com/
+A few things came up that only you can answer:
 
-Your round-two changes are in, on top of everything from your notes and your sketch: your wording throughout, the new menu, In Good Company laid out the way you drew it, the Career page, and Impactful Moments with your captions. Click any photo there to enlarge it; you are circled in the Oval Office and Bowden photos. Your Hat n Hoodie logo is in, the contact form works with no email address shown anywhere, and the shorts are out of the video.
+1. WHICH CAME FIRST? The bio and Career page say your first job in college athletics was at UF in spring 2000, then the Gator Bowl. The same page starts the Gator Bowl in 1999, and your CV says January 2000. Which is right?
 
-Three things I need from you:
+2. THE ACC DATE. The site says the ACC expanded to 12 teams and added its championship in 2004. Public sources put both in 2005, with the first game that December. Were you named in 2004? If so, I would word it so 2004 applies to your appointment.
 
-1. THE DOMAIN. This is the only thing holding up launch. In GoDaddy: Account Settings, then Delegate Access, then Invite, and invite YOUR-GODADDY-EMAIL-HERE with "Products and Domains" access. That lets me connect erikdellenback.com without your password, and you can remove me any time.
+3. NIGHT TO SHINE. The site says 24 countries. A 2026 news report says 74. What number would you like to use?
 
-2. TWO PHOTOS. A family photo, and the "picture of a list" for the About page. Those two cards are text until I have them. A larger headshot would help too.
+Still open from before: which inbox the contact form should go to, plus the family photo and the "picture of a list" for the About page.
 
-3. THE CONTACT FORM INBOX. Which inbox should messages go to? They come to me for now.
+Two small things I did. I kept "Starting foundations" plural on the Consulting page, because the document looked like a typing slip. I also used "Florida Foundation for Correctional Excellence" on the Career page so it matches their logo. Tell me if either is wrong.
 
-I fixed a few typos in your text as I went. Tell me if you want anything back the way you wrote it.
+So grateful for you too, my friend.
 
 Wyatt
 
@@ -32,23 +32,22 @@ Wyatt
 
 Lower-priority questions, kept here so they are not lost. Add any of them to a later email, or raise them on a call.
 
-- Career page, Gator Bowl: his round-two text says "Beginning in 1999 as the Gator Bowl parade intern" and 1999 to 2011, but his CV dates the Gator Bowl from January 2000, and the UF entry (Spring 2000) is called his first job in college athletics. The site uses his new 1999. Ask which is right.
-- Career page, Eleven22: his paragraph slips into "as we walk through faith"; the rest of the page is third person. Suggest "as the church walks through". His call.
-- Career page, Florida Family Voice: "lead the vision and strategy of FFV in advancing Florida’s premier defender of..." describes FFV advancing FFV. Suggest "lead the vision and strategy of FFV, Florida’s premier defender of...". His call.
-- Gallery: "Marco Rubio meeting at TTF" is shown spelled out as "at the Tim Tebow Foundation" so visitors know what TTF is.
-
+- Homepage hero line still says "25 years" while the new copy says "more than 25 years". The hero was not in his document, so it was left alone. The gallery page was not in it either.
+- "Every one of these has a story" and its "Invite Erik to speak" link stay at the end of About and Career. His document does not mention them, and it asked to remove only "What he did at each one" from the homepage.
+- The bio now names Hope Florida, in his document's wording. The Career page already did. Its logo stays off the homepage, which was his earlier call.
+- Two names for the UF association: "University of Florida Athletic Association" in the bio and "University Athletic Association" on Career. Both are his document's wording.
+- Correctional foundation board: reviewers asked whether 2019 is the right start year for that seat.
 - Original files of the video clips, to cure the stutter (they were screen-recorded from YouTube). The two Florida Family Voice clips are the easy ones: whoever produced the gala videos has the files.
 - Which social accounts he actually uses (the site shows none until he says).
 - Visitor analytics: yes or no.
 - Where the "Spoken Word" video is; whether "Tim and Erik" is the Night to Shine history video already in the banner.
 - Where people can watch Run the Race and He Calls Me Daughter (to link the posters), and whether he is fine with the studios' poster artwork on the site.
 - Night to Shine and Haiti photos for the gallery; the hurricane photo with the Governor at full resolution.
-- The Church card: his note had "(also?)"; it reads "but I also love the whole capital C Church around the world". Keep or drop the "also".
 - The homepage photo strip keeps two photos that are not in his sixteen (praying at the podium with the Governor and First Lady; Tebow CURE Hospital). Keep or swap.
-- Numbers: his full bio says 2,200 faith institutions and 5,600 nonprofit partners; his CV says 2,000 and 6,000. The site uses the bio's.
+- Numbers: his bio says 2,200 faith institutions and 5,600 nonprofit partners; his CV says 2,000 and 6,000. The site uses the bio's.
 - His CV names the "Florida Policy Alliance" of 38 state policy councils; probably the Family Policy Alliance. The site leaves the name out.
-- Career page: the two films sit under Projects (as on his sketch), not under Boards and recognition.
+- Career page: the two films sit under Projects (as on his sketch), not under Other boards & recognition.
 - Gallery order follows even columns, not the order of his list.
-- Homepage: "deserved or been fully qualified" is picked out in gold.
+- Homepage: "deserved or been fully qualified" is picked out in gold, and the two underlined phrases on Speaking and Consulting stayed through the copy edit.
 - Haiti United's logo comes from haiti-united.com, where he and Elizabeth are listed as hosts; confirm they are fine with it.
-- Proofreading done to his text, in case he asks: I've for Ive, can't, an Eagle Scout, simply to be remembered, make faith a priority, several businesses, nonprofit without the hyphen, a few commas, "breadth" for "width" of clients, a semicolon in the Lord line, the last bio paragraph as two sentences, talk titles in sentence case.
+- Choices made while applying the 6 November document, in case he asks: the dashes before "Erik", "Erik Dellenback" and "Galatians" are drawn rather than typed; "Show Me the Father" is italic to match "Run the Race"; the Speaking footer link now preselects the Speaking topic; third-person captions lost their italics, following his round-two note that italics mark first person.

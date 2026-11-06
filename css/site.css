@@ -320,14 +320,21 @@ main:focus { outline: none; }
 .split__photo img { width: 100%; height: 100%; object-fit: cover; }
 @media (min-width: 901px) { .split__photo { aspect-ratio: 1 / 1; } }
 @media (max-width: 900px) { .split { grid-template-columns: 1fr; } .split__photo { max-width: 520px; } }
-.prose .voice { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.55; color: var(--text); text-wrap: pretty; }
 .pull {
   margin: 0 0 18px;
   font-family: var(--serif); font-style: italic; font-weight: 300;
   font-size: clamp(20px, 2.6vw, 24px); line-height: 1.45; color: var(--body); text-wrap: pretty;
 }
+.pull--plain { font-style: normal; }
+.pull--plain em { font-style: italic; }
+.pull__refrain { display: block; }
+/* Attribution lines. The short rule is drawn here, so the copy itself carries no dash. */
+.pull__by { display: block; margin-top: 12px; font-family: var(--sans); font-style: normal; font-weight: 700; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.sig { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 20px; line-height: 1.5; color: var(--text); }
+.sig::before, .pull__by::before, .story__ref::before { content: ""; display: inline-block; width: 1.4em; height: 1px; margin-right: 0.6em; vertical-align: 0.3em; background: currentColor; }
 .cta--left { text-align: left; margin-top: clamp(20px, 2.5vw, 32px); }
 .cta--left .cta__link { margin-top: 0; }
+.nowrap { white-space: nowrap; }
 .talks { list-style: none; margin: 0; padding: 0; max-width: 800px; }
 .talks li { padding: 20px 0; border-bottom: 1px solid var(--rule); }
 .talks li:first-child { border-top: 1px solid var(--rule); }
@@ -336,12 +343,6 @@ main:focus { outline: none; }
   font-family: var(--sans); font-weight: 700; text-transform: uppercase;
   font-size: clamp(17px, 1.7vw, 21px); letter-spacing: 0.05em; line-height: 1.2; color: var(--text);
   text-wrap: balance;
-}
-.talks__line { margin: 8px 0 0; font-size: 16px; line-height: 1.7; color: var(--body); max-width: 680px; text-wrap: balance; }
-@media (min-width: 901px) {
-  .talks li { display: grid; grid-template-columns: minmax(200px, 280px) minmax(0, 1fr); column-gap: clamp(24px, 4vw, 48px); align-items: baseline; }
-  .talks__title:only-child { grid-column: 1 / -1; }
-  .talks__line { margin: 0; max-width: none; }
 }
 .press { max-width: var(--text-col); }
 .press--center { margin-left: auto; margin-right: auto; }
@@ -488,7 +489,7 @@ main:focus { outline: none; }
 .love--text { justify-content: center; border-top: 3px solid var(--gold); background: linear-gradient(180deg, rgba(209, 168, 111, 0.1), rgba(209, 168, 111, 0) 55%), var(--navy); }
 .love--text .love__body { padding: 30px 24px; }
 .love__title { margin: 0 0 8px; font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 15px; color: var(--text); }
-.love__line { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--text); text-wrap: pretty; }
+.love__line { margin: 0; font-family: var(--serif); font-weight: 300; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--text); text-wrap: pretty; }
 .love--text .love__title { font-size: 17px; margin-bottom: 12px; }
 @media (min-width: 561px) and (max-width: 1000px) { .love--text { order: -1; justify-content: flex-start; } }
 @media (min-width: 1001px) {
@@ -519,7 +520,11 @@ main:focus { outline: none; }
 .band--career .org__logo { background: transparent; padding: 0; min-height: 0; }
 .band--career .org__logo img { width: 170px; max-width: 170px; max-height: 84px; }
 .band--career .org__logo img[src*="td-autographs"] { width: 100px; }
-@media (max-width: 640px) { .band--career .org__logo { align-items: flex-start; } }
+@media (max-width: 640px) {
+  .band--career .org__logo { align-items: flex-start; }
+  .band--career .org__logo img { object-position: left center; }
+  .org__logo--word { display: none; }
+}
 .band--career .org__name { color: var(--ink); }
 .band--career .org__role { color: var(--navy); font-weight: 700; }
 .band--career .org__role span { color: var(--muted-ink); font-weight: 400; }
@@ -534,8 +539,6 @@ main:focus { outline: none; }
 .section__link a { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
 .section__link a:hover { color: var(--gold-strong); }
 .section__sub { margin: -10px auto 28px; max-width: 640px; text-align: center; font-size: 16px; line-height: 1.6; color: var(--ink); }
-.story__names span { white-space: nowrap; }
-.story__names { text-wrap: balance; text-align: center; font-family: var(--sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 15px; color: var(--gold-strong); }
 .logos__group { margin-top: clamp(36px, 4vw, 52px); }
 .logos--next { margin-top: 30px; }
 .logos__group:first-of-type { margin-top: 0; }
