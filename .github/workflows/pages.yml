@@ -1,0 +1,49 @@
+# Publishes only the website files to GitHub Pages.
+# docs/, README.md, scripts/ and anything else not copied below stay in the repo
+# but are never served on erikdellenback.com. If the site gains a new top-level
+# folder or file, add it to the copy step or it will not be published.
+# The custom domain lives in Settings, Pages; a CNAME file is ignored by this kind of deploy.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Collect the website files
+        run: |
+          mkdir _site
+          cp ./*.html favicon.svg robots.txt sitemap.xml _site/
+          cp -r css js images logos media _site/
+          # The notes must never ship with the site.
+          test ! -e _site/docs
+          test ! -e _site/README.md
+          test ! -e _site/scripts
+          echo "Publishing $(find _site -type f | wc -l) files"
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v5
