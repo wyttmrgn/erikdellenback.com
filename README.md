@@ -129,7 +129,7 @@ GitHub Pages on a free account requires the repository to be public, so everythi
 
 Three of Erik's domains reach this site (confirmed by Erik on 6 November 2026). `erikdellenback.com` is the main address, `dellenback.com` forwards to it, and `hatnhoodie.com` forwards to the Consulting page. All three sit in Erik's GoDaddy account, and Wyatt has delegate access to it.
 
-Status, 10 November 2026: live. erikdellenback.com points at GitHub Pages, the `CNAME` file is in the repo, the certificate is issued and Enforce HTTPS is on. Both other domains forward, with www included. Two gaps remain: GitHub's certificate covers erikdellenback.com but not www, so `https://www.erikdellenback.com` shows a certificate error while `http://www` works; and GoDaddy had not yet issued the certificate for `https://www.hatnhoodie.com`. The old preview address now redirects to erikdellenback.com.
+Status, 10 November 2026: live. erikdellenback.com points at GitHub Pages, and GitHub's certificate covers both erikdellenback.com and www.erikdellenback.com, with Enforce HTTPS on. dellenback.com and hatnhoodie.com forward over http and https, with and without www. All 13 addresses, including the old preview address, end on the right page. After any change to the custom domain, remove and re-add it in Settings, Pages so the certificate is requested again with both names.
 
 ### 1. Verify the domain with GitHub first
 
@@ -178,7 +178,7 @@ Then test `https://` and `https://www.` on both. A plain visit should land on th
 2. Content blockers: everything still open is in `docs/FOR-ERIK.md` (the form inbox, the family photo, a few one-line answers). Delegate access to GoDaddy arrived on 6 November 2026. Erik confirmed by phone on 2 October 2026 that the video clips are safe to use, so footage permission is not a blocker.
    The contact form works today on Formspree (Wyatt's account, delivering to Wyatt). It moves to the Morgan Web Co forms setup on launch day; see step 5.
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
-4. Done 10 November 2026: DNS, custom domain, certificate, Enforce HTTPS, and both forwards. Still open: the TXT verification record, www in GitHub's certificate, and GoDaddy's certificate for www.hatnhoodie.com (see the status note above).
+4. Done 10 November 2026: DNS, custom domain, certificate for both names, Enforce HTTPS, and both forwards. Still open: the TXT verification record.
 5. Move the contact form to the Morgan Web Co forms setup, once the site answers on erikdellenback.com (doing it earlier would mean registering the preview address and redoing it):
    - add erikdellenback.com as a site in the Morgan Web Co forms setup and get its key or endpoint, with Erik's chosen inbox as the recipient;
    - in `contact.html` change where the form posts and rename the two helper fields to what that service expects (for Web3Forms: `action` to `https://api.web3forms.com/submit`, a hidden `access_key`, `subject` instead of `_subject`, a `botcheck` checkbox instead of `_gotcha`), and update the form block in `js/site.js` to match;
