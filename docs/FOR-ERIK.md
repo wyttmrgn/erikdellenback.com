@@ -6,13 +6,13 @@ This is the one list. The email between the two rules below is short on purpose 
 
 Hi Erik,
 
-Thank you for the document and the access. It was easy to follow. All of the edits are in, and hatNhoodie.com is set to go to the Consulting page. Take a look:
+Your site is live! Thank you for the document and the access. It was easy to follow, and all of the edits are in. All three addresses work: ErikDellenback.com, Dellenback.com, and hatNhoodie.com, which goes straight to the Consulting page. Take a look:
 
 https://erikdellenback.com
 
 A few things came up that only you can answer:
 
-1. WHICH CAME FIRST? The bio and Career page say your first job in college athletics was at UF in spring 2000, then the Gator Bowl. The same page starts the Gator Bowl in 1999, and your CV says January 2000. Which is right?
+1. WHICH CAME FIRST? The bio and Career page say your first job in college athletics was at UF in spring 2000, then the Gator Bowl. The Career page also starts the Gator Bowl in 1999, and your CV says January 2000. Which is right?
 
 2. THE ACC DATE. The site says the ACC expanded to 12 teams and added its championship in 2004. Public sources put both in 2005, with the first game that December. Were you named in 2004? If so, I would word it so 2004 applies to your appointment.
 
