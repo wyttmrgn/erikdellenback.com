@@ -18,7 +18,8 @@ js/site.js                 the menu panel, photo strip speed, reveal, hero video
 images/                    responsive WebP + JPEG renditions from scripts/optimize-images.py
 media/                     hero video files go here (see below); empty until then
 favicon.svg                browser tab icon
-.nojekyll                  tells GitHub Pages to serve files as-is
+.github/workflows/pages.yml publishes the website files only (see Deploying)
+.nojekyll                  left from the old branch deploy; harmless
 robots.txt, sitemap.xml    search engine basics
 scripts/optimize-images.py turns a source photo into the sizes the pages expect
 docs/ASSESSMENT.md         the original design review (many of its items have since been decided)
@@ -104,7 +105,7 @@ The free plan allows 50 messages a month, which is plenty; the paid plan adds a 
 
 ## Deploying
 
-The site deploys from the `main` branch, root folder. Every push to `main` goes live in a minute or two.
+Every push to `main` runs `.github/workflows/pages.yml`, which copies only the website files (the HTML pages, `css`, `js`, `images`, `logos`, `media`, `favicon.svg`, `robots.txt`, `sitemap.xml`) and publishes them. It goes live in a minute or two. `README.md`, `docs/` and `scripts/` stay in the repo but are never served on erikdellenback.com. A new top-level file or folder the site needs must be added to the copy step, or it will not be published. Settings, Pages, Source is set to GitHub Actions (since 10 November 2026); the custom domain lives in that same settings page, and the `CNAME` file is ignored by this kind of deploy.
 
 Ownership: Wyatt owns this GitHub repository and the GitHub Pages site. Erik owns the domain at GoDaddy. GitHub Pages ties the custom domain, its certificate and the `www` CNAME target to the account that owns the repository, so if the repo ever moves to another account, the domain verification and the `www` record have to be redone.
 
@@ -122,7 +123,7 @@ gh repo create erikdellenback.com --public --source=. --remote=origin --push
 gh api -X POST repos/{owner}/erikdellenback.com/pages -f "source[branch]=main" -f "source[path]=/"
 ```
 
-GitHub Pages on a free account requires the repository to be public. Nothing private is in this repo.
+GitHub Pages on a free account requires the repository to be public, so everything here, notes included, is readable on github.com. Keep anything private in the parent folder.
 
 ## Pointing the domain at the site (GoDaddy)
 
