@@ -91,17 +91,13 @@ Open http://localhost:8000.
 
 ## The contact form (no email address on the site)
 
-Erik asked that the site never show an email address. Every "email Erik" link now goes to `contact.html`, which posts to [Formspree](https://formspree.io). The recipient address lives in the Formspree account, not in the HTML, so it is never exposed. The page's JS sends the form with `fetch` so the visitor stays on the page; without JS the form still posts and Formspree shows its own pages (its reCAPTCHA check first, if that is left on, then its thank-you page). A hidden `_gotcha` field catches simple bots.
+Erik asked that the site never show an email address. Every "email Erik" link goes to `contact.html`, whose form works the same way as every Morgan Web Co site (M6 Farms, Mr Auto): `js/site.js` sends it as JSON to the Morgan Web Co forms worker at `https://dashboard.morganwebco.com/api/forms`. The worker checks Cloudflare Turnstile, drops the `botcheck` honeypot, logs the lead in the Morgan Web Co dashboard, and emails it through Brevo. It finds the site by the posting domain, so the recipient lives in the worker's `sites` table (`notify_email`), not in this repo. Messages go to Erik's inbox with a hidden BCC to the studio inbox. Replying to the email replies to the visitor.
 
-To connect it (one time, about five minutes):
-
-1. Sign up at formspree.io (Wyatt's account) and create a form. Set the recipient to the inbox Erik chooses. Formspree emails that inbox a confirmation link; Erik clicks it once.
-2. Copy the form id from the endpoint it gives you (`https://formspree.io/f/abcdwxyz`).
-3. In `contact.html`, put that id in the form's `action`. Done on 1 October 2026: the form is live at `https://formspree.io/f/xdekvydd`, in Wyatt's Formspree account, delivering to Wyatt's inbox until Erik names his. To change who receives messages, change the form's email in the Formspree dashboard; nothing on the site needs to change. (If the action ever contains the placeholder `FORM_ID` again, the page shows "This form is being connected" and disables Send.)
-   In the form's settings on formspree.io, under Spam protection, turn reCAPTCHA off. Formspree's default reCAPTCHA is a separate page that does not work with a background send; with it off, messages go through without the visitor leaving the site, and the honeypot field plus Formspree's own spam filter still apply. If it is left on, the site falls back to a normal form post and the visitor completes the check on Formspree's page.
-4. Push. Send a test message from the live page and check it arrives with the subject "Website: Speaking" (the subject follows the topic the visitor picks). Test once more with JavaScript off to see Formspree's own pages.
-
-The free plan allows 50 messages a month, which is plenty; the paid plan adds a custom thank-you page and file uploads if they are ever wanted. Links elsewhere on the site preselect the topic with `contact.html?topic=speaking`, `consulting` or `press`.
+- **Turnstile:** the widget uses Morgan Web Co's shared sitekey. `erikdellenback.com` must be listed in that widget's hostnames in the Cloudflare dashboard, or the check fails on this site.
+- **Subject:** "Website: Speaking", "Website: Consulting", "Website: Press" or "Website: Something else", following the topic the visitor picks. Links elsewhere on the site preselect it with `contact.html?topic=speaking`, `consulting` or `press`.
+- **Spam rule:** the worker logs but never emails a message that contains a link. Speaking or press requests that paste an event link will show in the dashboard's leads but not in the inbox.
+- **Without JavaScript** the form cannot send (Turnstile needs it) and says so.
+- Setup for this site is in `add-erikdellenback.sql` in the morgan-web-co project, in the order: run the SQL, add the Turnstile hostname, deploy this form, send a test (it reaches the studio inbox only), then set `notify_email` to Erik's address.
 
 ## Deploying
 
@@ -179,10 +175,6 @@ Then test `https://` and `https://www.` on both. A plain visit should land on th
    The contact form works today on Formspree (Wyatt's account, delivering to Wyatt). It moves to the Morgan Web Co forms setup on launch day; see step 5.
 3. Push, enable Pages, confirm `https://<user>.github.io/erikdellenback.com/` renders.
 4. Done 10 November 2026: DNS, custom domain, certificate for both names, Enforce HTTPS, and both forwards. Still open: the TXT verification record.
-5. Move the contact form to the Morgan Web Co forms setup, once the site answers on erikdellenback.com (doing it earlier would mean registering the preview address and redoing it):
-   - add erikdellenback.com as a site in the Morgan Web Co forms setup and get its key or endpoint, with Erik's chosen inbox as the recipient;
-   - in `contact.html` change where the form posts and rename the two helper fields to what that service expects (for Web3Forms: `action` to `https://api.web3forms.com/submit`, a hidden `access_key`, `subject` instead of `_subject`, a `botcheck` checkbox instead of `_gotcha`), and update the form block in `js/site.js` to match;
-   - push, then send a test from the form on erikdellenback.com and confirm it arrives with the subject "Website: Speaking";
-   - delete the Formspree form and update "The contact form" section above.
+5. Contact form: moved to the Morgan Web Co forms worker (see "The contact form" above). Afterwards, delete the old Formspree form `xdekvydd` in Wyatt's Formspree account.
 6. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.
 7. Google Search Console: verify with the same TXT record and submit `sitemap.xml`.

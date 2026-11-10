@@ -157,15 +157,17 @@
     }
   }
 
-  // Contact form: preselect the topic from ?topic=, set the subject, and
-  // send with fetch so the visitor stays on the page. Without JS the form
-  // still posts normally and Formspree shows its own thank-you page.
+  // Contact form: preselect the topic from ?topic=, set the subject, and send
+  // the message as JSON to the Morgan Web Co forms worker (data-endpoint),
+  // which checks Cloudflare Turnstile, logs the lead and emails it. The
+  // recipient lives in the worker's database, never in this site.
   var form = document.querySelector('.form[data-form]');
   if (form && form.querySelector('.form__submit') && form.querySelector('.form__status')) {
     var status = form.querySelector('.form__status');
     var topic = form.querySelector('[name="topic"]');
-    var subject = form.querySelector('[name="_subject"]');
+    var subject = form.querySelector('[name="subject"]');
     var submit = form.querySelector('.form__submit');
+    var endpoint = form.getAttribute('data-endpoint');
     try {
       var wanted = (window.location.search.match(/[?&]topic=([^&]+)/) || [])[1];
       if (wanted && topic) {
@@ -176,36 +178,31 @@
     function setSubject() { if (subject && topic) subject.value = 'Website: ' + topic.value; }
     if (topic) topic.addEventListener('change', setSubject);
     setSubject();
-    if ((form.getAttribute('action') || '').indexOf('FORM_ID') !== -1) {
-      submit.disabled = true;
-      status.textContent = 'This form is being connected. Please check back shortly.';
-      form.insertBefore(status, form.firstChild);
-    } else if (window.fetch && window.FormData) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (!form.checkValidity || form.checkValidity()) {
-          submit.disabled = true; status.className = 'form__status'; status.textContent = 'Sending…';
-          fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-            .then(function (r) {
-              // Formspree refused the background send (for example its reCAPTCHA is
-              // switched on for this form): hand over to a normal form post, which
-              // takes the visitor through Formspree's own check and thank-you page.
-              if (!r.ok) { status.textContent = 'One more step on the next page…'; form.submit(); return null; }
-              return r.json();
-            })
-            .then(function (data) {
-              if (data === null) return;
-              Array.prototype.forEach.call(form.querySelectorAll('.form__row, .form__submit'), function (el) { el.hidden = true; });
-              status.className = 'form__status form__status--ok';
-              status.textContent = 'Thank you. Your message is on its way to Erik.';
-            })
-            .catch(function () {
-              submit.disabled = false;
-              status.textContent = 'Something went wrong and the message did not send. Please try again in a minute.';
-            });
-        } else if (form.reportValidity) form.reportValidity();
-      });
+    function fail(text) {
+      submit.disabled = false;
+      status.className = 'form__status';
+      status.textContent = text;
+      if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
     }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.checkValidity && !form.checkValidity()) { if (form.reportValidity) form.reportValidity(); return; }
+      if (!window.fetch || !window.FormData || !endpoint) { fail('This browser cannot send the form. Please try another browser.'); return; }
+      var data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
+      // Turnstile fills this in on its own once it has checked the visitor.
+      if (!data['cf-turnstile-response']) { status.className = 'form__status'; status.textContent = 'One moment: the security check above the Send button is still running.'; return; }
+      submit.disabled = true; status.className = 'form__status'; status.textContent = 'Sending…';
+      fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (res) {
+          if (!res || !res.ok) { fail('Something went wrong and the message did not send. Please try again in a minute.'); return; }
+          Array.prototype.forEach.call(form.querySelectorAll('.form__row, .form__check, .form__submit'), function (el) { el.hidden = true; });
+          status.className = 'form__status form__status--ok';
+          status.textContent = 'Thank you. Your message is on its way to Erik.';
+        })
+        .catch(function () { fail('Something went wrong and the message did not send. Please try again in a minute.'); });
+    });
   }
 
   // Photo lightbox: any .tile__link opens its full photo in the <dialog>.

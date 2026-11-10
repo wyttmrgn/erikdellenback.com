@@ -461,6 +461,7 @@ main:focus { outline: none; }
 .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--gold); outline-offset: 2px; border-color: var(--gold); }
 .form textarea { min-height: 160px; resize: vertical; }
 .form .form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; padding: 0; border: 0; opacity: 0; }
+.form__check { margin: 4px 0 20px; min-height: 65px; }
 .form__submit {
   font-family: var(--sans); font-weight: 700; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
   padding: 14px 32px; color: var(--gold); background: transparent; border: 1.5px solid var(--gold); border-radius: 0; cursor: pointer;
