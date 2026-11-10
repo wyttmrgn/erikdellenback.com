@@ -1,6 +1,6 @@
 # Running list for Erik
 
-This is the one list. The email between the two rules below is short on purpose and ready to paste as a reply. The site went live on erikdellenback.com on 10 November 2026, so the link in it is the real address. When Erik answers something, delete it here; when something new comes up, add it. Last updated 6 November 2026: his copywriter's document is built, GoDaddy delegate access works, and he confirmed hatnhoodie.com goes to the Consulting page. He did not answer the form inbox or the two photos.
+This is the one list. The email between the two rules below is short on purpose and ready to paste as a reply. The site went live on erikdellenback.com on 10 November 2026, so the link in it is the real address. When Erik answers something, delete it here; when something new comes up, add it. Last updated 6 November 2026: his copywriter's document is built, GoDaddy delegate access works, and he confirmed hatnhoodie.com goes to the Consulting page. On 10 November Wyatt set the form to deliver to Erik's Gmail with a hidden copy to the studio, and told Erik. The two photos are still outstanding.
 
 ---
 

@@ -97,7 +97,8 @@ Erik asked that the site never show an email address. Every "email Erik" link go
 - **Subject:** "Website: Speaking", "Website: Consulting", "Website: Press" or "Website: Something else", following the topic the visitor picks. Links elsewhere on the site preselect it with `contact.html?topic=speaking`, `consulting` or `press`.
 - **Spam rule:** the worker logs but never emails a message that contains a link. Speaking or press requests that paste an event link will show in the dashboard's leads but not in the inbox.
 - **Without JavaScript** the form cannot send (Turnstile needs it) and says so.
-- Setup for this site is in `add-erikdellenback.sql` in the morgan-web-co project, in the order: run the SQL, add the Turnstile hostname, deploy this form, send a test (it reaches the studio inbox only), then set `notify_email` to Erik's address.
+- Set up on 10 November 2026: the site and Erik's dashboard login were added with `add-erikdellenback.sql` (morgan-web-co project, untracked), `erikdellenback.com` was added to the Turnstile widget, this form was deployed, and `notify_email` was set to Erik's Gmail. The worker answers this domain (checked with a preflight request that sends nothing) and has its Turnstile secret set. No real message had been sent through it yet when this was written; Wyatt's first test reaches Erik too, so label it as a test.
+- To change who receives messages, update `notify_email` for `erikdellenback.com` in the `sites` table of the `morgan-dashboard` database. The studio copy is automatic.
 
 ## Deploying
 
