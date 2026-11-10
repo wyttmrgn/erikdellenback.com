@@ -18,7 +18,7 @@ A few things came up that only you can answer:
 
 3. NIGHT TO SHINE. The site says 24 countries. A 2026 news report says 74. What number would you like to use?
 
-Still open from before: which inbox the contact form should go to, plus the family photo and the "picture of a list" for the About page.
+Messages from the contact form now come straight to your Gmail. Still open from before: the family photo and the "picture of a list" for the About page.
 
 Two small things I did. I kept "Starting foundations" plural on the Consulting page, because the document looked like a typing slip. I also used "Florida Foundation for Correctional Excellence" on the Career page so it matches their logo. Tell me if either is wrong.
 
