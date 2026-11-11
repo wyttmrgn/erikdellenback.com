@@ -178,4 +178,4 @@ Then test `https://` and `https://www.` on both. A plain visit should land on th
 4. Done 10 November 2026: DNS, custom domain, certificate for both names, Enforce HTTPS, and both forwards. Still open: the TXT verification record.
 5. Contact form: moved to the Morgan Web Co forms worker (see "The contact form" above). Afterwards, delete the old Formspree form `xdekvydd` in Wyatt's Formspree account.
 6. Share the URL in iMessage or Slack to check the preview card. View at phone, tablet and desktop widths.
-7. Google Search Console: verify with the same TXT record and submit `sitemap.xml`.
+7. Google Search Console: done 11 November 2026 as a Domain property (`sc-domain:erikdellenback.com`), verified by a TXT record on `@` in GoDaddy, under the Google account connected to the Morgan Web Co dashboard, which picks it up automatically. Submit `sitemap.xml` under Sitemaps if it is not listed there yet.
